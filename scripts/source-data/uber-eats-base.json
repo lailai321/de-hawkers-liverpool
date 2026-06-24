@@ -1,0 +1,146 @@
+{
+  "One Choice with Rice": {
+    "description": "Your choice of stir fried dish with Rice in one container.",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/29c9f8f77a4076f7f5bdb86e8491bff5/58f691da9eaef86b0b51f9b2c483fe63.jpeg"
+  },
+  "Spring Rolls": {
+    "description": "One piece spring roll filled with pork mince in traditional style.",
+    "imageUrl": null
+  },
+  "Vegetable Spring Rolls": {
+    "description": "One piece spring roll filled with mixed vegetables.",
+    "imageUrl": null
+  },
+  "Pork Fried Dim Sim": {
+    "description": "One piece dim sim filled with pork mince and juicy inside.",
+    "imageUrl": null
+  },
+  "Steamed Dim Sim": {
+    "description": "Six pieces. Filled with pork mince and juicy inside.",
+    "imageUrl": null
+  },
+  "Prawn Chips": {
+    "description": "Crispy prawns chips.",
+    "imageUrl": null
+  },
+  "Honey Chicken": {
+    "description": "Finger sized battered chicken breast with special honey sauce and sesame on top (no veggies).",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/89380d685b99c94ab4d6cc121f731cdb/5143f1e218c67c20fe5a4cd33d90b07b.jpeg"
+  },
+  "Satay Chicken": {
+    "description": "Thin sliced chicken breast and vegetables stir fried with delicious aromatic blend of peanuts, oriental herbs and spices.",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/fe1deaf2177a234e512033afd2f4256d/58f691da9eaef86b0b51f9b2c483fe63.jpeg"
+  },
+  "Mongolian Beef": {
+    "description": "Stir-fried beef in a savoury sauce.",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/84aef4458d81675ed10da7814c660ded/58f691da9eaef86b0b51f9b2c483fe63.jpeg"
+  },
+  "Beef with Black Bean Sauce": {
+    "description": "Beef and bell pepper stir fried in Chinese fermented black bean sauce, sharp, salty and thick with a hint of sweet.",
+    "imageUrl": null
+  },
+  "Salt and Pepper Fried Fish": {
+    "description": "Deep fried battered fish fillet chunks blend with chilli paste.",
+    "imageUrl": null
+  },
+  "Teriyaki Chicken": {
+    "description": "Thin cut chicken breast stir fried with mix vegetables in traditional Japanese teriyaki sauce, savoury, salty and sweet with lots of umami undertones.",
+    "imageUrl": null
+  },
+  "Sweet and Sour Chicken": {
+    "description": "Deep fried battered chicken with sweet and sour sauce.",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/ebd4da86dd8ba1e57461415c6ef9c0f7/a1681d67ebe55c76c3af5f401619c278.jpeg"
+  },
+  "Chicken with Vegetables": {
+    "description": "Thin cut chicken breast, stir fried with mixed vegetables in flavourful garlic and oyster sauce.",
+    "imageUrl": null
+  },
+  "Chilli Chicken": {
+    "description": "Thin cut chicken breast stir fried with mixed vegetables in Chinese hot fermented bean paste (郫县豆瓣酱).",
+    "imageUrl": null
+  },
+  "Singapore Noodles": {
+    "description": "Rice vermicelli noodle with a meat of your choice egg, shallot, and mix vegetables.",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/c8a323fcaf5606b6bd23de9ede0ab21d/5143f1e218c67c20fe5a4cd33d90b07b.jpeg"
+  },
+  "Thai Pad See Ew": {
+    "description": "Thick rice noodle with a meat of your choice, egg, mixed vegetables, soy sauce and oyster sauce. Picture is seafood Pad See Ew.",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/76d07c3de12bcbb8277c3ca4982fcba3/58f691da9eaef86b0b51f9b2c483fe63.jpeg"
+  },
+  "Pad Thai": {
+    "description": "Thin rice noodle with a meat of your choice, egg, peanuts, shallots, and tamarind sauce.",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/08ae9413c27f57caf192b1088d537dc7/58f691da9eaef86b0b51f9b2c483fe63.jpeg"
+  },
+  "Chow Mein": {
+    "description": "Served with mixed vegetables and egg noodles. Picture is seafood Chow Mein.",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/b883aa14073804bcc00b724b459b17d6/58f691da9eaef86b0b51f9b2c483fe63.jpeg"
+  },
+  "Stir Fry Flat Rice Noodle": {
+    "description": "Savory flat rice noodles stir-fried with soy sauce for a comforting, tender dish.",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/e3a662d013b58551bc412ae1c60f2f3d/5143f1e218c67c20fe5a4cd33d90b07b.jpeg"
+  },
+  "Mee Goreng": {
+    "description": "A sticky, savory sweet Indonesian stir-fried noodle dish with your choice of meat.",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/994692349db7bc52fbd0d08ca7b639fa/58f691da9eaef86b0b51f9b2c483fe63.jpeg"
+  },
+  "Chicken Wonton Noodle Soup": {
+    "description": "Chewy egg noodles and wonton dumplings, combined and served in a flavorful slow cooked chicken broth. Top with choy sum. The wontons are filled with a combination of minced Chicken and vegetable, lightly flavored with sesame oil, soy sauce and grated ginger.",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/ebbcab4aee7eb2917b15ce9059abe292/5143f1e218c67c20fe5a4cd33d90b07b.jpeg"
+  },
+  "Laksa Soup": {
+    "description": "Deliciously hearty noodle soup with a meat of your choice. Coconut milk, and Asian vegetables.",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/14513728fc6697ffaeb81c9c4b521309/5143f1e218c67c20fe5a4cd33d90b07b.jpeg"
+  },
+  "Tomyum Noodle Soup": {
+    "description": "A classic Thai dish featuring a spicy, hot and sour broth enriched with Thai seasonings, spices, and fresh lime juice.",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/c1d4051b5e6693b56bc5ef5e664010bf/58f691da9eaef86b0b51f9b2c483fe63.jpeg"
+  },
+  "Chinese Special Fried Rice": {
+    "description": "The base ingredients include egg and mixed vegetables.",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/f43e1d3a9ec4136bb67b2e28f88a80ba/58f691da9eaef86b0b51f9b2c483fe63.jpeg"
+  },
+  "Thai Fried Rice": {
+    "description": "Authentic Thai style Stir-fried rice with Thai basil, scrambled egg, chilies, and fish sauce. Choose pork, chicken, beef, or king prawn.",
+    "imageUrl": null
+  },
+  "Nasi Goreng": {
+    "description": "A delicious stir-fried Indonesian rice sweet, spicy and packed with savory deliciousness.",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/1a92558152a38039ba815bbbb2fed3bc/58f691da9eaef86b0b51f9b2c483fe63.jpeg"
+  },
+  "Pork Chop with Rice or Noodle Soup": {
+    "description": "Spicy, salty and crispy yet tender texture deep fried pork chop served with a fried egg, steam vegetable and your selection of carbs.",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/46e71f8b0ea91a44168898cb3a4c9b1d/58f691da9eaef86b0b51f9b2c483fe63.jpeg"
+  },
+  "Crispy Chicken with Rice or Noodle Soup": {
+    "description": "The chicken is poached very gently, then dipped in vinegar and maltose, dried and deep-fried for the crispy skin, served with fried egg, steam vegetables and your selection of carbs.",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/bef2e63b050b877746776c71ca788d73/58f691da9eaef86b0b51f9b2c483fe63.jpeg"
+  },
+  "Beef Brisket": {
+    "description": "Slowly braised savory sweet beef brisket served in a hot rich beef bone broth.",
+    "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/cb5b17c3ad21acfb03eca634aca365d8/58f691da9eaef86b0b51f9b2c483fe63.jpeg"
+  },
+  "Steamed Rice": {
+    "description": "Freshly cooked white rice.",
+    "imageUrl": null
+  },
+  "Fried Rice (Sides)": {
+    "description": "Ingredients include rice, egg, peas, carrot, corn kernels etc. no ham, garlic or spring onion.",
+    "imageUrl": null
+  },
+  "Soft Drink Can": {
+    "description": "375ml",
+    "imageUrl": null
+  },
+  "Soft Drink Bottle": {
+    "description": "600ml",
+    "imageUrl": null
+  },
+  "Water Bottle": {
+    "description": "Fresh and refreshing drinking water.",
+    "imageUrl": null
+  },
+  "Chicken Corn Soup": {
+    "description": "Tender chicken and corn in a comforting soup.",
+    "imageUrl": null
+  }
+}

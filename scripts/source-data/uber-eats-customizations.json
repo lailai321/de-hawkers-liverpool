@@ -1,0 +1,1827 @@
+[
+ {
+  "category": "Offers",
+  "title": "One Choice with Rice",
+  "uuid": "4c7e386d-c736-4c3a-b677-58c251a46fb6",
+  "basePrice": 1584,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of stir fried",
+    "uuid": "a5b8a8df-4a4e-431d-b356-e4b3c8087c6d",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Mongolian Beef",
+      "price": 0,
+      "uuid": "66aaa4ab-9925-47e0-91f3-6387e27e69e2",
+      "isSoldOut": false
+     },
+     {
+      "title": "Chilli Chicken",
+      "price": 0,
+      "uuid": "1f01b675-a5c0-4ae6-8c9d-8b787b7befaf",
+      "isSoldOut": false
+     },
+     {
+      "title": "Honey Chicken",
+      "price": 0,
+      "uuid": "4d90e97a-4039-41db-81a3-4bc8807b49bb",
+      "isSoldOut": false
+     },
+     {
+      "title": "Teriyaki Chicken",
+      "price": 0,
+      "uuid": "0dd594ca-0ae2-4659-8d35-c69ed8edf7cf",
+      "isSoldOut": false
+     },
+     {
+      "title": "Beef w/ Black Bean",
+      "price": 0,
+      "uuid": "83669d84-4f7d-4672-9698-b81cdef67ba3",
+      "isSoldOut": false
+     },
+     {
+      "title": "Satay Chicken",
+      "price": 0,
+      "uuid": "753db3c2-ccd1-4c3c-9fec-8acfbf21d5e3",
+      "isSoldOut": false
+     },
+     {
+      "title": "Salt and Pepper Fish",
+      "price": 0,
+      "uuid": "1b2f1b02-ba1a-47bd-8441-9b5b6e04d802",
+      "isSoldOut": false
+     },
+     {
+      "title": "Chicken with Vegetables",
+      "price": 0,
+      "uuid": "14fbb69b-f2f7-4434-9065-871a7abc2bbd",
+      "isSoldOut": false
+     },
+     {
+      "title": "Sweet Sour Chicken",
+      "price": 0,
+      "uuid": "8b8c1fbc-d883-4433-8f61-be0086102e3b",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Choice of Rice",
+    "uuid": "4292e1bb-37bd-4cda-95ff-528979b7483c",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Boild Rice",
+      "price": 0,
+      "uuid": "446df80c-337f-4ba2-a701-5810dcc0882f",
+      "isSoldOut": false
+     },
+     {
+      "title": "Fried Rice",
+      "price": 0,
+      "uuid": "5d701b47-2554-48f2-ae31-4d1a9ce53a7c",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Stir Fried Noodles",
+  "title": "Singapore Noodles",
+  "uuid": "37fb9c95-1785-4464-8dda-cf3f8f221afc",
+  "basePrice": 1584,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of Filling",
+    "uuid": "3226f7b9-51c6-4e10-8b7f-e88289c976f7",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Vegetable",
+      "price": 0,
+      "uuid": "d4c063ce-3e7c-4bfd-8b42-880ac800a7a2",
+      "isSoldOut": false
+     },
+     {
+      "title": "Beef",
+      "price": 300,
+      "uuid": "81661a13-8ec8-49a0-ba14-054d6aa5b62e",
+      "isSoldOut": false
+     },
+     {
+      "title": "Chicken",
+      "price": 300,
+      "uuid": "6e7b7b66-320f-4fd8-b6d8-2047e39db43a",
+      "isSoldOut": false
+     },
+     {
+      "title": "Combination(King Prawn, Chicken and Beef)",
+      "price": 500,
+      "uuid": "6ee412d4-d4ec-42ae-b2f1-17e6aa035ddf",
+      "isSoldOut": false
+     },
+     {
+      "title": "Seafood",
+      "price": 500,
+      "uuid": "29786020-25bd-4e28-934e-e3e9836a5b96",
+      "isSoldOut": false
+     },
+     {
+      "title": "King Prawn",
+      "price": 700,
+      "uuid": "da2035c4-a040-40b3-9076-b3db62c667f7",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Extra",
+    "uuid": "fc453d62-0861-441a-96bb-5116f8bfcb15",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Extra Meat",
+      "price": 300,
+      "uuid": "c3a28954-c024-40b3-9e6d-66b84a51dfd5",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Stir Fried Noodles",
+  "title": "Thai Pad See Ew",
+  "uuid": "5345e236-3308-4d88-a05a-9372d7b4bb00",
+  "basePrice": 1584,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of Filling",
+    "uuid": "3226f7b9-51c6-4e10-8b7f-e88289c976f7",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Vegetable",
+      "price": 0,
+      "uuid": "d4c063ce-3e7c-4bfd-8b42-880ac800a7a2",
+      "isSoldOut": false
+     },
+     {
+      "title": "Beef",
+      "price": 300,
+      "uuid": "81661a13-8ec8-49a0-ba14-054d6aa5b62e",
+      "isSoldOut": false
+     },
+     {
+      "title": "Chicken",
+      "price": 300,
+      "uuid": "6e7b7b66-320f-4fd8-b6d8-2047e39db43a",
+      "isSoldOut": false
+     },
+     {
+      "title": "Combination(King Prawn, Chicken and Beef)",
+      "price": 500,
+      "uuid": "6ee412d4-d4ec-42ae-b2f1-17e6aa035ddf",
+      "isSoldOut": false
+     },
+     {
+      "title": "Seafood",
+      "price": 500,
+      "uuid": "29786020-25bd-4e28-934e-e3e9836a5b96",
+      "isSoldOut": false
+     },
+     {
+      "title": "King Prawn",
+      "price": 700,
+      "uuid": "da2035c4-a040-40b3-9076-b3db62c667f7",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Extra",
+    "uuid": "fc453d62-0861-441a-96bb-5116f8bfcb15",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Extra Meat",
+      "price": 300,
+      "uuid": "c3a28954-c024-40b3-9e6d-66b84a51dfd5",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Stir Fried Noodles",
+  "title": "Pad Thai",
+  "uuid": "87abd6d0-7d28-4ebb-904f-bdcf7003bdb7",
+  "basePrice": 1584,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of Filling",
+    "uuid": "3226f7b9-51c6-4e10-8b7f-e88289c976f7",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Vegetable",
+      "price": 0,
+      "uuid": "d4c063ce-3e7c-4bfd-8b42-880ac800a7a2",
+      "isSoldOut": false
+     },
+     {
+      "title": "Beef",
+      "price": 300,
+      "uuid": "81661a13-8ec8-49a0-ba14-054d6aa5b62e",
+      "isSoldOut": false
+     },
+     {
+      "title": "Chicken",
+      "price": 300,
+      "uuid": "6e7b7b66-320f-4fd8-b6d8-2047e39db43a",
+      "isSoldOut": false
+     },
+     {
+      "title": "Combination(King Prawn, Chicken and Beef)",
+      "price": 500,
+      "uuid": "6ee412d4-d4ec-42ae-b2f1-17e6aa035ddf",
+      "isSoldOut": false
+     },
+     {
+      "title": "Seafood",
+      "price": 500,
+      "uuid": "29786020-25bd-4e28-934e-e3e9836a5b96",
+      "isSoldOut": false
+     },
+     {
+      "title": "King Prawn",
+      "price": 700,
+      "uuid": "da2035c4-a040-40b3-9076-b3db62c667f7",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Extra",
+    "uuid": "fc453d62-0861-441a-96bb-5116f8bfcb15",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Extra Meat",
+      "price": 300,
+      "uuid": "c3a28954-c024-40b3-9e6d-66b84a51dfd5",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Stir Fried Noodles",
+  "title": "Chow Mein",
+  "uuid": "ab2c1353-fe60-489e-8979-d377fbace383",
+  "basePrice": 1584,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of Filling",
+    "uuid": "3226f7b9-51c6-4e10-8b7f-e88289c976f7",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Vegetable",
+      "price": 0,
+      "uuid": "d4c063ce-3e7c-4bfd-8b42-880ac800a7a2",
+      "isSoldOut": false
+     },
+     {
+      "title": "Beef",
+      "price": 300,
+      "uuid": "81661a13-8ec8-49a0-ba14-054d6aa5b62e",
+      "isSoldOut": false
+     },
+     {
+      "title": "Chicken",
+      "price": 300,
+      "uuid": "6e7b7b66-320f-4fd8-b6d8-2047e39db43a",
+      "isSoldOut": false
+     },
+     {
+      "title": "Combination(King Prawn, Chicken and Beef)",
+      "price": 500,
+      "uuid": "6ee412d4-d4ec-42ae-b2f1-17e6aa035ddf",
+      "isSoldOut": false
+     },
+     {
+      "title": "Seafood",
+      "price": 500,
+      "uuid": "29786020-25bd-4e28-934e-e3e9836a5b96",
+      "isSoldOut": false
+     },
+     {
+      "title": "King Prawn",
+      "price": 700,
+      "uuid": "da2035c4-a040-40b3-9076-b3db62c667f7",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Extra",
+    "uuid": "fc453d62-0861-441a-96bb-5116f8bfcb15",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Extra Meat",
+      "price": 300,
+      "uuid": "c3a28954-c024-40b3-9e6d-66b84a51dfd5",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Stir Fried Noodles",
+  "title": "Stir Fry Flat Rice Noodle",
+  "uuid": "b38060c5-0cb7-4aa4-8abb-92678c5b03e7",
+  "basePrice": 1584,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of Filling",
+    "uuid": "3226f7b9-51c6-4e10-8b7f-e88289c976f7",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Vegetable",
+      "price": 0,
+      "uuid": "d4c063ce-3e7c-4bfd-8b42-880ac800a7a2",
+      "isSoldOut": false
+     },
+     {
+      "title": "Beef",
+      "price": 300,
+      "uuid": "81661a13-8ec8-49a0-ba14-054d6aa5b62e",
+      "isSoldOut": false
+     },
+     {
+      "title": "Chicken",
+      "price": 300,
+      "uuid": "6e7b7b66-320f-4fd8-b6d8-2047e39db43a",
+      "isSoldOut": false
+     },
+     {
+      "title": "Combination(King Prawn, Chicken and Beef)",
+      "price": 500,
+      "uuid": "6ee412d4-d4ec-42ae-b2f1-17e6aa035ddf",
+      "isSoldOut": false
+     },
+     {
+      "title": "Seafood",
+      "price": 500,
+      "uuid": "29786020-25bd-4e28-934e-e3e9836a5b96",
+      "isSoldOut": false
+     },
+     {
+      "title": "King Prawn",
+      "price": 700,
+      "uuid": "da2035c4-a040-40b3-9076-b3db62c667f7",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Extra",
+    "uuid": "fc453d62-0861-441a-96bb-5116f8bfcb15",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Extra Meat",
+      "price": 300,
+      "uuid": "c3a28954-c024-40b3-9e6d-66b84a51dfd5",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Stir Fried Noodles",
+  "title": "Mee Goreng",
+  "uuid": "ccb33b1f-f67b-477b-a8fc-d149b2a485fb",
+  "basePrice": 1584,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of Filling",
+    "uuid": "3226f7b9-51c6-4e10-8b7f-e88289c976f7",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Vegetable",
+      "price": 0,
+      "uuid": "d4c063ce-3e7c-4bfd-8b42-880ac800a7a2",
+      "isSoldOut": false
+     },
+     {
+      "title": "Beef",
+      "price": 300,
+      "uuid": "81661a13-8ec8-49a0-ba14-054d6aa5b62e",
+      "isSoldOut": false
+     },
+     {
+      "title": "Chicken",
+      "price": 300,
+      "uuid": "6e7b7b66-320f-4fd8-b6d8-2047e39db43a",
+      "isSoldOut": false
+     },
+     {
+      "title": "Combination(King Prawn, Chicken and Beef)",
+      "price": 500,
+      "uuid": "6ee412d4-d4ec-42ae-b2f1-17e6aa035ddf",
+      "isSoldOut": false
+     },
+     {
+      "title": "Seafood",
+      "price": 500,
+      "uuid": "29786020-25bd-4e28-934e-e3e9836a5b96",
+      "isSoldOut": false
+     },
+     {
+      "title": "King Prawn",
+      "price": 700,
+      "uuid": "da2035c4-a040-40b3-9076-b3db62c667f7",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Extra",
+    "uuid": "fc453d62-0861-441a-96bb-5116f8bfcb15",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Extra Meat",
+      "price": 300,
+      "uuid": "c3a28954-c024-40b3-9e6d-66b84a51dfd5",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Fried Rice",
+  "title": "Nasi Goreng",
+  "uuid": "25bdaa4e-cf58-47b3-a6e3-0080c4e7f82e",
+  "basePrice": 1824,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of Filling",
+    "uuid": "3226f7b9-51c6-4e10-8b7f-e88289c976f7",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Vegetable",
+      "price": 0,
+      "uuid": "d4c063ce-3e7c-4bfd-8b42-880ac800a7a2",
+      "isSoldOut": false
+     },
+     {
+      "title": "Beef",
+      "price": 300,
+      "uuid": "81661a13-8ec8-49a0-ba14-054d6aa5b62e",
+      "isSoldOut": false
+     },
+     {
+      "title": "Chicken",
+      "price": 300,
+      "uuid": "6e7b7b66-320f-4fd8-b6d8-2047e39db43a",
+      "isSoldOut": false
+     },
+     {
+      "title": "Combination(King Prawn, Chicken and Beef)",
+      "price": 500,
+      "uuid": "6ee412d4-d4ec-42ae-b2f1-17e6aa035ddf",
+      "isSoldOut": false
+     },
+     {
+      "title": "Seafood",
+      "price": 500,
+      "uuid": "29786020-25bd-4e28-934e-e3e9836a5b96",
+      "isSoldOut": false
+     },
+     {
+      "title": "King Prawn",
+      "price": 700,
+      "uuid": "da2035c4-a040-40b3-9076-b3db62c667f7",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Fried Rice",
+  "title": "Chinese Special Fried Rice",
+  "uuid": "3dc8e626-f696-4fdb-a512-fec1950577c7",
+  "basePrice": 1824,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of Filling",
+    "uuid": "2142e417-8adb-4e1b-8f9b-dd18755d73a2",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Vegetable",
+      "price": 0,
+      "uuid": "d4c063ce-3e7c-4bfd-8b42-880ac800a7a2",
+      "isSoldOut": false
+     },
+     {
+      "title": "Beef",
+      "price": 300,
+      "uuid": "81661a13-8ec8-49a0-ba14-054d6aa5b62e",
+      "isSoldOut": false
+     },
+     {
+      "title": "Chicken",
+      "price": 300,
+      "uuid": "6e7b7b66-320f-4fd8-b6d8-2047e39db43a",
+      "isSoldOut": false
+     },
+     {
+      "title": "Combination (King Prawn, Chicken and Beef)",
+      "price": 500,
+      "uuid": "9f169276-7a95-4a70-8537-224afc894f75",
+      "isSoldOut": false
+     },
+     {
+      "title": "Seafood",
+      "price": 500,
+      "uuid": "29786020-25bd-4e28-934e-e3e9836a5b96",
+      "isSoldOut": false
+     },
+     {
+      "title": "King Prawn",
+      "price": 700,
+      "uuid": "da2035c4-a040-40b3-9076-b3db62c667f7",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Fried Rice",
+  "title": "Thai Fried Rice",
+  "uuid": "838f2ffd-f7b4-40dc-80cf-0572508b88a1",
+  "basePrice": 1824,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of Filling",
+    "uuid": "3226f7b9-51c6-4e10-8b7f-e88289c976f7",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Vegetable",
+      "price": 0,
+      "uuid": "d4c063ce-3e7c-4bfd-8b42-880ac800a7a2",
+      "isSoldOut": false
+     },
+     {
+      "title": "Beef",
+      "price": 300,
+      "uuid": "81661a13-8ec8-49a0-ba14-054d6aa5b62e",
+      "isSoldOut": false
+     },
+     {
+      "title": "Chicken",
+      "price": 300,
+      "uuid": "6e7b7b66-320f-4fd8-b6d8-2047e39db43a",
+      "isSoldOut": false
+     },
+     {
+      "title": "Combination(King Prawn, Chicken and Beef)",
+      "price": 500,
+      "uuid": "6ee412d4-d4ec-42ae-b2f1-17e6aa035ddf",
+      "isSoldOut": false
+     },
+     {
+      "title": "Seafood",
+      "price": 500,
+      "uuid": "29786020-25bd-4e28-934e-e3e9836a5b96",
+      "isSoldOut": false
+     },
+     {
+      "title": "King Prawn",
+      "price": 700,
+      "uuid": "da2035c4-a040-40b3-9076-b3db62c667f7",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Entree",
+  "title": "Spring Rolls",
+  "uuid": "ddfbc273-9c09-4c93-a4a4-eef3386cad7d",
+  "basePrice": 250,
+  "hasCustomizations": false,
+  "customizationsList": []
+ },
+ {
+  "category": "Entree",
+  "title": "Vegetable Spring Rolls",
+  "uuid": "eb8071df-a92b-44aa-9c6f-62d8cbeb8f9d",
+  "basePrice": 250,
+  "hasCustomizations": false,
+  "customizationsList": []
+ },
+ {
+  "category": "Entree",
+  "title": "Pork Fried Dim Sim",
+  "uuid": "39f55de7-e66b-4e2a-8c2e-bc6ae424f50a",
+  "basePrice": 280,
+  "hasCustomizations": false,
+  "customizationsList": []
+ },
+ {
+  "category": "Entree",
+  "title": "Steamed Dim Sim",
+  "uuid": "b6259c3b-4bee-4dc6-81aa-6fb0b0788097",
+  "basePrice": 1680,
+  "hasCustomizations": false,
+  "customizationsList": []
+ },
+ {
+  "category": "Entree",
+  "title": "Prawn Chips",
+  "uuid": "1ef3d463-eff5-45d2-b021-77bb7d025ec4",
+  "basePrice": 380,
+  "hasCustomizations": false,
+  "customizationsList": []
+ },
+ {
+  "category": "Chinese Stir Fried",
+  "title": "Honey Chicken",
+  "uuid": "2b71b00c-c132-451b-9476-586ce7255a95",
+  "basePrice": 2580,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Chinese Stir Fried",
+  "title": "Satay Chicken",
+  "uuid": "414fa0c6-97bd-4193-8301-0d11fa7b3fb3",
+  "basePrice": 2580,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Chinese Stir Fried",
+  "title": "Mongolian Beef",
+  "uuid": "7a419144-7308-4324-bb49-e98712e6792c",
+  "basePrice": 2580,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Chinese Stir Fried",
+  "title": "Beef with Black Bean Sauce",
+  "uuid": "71dfc30d-a29f-4012-b38b-2dc272e96e92",
+  "basePrice": 2580,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Chinese Stir Fried",
+  "title": "Salt and Pepper Fried Fish",
+  "uuid": "37985c28-70fa-4398-8486-2bb6a019fc80",
+  "basePrice": 2580,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Chinese Stir Fried",
+  "title": "Teriyaki Chicken",
+  "uuid": "426b450a-ece4-438f-b121-6874dcd51e1a",
+  "basePrice": 2580,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Chinese Stir Fried",
+  "title": "Sweet and Sour Chicken",
+  "uuid": "cc2a13bb-1ea5-4c80-b4e9-40d4822995fb",
+  "basePrice": 2580,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Chinese Stir Fried",
+  "title": "Chicken with Vegetables",
+  "uuid": "883513ac-6816-407b-ace8-7d1389c6f0e2",
+  "basePrice": 2580,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Chinese Stir Fried",
+  "title": "Chilli Chicken",
+  "uuid": "d369b34c-4015-4e16-a188-8c12bdcbb83b",
+  "basePrice": 2580,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Noodle Soup",
+  "title": "Chicken Wonton Noodle Soup",
+  "uuid": "952fb017-aea4-40cd-92c3-83b5fb02e0fc",
+  "basePrice": 1780,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Extra",
+    "uuid": "89b0c4d1-cdbd-47d9-a98f-a19cc6b6a066",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Vegetables",
+      "price": 300,
+      "uuid": "4b9b80a8-85ac-48d1-b9b5-2513e1028a1e",
+      "isSoldOut": false
+     },
+     {
+      "title": "Chicken breast pieces",
+      "price": 300,
+      "uuid": "e10e23c5-fbf1-4b07-a431-10b3725537af",
+      "isSoldOut": false
+     },
+     {
+      "title": "Beef",
+      "price": 300,
+      "uuid": "3b8d9578-3518-4ed8-a5a5-81427953737a",
+      "isSoldOut": false
+     },
+     {
+      "title": "King Prawn",
+      "price": 500,
+      "uuid": "2fb35fd4-bce4-4a81-a09b-a95cb504f481",
+      "isSoldOut": false
+     },
+     {
+      "title": "Seafood",
+      "price": 500,
+      "uuid": "458a0880-bc5a-4b58-bde0-2072297313d9",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Noodle Soup",
+  "title": "Laksa Soup",
+  "uuid": "ff60fcd6-589b-4af2-8985-120f5fccf57b",
+  "basePrice": 1780,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of Filling",
+    "uuid": "3226f7b9-51c6-4e10-8b7f-e88289c976f7",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Vegetable",
+      "price": 0,
+      "uuid": "d4c063ce-3e7c-4bfd-8b42-880ac800a7a2",
+      "isSoldOut": false
+     },
+     {
+      "title": "Beef",
+      "price": 300,
+      "uuid": "81661a13-8ec8-49a0-ba14-054d6aa5b62e",
+      "isSoldOut": false
+     },
+     {
+      "title": "Chicken",
+      "price": 300,
+      "uuid": "6e7b7b66-320f-4fd8-b6d8-2047e39db43a",
+      "isSoldOut": false
+     },
+     {
+      "title": "Combination(King Prawn, Chicken and Beef)",
+      "price": 500,
+      "uuid": "6ee412d4-d4ec-42ae-b2f1-17e6aa035ddf",
+      "isSoldOut": false
+     },
+     {
+      "title": "Seafood",
+      "price": 500,
+      "uuid": "29786020-25bd-4e28-934e-e3e9836a5b96",
+      "isSoldOut": false
+     },
+     {
+      "title": "King Prawn",
+      "price": 700,
+      "uuid": "da2035c4-a040-40b3-9076-b3db62c667f7",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Extra",
+    "uuid": "fc453d62-0861-441a-96bb-5116f8bfcb15",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Extra Meat",
+      "price": 300,
+      "uuid": "c3a28954-c024-40b3-9e6d-66b84a51dfd5",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Noodle Soup",
+  "title": "Tomyum Noodle Soup",
+  "uuid": "eac8e1b8-b99e-494f-871b-14839876dd1b",
+  "basePrice": 1780,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of Filling",
+    "uuid": "2142e417-8adb-4e1b-8f9b-dd18755d73a2",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Vegetable",
+      "price": 0,
+      "uuid": "d4c063ce-3e7c-4bfd-8b42-880ac800a7a2",
+      "isSoldOut": false
+     },
+     {
+      "title": "Beef",
+      "price": 300,
+      "uuid": "81661a13-8ec8-49a0-ba14-054d6aa5b62e",
+      "isSoldOut": false
+     },
+     {
+      "title": "Chicken",
+      "price": 300,
+      "uuid": "6e7b7b66-320f-4fd8-b6d8-2047e39db43a",
+      "isSoldOut": false
+     },
+     {
+      "title": "Combination (King Prawn, Chicken and Beef)",
+      "price": 500,
+      "uuid": "9f169276-7a95-4a70-8537-224afc894f75",
+      "isSoldOut": false
+     },
+     {
+      "title": "Seafood",
+      "price": 500,
+      "uuid": "29786020-25bd-4e28-934e-e3e9836a5b96",
+      "isSoldOut": false
+     },
+     {
+      "title": "King Prawn",
+      "price": 700,
+      "uuid": "da2035c4-a040-40b3-9076-b3db62c667f7",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Chief's Special",
+  "title": "Pork Chop with Rice or Noodle Soup",
+  "uuid": "a9517cb9-0f34-4e11-8830-cccf4efcb350",
+  "basePrice": 2280,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of Carbs (Chief's Special)",
+    "uuid": "f9a8bfa8-c2a1-4a02-998a-3ef5193b7eb5",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Steam Rice",
+      "price": 0,
+      "uuid": "6169a1ab-43bf-4107-a263-55796525472c",
+      "isSoldOut": false
+     },
+     {
+      "title": "Fried Rice",
+      "price": 0,
+      "uuid": "6159d899-3041-49b8-920b-c687bd8627e7",
+      "isSoldOut": false
+     },
+     {
+      "title": "Clear Noodle Soup",
+      "price": 0,
+      "uuid": "9af11411-c3fc-4423-8b4f-556094a5b6ed",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Chief's Special",
+  "title": "Crispy Chicken with Rice or Noodle Soup",
+  "uuid": "3cde92d0-be43-4cb0-ac6b-727f74426595",
+  "basePrice": 2280,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of Carbs (Chief's Special)",
+    "uuid": "f9a8bfa8-c2a1-4a02-998a-3ef5193b7eb5",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Steam Rice",
+      "price": 0,
+      "uuid": "6169a1ab-43bf-4107-a263-55796525472c",
+      "isSoldOut": false
+     },
+     {
+      "title": "Fried Rice",
+      "price": 0,
+      "uuid": "6159d899-3041-49b8-920b-c687bd8627e7",
+      "isSoldOut": false
+     },
+     {
+      "title": "Clear Noodle Soup",
+      "price": 0,
+      "uuid": "9af11411-c3fc-4423-8b4f-556094a5b6ed",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Chief's Special",
+  "title": "Beef Brisket",
+  "uuid": "00b20be3-ad35-4d1e-9a39-54fea71e78fd",
+  "basePrice": 2280,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of Carbs (Chief's Special)",
+    "uuid": "f9a8bfa8-c2a1-4a02-998a-3ef5193b7eb5",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Steam Rice",
+      "price": 0,
+      "uuid": "6169a1ab-43bf-4107-a263-55796525472c",
+      "isSoldOut": false
+     },
+     {
+      "title": "Fried Rice",
+      "price": 0,
+      "uuid": "6159d899-3041-49b8-920b-c687bd8627e7",
+      "isSoldOut": false
+     },
+     {
+      "title": "Clear Noodle Soup",
+      "price": 0,
+      "uuid": "9af11411-c3fc-4423-8b4f-556094a5b6ed",
+      "isSoldOut": false
+     }
+    ]
+   },
+   {
+    "title": "Add Drinks",
+    "uuid": "cb9e8754-cbcc-44bd-93ed-e9e663f03c6a",
+    "minPermitted": 0,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Soft Drink Can 375ml",
+      "price": 480,
+      "uuid": "778523eb-8c78-4a29-a4c7-144486cde225",
+      "isSoldOut": false
+     },
+     {
+      "title": "Soft Drink Bottle 600ml",
+      "price": 600,
+      "uuid": "fe7cfd0f-4c7a-4523-81b0-8cff5df75369",
+      "isSoldOut": false
+     },
+     {
+      "title": "Water Bottle",
+      "price": 480,
+      "uuid": "803198ab-812d-491a-9fba-1d3f0c45b1cd",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Sides",
+  "title": "Steamed Rice",
+  "uuid": "ec4d880f-49ee-4f43-9ce1-56caad131e8c",
+  "basePrice": 600,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of Size",
+    "uuid": "77925532-b4ee-4056-9d79-4f3f9795b33f",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Small",
+      "price": 0,
+      "uuid": "9ffa32fb-6f59-4e67-a437-c6d1ef25ba85",
+      "isSoldOut": false
+     },
+     {
+      "title": "Large",
+      "price": 150,
+      "uuid": "2e63a3e2-7814-48fc-ba19-10db8efc0808",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Sides",
+  "title": "Fried Rice",
+  "uuid": "301e2427-9ae4-4fe5-830b-c583512792d0",
+  "basePrice": 1190,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of Size",
+    "uuid": "21bd7995-c4a3-4cdb-833c-79d311efbd77",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Small",
+      "price": 0,
+      "uuid": "9ffa32fb-6f59-4e67-a437-c6d1ef25ba85",
+      "isSoldOut": false
+     },
+     {
+      "title": "Large",
+      "price": 200,
+      "uuid": "74d2fb4c-b301-4191-abf2-04663de933e7",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Beverage",
+  "title": "Soft Drink Can",
+  "uuid": "021876d1-d856-4fc2-b676-d879b155db1e",
+  "basePrice": 480,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of Flavour",
+    "uuid": "984b5b97-c0dd-4921-8f2c-db69a6a33c10",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Coke",
+      "price": 0,
+      "uuid": "8866de4f-fa02-4e03-abcc-75ca1e49ead5",
+      "isSoldOut": false
+     },
+     {
+      "title": "Coke Zero",
+      "price": 0,
+      "uuid": "d93b9208-116b-4199-9032-d12d34e97707",
+      "isSoldOut": false
+     },
+     {
+      "title": "Fanta",
+      "price": 0,
+      "uuid": "a2ea9567-e2c8-4eb6-9fd6-9dfd1ab78086",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Beverage",
+  "title": "Soft Drink Bottle",
+  "uuid": "0e5e2067-819e-4966-8a7e-e16f0c83fe6a",
+  "basePrice": 600,
+  "hasCustomizations": true,
+  "customizationsList": [
+   {
+    "title": "Choice of Flavour",
+    "uuid": "f911c656-2578-4a87-aae0-092cb760887d",
+    "minPermitted": 1,
+    "maxPermitted": 1,
+    "options": [
+     {
+      "title": "Coke",
+      "price": 0,
+      "uuid": "8866de4f-fa02-4e03-abcc-75ca1e49ead5",
+      "isSoldOut": false
+     },
+     {
+      "title": "Coke Zero",
+      "price": 0,
+      "uuid": "d93b9208-116b-4199-9032-d12d34e97707",
+      "isSoldOut": false
+     },
+     {
+      "title": "Vanilla Coke",
+      "price": 0,
+      "uuid": "39fc68f5-5539-40d9-a102-bc02892f5d88",
+      "isSoldOut": false
+     },
+     {
+      "title": "Fanta",
+      "price": 0,
+      "uuid": "3948a1ee-29bd-48ff-b57f-9bf5ad176cd3",
+      "isSoldOut": false
+     },
+     {
+      "title": "Sprite",
+      "price": 0,
+      "uuid": "6aa8017b-3555-482c-b5f9-ee828409961a",
+      "isSoldOut": false
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "category": "Beverage",
+  "title": "Water Bottle",
+  "uuid": "6ae15d34-e705-43bb-a238-1ddf6a6a250b",
+  "basePrice": 480,
+  "hasCustomizations": false,
+  "customizationsList": []
+ },
+ {
+  "category": "Soup",
+  "title": "Chicken Corn Soup",
+  "uuid": "6d465925-b261-474e-96ec-e588afddbc18",
+  "basePrice": 850,
+  "hasCustomizations": false,
+  "customizationsList": []
+ }
+]
