@@ -1,0 +1,23 @@
+.dh-marble {
+  background-color: var(--cream-050);
+  background-image:
+    radial-gradient(120% 80% at 80% -10%, rgba(255,255,255,0.9), transparent 60%),
+    radial-gradient(90% 70% at -10% 110%, rgba(239,226,210,0.6), transparent 55%),
+    linear-gradient(180deg, #fffaf4 0%, var(--cream-050) 100%);
+}
+
+.dh-display {
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  text-transform: uppercase;
+  letter-spacing: var(--type-display-tracking);
+  color: var(--color-primary);
+  text-shadow: var(--display-shadow);
+  line-height: var(--leading-tight);
+}
+
+.dh-cn {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+}

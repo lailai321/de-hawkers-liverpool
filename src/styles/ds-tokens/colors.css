@@ -1,0 +1,84 @@
+/* ===========================================================================
+   De Hawker's — Color tokens
+   Sampled directly from the menu boards & Westfield Liverpool fit-out package.
+   One dominant terracotta, one golden-yellow accent, warm cream paper,
+   plus the real fit-out material neutrals (white tile, concrete, bamboo).
+   =========================================================================== */
+:root {
+  /* --- Terracotta / rust red (PRIMARY brand color) ------------------------ */
+  --terracotta-800: #6E2109;   /* deepest — shadows, pressed states          */
+  --terracotta-700: #8A2A0D;   /* storefront glazed tile rust                */
+  --terracotta-600: #A4330F;
+  --terracotta-500: #BA3A13;   /* ★ BRAND PRIMARY — menu panels, signage     */
+  --terracotta-400: #CE5A33;
+  --terracotta-300: #E08A6A;
+  --terracotta-200: #EFB9A4;
+  --terracotta-100: #F7DDD2;
+  --terracotta-050: #FBEFE9;
+
+  /* --- Saffron / golden yellow (ACCENT) ----------------------------------- */
+  --saffron-700: #D98A00;
+  --saffron-600: #F2A900;      /* deeper gold — burst outlines, hover gold    */
+  --saffron-500: #FFC418;      /* ★ BRAND ACCENT — offset shadows, price star */
+  --saffron-400: #FFD451;
+  --saffron-300: #FFE38A;
+  --saffron-100: #FFF3CE;
+
+  /* --- Cream / warm paper -------------------------------------------------- */
+  --cream-050: #FDF4ED;        /* ★ page background — warm marble paper       */
+  --cream-100: #F6ECDF;
+  --cream-200: #EFE2D2;
+  --cream-300: #E4D3BE;
+
+  /* --- Warm ink (text — never pure black) --------------------------------- */
+  --ink-900: #2A1A12;          /* ★ primary text — warm espresso             */
+  --ink-700: #554545;          /* secondary text                             */
+  --ink-500: #856F63;          /* muted captions                             */
+  --ink-300: #B8A99E;          /* disabled / hairlines                       */
+
+  /* --- Fit-out material neutrals ------------------------------------------ */
+  --paper-white: #FFFFFF;      /* glazed white wall tile                      */
+  --bamboo-600: #8C5A2C;       /* timber slat — counter base, deep            */
+  --bamboo-500: #B07A45;       /* bamboo / warm wood                          */
+  --bamboo-300: #D8B58A;       /* light timber                                */
+  --concrete-500: #A6A9A8;     /* polished concrete ceiling                   */
+  --concrete-300: #C9CBCA;
+  --grout-brown: #8B5A52;      /* Mapei terracotta grout                      */
+
+  /* --- Greens (fresh garnish — sparingly, for food/freshness cues) -------- */
+  --scallion-500: #5C8A3A;
+  --scallion-300: #9BC06A;
+
+  /* =======================================================================
+     SEMANTIC ALIASES — reference these in product UI
+     ======================================================================= */
+  --color-bg:            var(--cream-050);
+  --color-bg-marble:     var(--cream-050);
+  --color-surface:       var(--paper-white);
+  --color-surface-sunk:  var(--cream-100);
+  --color-panel:         var(--terracotta-500);   /* the terracotta menu panel */
+  --color-panel-ink:     var(--cream-050);         /* text on terracotta panel  */
+
+  --color-primary:       var(--terracotta-500);
+  --color-primary-hover: var(--terracotta-600);
+  --color-primary-press: var(--terracotta-700);
+  --color-on-primary:    var(--cream-050);
+
+  --color-accent:        var(--saffron-500);
+  --color-accent-hover:  var(--saffron-600);
+  --color-on-accent:     var(--ink-900);
+
+  --color-text:          var(--ink-900);
+  --color-text-muted:    var(--ink-700);
+  --color-text-subtle:   var(--ink-500);
+  --color-text-invert:   var(--cream-050);
+
+  --color-border:        var(--terracotta-100);
+  --color-border-strong: var(--terracotta-500);
+  --color-hairline:      var(--cream-300);
+
+  --color-focus-ring:    var(--saffron-500);
+
+  --color-success:       var(--scallion-500);
+  --color-price:         var(--terracotta-500);
+}

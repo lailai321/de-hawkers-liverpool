@@ -1,33 +1,38 @@
-@font-face {
-  font-family: 'Rackety DEMO';
-  src: url('/fonts/Rackety_DEMO.otf') format('opentype');
-  font-weight: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'BudgePair';
-  src: url('/fonts/BudgePair-Regular.otf') format('opentype');
-  font-weight: normal;
-  font-display: swap;
-}
+/* De Hawker's brand fonts (replaces Baloo 2 / Nunito Sans) */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Zilla+Slab:ital,wght@0,500;0,600;0,700;1,600&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,400&display=swap');
+
+/* De Hawker's design-system tokens (colors/typography/spacing/effects/base) */
+@import '../styles/ds-tokens/colors.css';
+@import '../styles/ds-tokens/typography.css';
+@import '../styles/ds-tokens/spacing.css';
+@import '../styles/ds-tokens/effects.css';
+@import '../styles/ds-tokens/base.css';
 
 @import "tailwindcss";
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --brand:   #F3BD25;
-  --brand-d: #D9A815;
-  --bg:      #FFFFFF;
-  --dark:    #1A1A1A;
-  --surface: #F7F7F7;
+  /* Site-wide semantic colors, remapped from Super Noodles yellow/dark to
+     De Hawker's terracotta/saffron/cream/espresso. Existing components
+     reference these variable names via var(--brand) etc., so most of the
+     reskin happens here rather than in each component. */
+  --brand:   #BA3A13; /* terracotta-500 */
+  --brand-d: #8A2A0D; /* terracotta-700, hover/press */
+  --accent:   #FFC418; /* saffron-500 — offset shadows, price bursts, selected states */
+  --accent-d: #F2A900; /* saffron-600 */
+  --bg:      #FDF4ED; /* cream-050 */
+  --dark:    #2A1A12; /* ink-900, espresso */
+  --surface: #F6ECDF; /* cream-100 */
   --card:    #FFFFFF;
-  --white:   #1A1A1A;   /* main text */
-  --muted:   #666666;
-  --border:  #EEEEEE;
-  --dim:     #999999;
+  --white:   #2A1A12;   /* main text */
+  --muted:   #856F63; /* ink-500 */
+  --border:  #F7DDD2; /* terracotta-100 */
+  --dim:     #B8A99E; /* ink-300 */
+  --on-brand:  #FDF4ED; /* cream text on terracotta panels/buttons */
+  --on-accent: #2A1A12; /* espresso text on saffron accents */
   /* legacy */
-  --yellow:  #F3BD25;
+  --yellow:  #BA3A13;
   --black:   #FFFFFF;
 }
 
@@ -37,7 +42,7 @@ html {
 }
 
 body {
-  font-family: 'BudgePair', system-ui, sans-serif;
+  font-family: 'Nunito Sans', system-ui, sans-serif;
   background: var(--bg);
   color: var(--dark);
   -webkit-font-smoothing: antialiased;
@@ -82,8 +87,8 @@ body {
   background: transparent;
   border: none;
   border-left: 4px solid transparent;
-  color: #1A1A1A;
-  font-family: 'BudgePair', sans-serif;
+  color: var(--dark);
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0;
@@ -93,11 +98,11 @@ body {
   transition: background 0.15s;
   line-height: 1.3;
 }
-.cat-sidebar-btn:hover { background: #F7F7F7; }
+.cat-sidebar-btn:hover { background: var(--surface); }
 .cat-sidebar-btn.active {
   background: var(--brand);
-  border-left-color: #1A1A1A;
-  color: #1A1A1A;
+  border-left-color: var(--accent);
+  color: var(--on-brand);
 }
 
 /* ── Main content ── */
@@ -110,13 +115,14 @@ body {
 /* ── Category section title ── */
 .cat-section-title {
   background: var(--brand);
-  color: var(--dark);
-  font-family: 'Rackety DEMO', sans-serif;
+  color: var(--on-brand);
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 800;
   font-size: 26px;
   letter-spacing: 0.05em;
   padding: 12px 20px;
   margin-bottom: 16px;
-  border-radius: 4px;
+  border-radius: var(--radius-md);
   text-transform: uppercase;
 }
 
@@ -147,7 +153,7 @@ body {
     top: 64px;
     z-index: 90;
     background: #FFFFFF;
-    border-bottom: 1px solid #EEEEEE;
+    border-bottom: 1px solid #F7DDD2;
     box-shadow: 0 2px 6px rgba(0,0,0,0.07);
   }
 }
@@ -155,27 +161,28 @@ body {
 /* ── Inputs ── */
 .input-dark {
   background: #FFFFFF;
-  border: 1px solid #DDDDDD;
-  border-radius: 4px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
   padding: 12px 16px;
   color: var(--dark);
-  font-family: 'BudgePair', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 1rem;
   width: 100%;
   outline: none;
   transition: border-color 0.15s;
 }
-.input-dark:focus { border-color: var(--brand); }
-.input-dark::placeholder { color: #AAAAAA; }
+.input-dark:focus { border-color: var(--accent); }
+.input-dark::placeholder { color: var(--dim); }
 .input-dark option { background: #FFF; }
 
 /* ── Buttons ── */
 .btn-brand {
   background: var(--brand);
-  color: var(--dark);
+  color: var(--on-brand);
   border: none;
-  border-radius: 4px;
-  font-family: 'Rackety DEMO', sans-serif;
+  border-radius: var(--radius-pill);
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 800;
   font-size: 20px;
   letter-spacing: 0.05em;
   padding: 14px 24px;
@@ -204,10 +211,10 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: #FFF8E5;
+  background: var(--terracotta-050, #FBEFE9);
   border-radius: 12px;
-  border: 1.5px solid #F3BD25;
-  box-shadow: 0 2px 10px rgba(243,189,37,0.18);
+  border: 1.5px solid var(--accent);
+  box-shadow: 0 2px 10px rgba(255,196,24,0.25);
   position: relative;
   padding: 12px 16px;
   gap: 4px;
@@ -223,23 +230,23 @@ body {
   height: 18px;
   background: #FFFFFF;
   border-radius: 50%;
-  border: 1.5px solid #F3BD25;
+  border: 1.5px solid var(--accent);
   z-index: 2;
 }
 .coupon-card::before { left:  -9px; }
 .coupon-card::after  { right: -9px; }
 .coupon-title {
-  font-family: 'BudgePair', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
-  color: #F3BD25;
+  color: var(--brand);
   line-height: 1.3;
   word-break: break-word;
 }
 .coupon-subtitle {
-  font-family: 'BudgePair', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 1.25rem;
-  color: #555555;
+  color: var(--muted);
   line-height: 1.3;
 }
 @media (max-width: 600px) {
@@ -273,7 +280,9 @@ body {
   gap: 10px;
 }
 .hero-title {
-  font-family: 'Rackety DEMO', sans-serif;
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
   font-size: 3.75rem;
   color: #FFFFFF;
   letter-spacing: 0.04em;
@@ -285,7 +294,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 6px 10px;
-  font-family: 'BudgePair', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 0.875rem;
   color: rgba(255,255,255,0.95);
   text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0px 0px 20px rgba(0,0,0,0.6);
@@ -293,13 +302,13 @@ body {
 .hero-sep { opacity: 0.4; }
 
 .hero-info-item { display: inline-flex; align-items: flex-start; gap: 6px; }
-.hero-info-icon { color: #F3BD25; flex-shrink: 0; margin-top: 2px; }
+.hero-info-icon { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
 
 .hero-mobile-overlay { display: none; }
 
 .hero-coupons {
   background: #FFFFFF;
-  border-bottom: 1px solid #EEEEEE;
+  border-bottom: 1px solid var(--border);
   padding: 18px 28px;
 }
 .hero-coupons .promo-scroll { max-width: 1280px; margin: 0 auto; padding: 0; }

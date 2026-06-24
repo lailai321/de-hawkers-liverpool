@@ -14,7 +14,7 @@ export default function ItemCard({ item, isSoldOut, onClick }: Props) {
       onClick={isSoldOut ? undefined : onClick}
       style={{
         background: '#FFFFFF', borderRadius: 8,
-        border: '1px solid #EEEEEE',
+        border: '1px solid #F7DDD2',
         boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
         padding: '14px 14px 26px 14px',
         display: 'flex', gap: 12,
@@ -28,18 +28,18 @@ export default function ItemCard({ item, isSoldOut, onClick }: Props) {
     >
       {/* Text */}
       <div style={{ flex: 1, minWidth: 0 }}>
-        <p style={{ fontFamily: "'BudgePair', sans-serif", fontWeight: 700, fontSize: '1rem', color: '#1A1A1A', lineHeight: 1.35, marginBottom: 6 }}>
+        <p style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 700, fontSize: '1rem', color: '#2A1A12', lineHeight: 1.35, marginBottom: 6 }}>
           {item.name}
         </p>
         {item.description && (
           <p style={{
-            fontFamily: "'BudgePair', sans-serif", fontSize: '0.8rem', color: '#666666', lineHeight: 1.5, marginBottom: 8,
+            fontFamily: "'Nunito Sans', sans-serif", fontSize: '0.8rem', color: '#856F63', lineHeight: 1.5, marginBottom: 8,
             overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' as const,
           }}>
             {item.description}
           </p>
         )}
-        <p style={{ fontFamily: "'BudgePair', sans-serif", fontWeight: 700, fontSize: '0.95rem', color: '#1A1A1A' }}>
+        <p style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 700, fontSize: '0.95rem', color: '#2A1A12' }}>
           ${item.price.toFixed(2)}
           {isSoldOut && (
             <span style={{ marginLeft: 8, fontSize: 11, padding: '2px 7px', borderRadius: 3, background: '#F5F5F5', color: '#999', border: '1px solid #E5E5E5' }}>
@@ -63,7 +63,7 @@ export default function ItemCard({ item, isSoldOut, onClick }: Props) {
               style={{
                 position: 'absolute', right: 0, bottom: 0,
                 width: 40, height: 40, borderRadius: '50%',
-                background: '#F3BD25', color: '#1A1A1A',
+                background: '#BA3A13', color: '#2A1A12',
                 border: 'none', fontSize: '1.6rem', fontWeight: 700,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 cursor: 'pointer', boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
@@ -81,7 +81,7 @@ export default function ItemCard({ item, isSoldOut, onClick }: Props) {
               onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
               style={{
                 width: 40, height: 40, borderRadius: '50%',
-                background: '#F3BD25', color: '#1A1A1A',
+                background: '#BA3A13', color: '#2A1A12',
                 border: 'none', fontSize: '1.6rem', fontWeight: 700,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 cursor: 'pointer', boxShadow: '0 2px 8px rgba(0,0,0,0.2)',

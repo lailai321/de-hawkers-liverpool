@@ -12,8 +12,8 @@ interface OrderSummary {
   order_items: { item_name: string; quantity: number }[]
 }
 
-const R = { fontFamily: "'Rackety DEMO', sans-serif" } as const
-const F = { fontFamily: "'BudgePair', sans-serif" } as const
+const R = { fontFamily: "'Baloo 2', sans-serif" } as const
+const F = { fontFamily: "'Nunito Sans', sans-serif" } as const
 
 const STATUS = {
   confirmed:  { label: "We're preparing your order",     color: '#9A6700', background: '#FFF7D6' },
@@ -75,7 +75,7 @@ export default function TrackPage() {
   return (
     <div style={{ background: '#FFF', minHeight: '100svh', padding: '56px 16px 80px' }}>
       <div style={{ maxWidth: 520, margin: '0 auto' }}>
-        <h1 style={{ ...R, fontSize: 'clamp(2.4rem, 10vw, 3rem)', color: '#1A1A1A', letterSpacing: '0.06em', textAlign: 'center', marginBottom: 8 }}>
+        <h1 style={{ ...R, fontSize: 'clamp(2.4rem, 10vw, 3rem)', color: '#2A1A12', letterSpacing: '0.06em', textAlign: 'center', marginBottom: 8 }}>
           Track Your Order
         </h1>
         <p style={{ ...F, fontSize: '0.95rem', color: '#666', textAlign: 'center', marginBottom: 32 }}>
@@ -128,7 +128,7 @@ export default function TrackPage() {
                 }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, marginBottom: 12 }}>
                     <div>
-                      <h2 style={{ ...R, fontSize: '1.35rem', color: '#1A1A1A', letterSpacing: '0.04em' }}>
+                      <h2 style={{ ...R, fontSize: '1.35rem', color: '#2A1A12', letterSpacing: '0.04em' }}>
                         Order #{String(order.order_number).padStart(4, '0')}
                       </h2>
                       <p style={{ ...F, fontSize: '0.78rem', color: '#777', marginTop: 3 }}>
@@ -161,7 +161,7 @@ export default function TrackPage() {
                     <span style={{ ...F, fontSize: '0.85rem', color: '#666' }}>
                       Pickup: {order.pickup_time === 'asap' ? 'ASAP' : order.pickup_time}
                     </span>
-                    <strong style={{ ...F, fontSize: '0.95rem', color: '#1A1A1A' }}>
+                    <strong style={{ ...F, fontSize: '0.95rem', color: '#2A1A12' }}>
                       ${(order.total_cents / 100).toFixed(2)}
                     </strong>
                   </div>

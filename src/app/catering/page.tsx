@@ -1,12 +1,12 @@
 'use client'
 import { useState } from 'react'
 
-const R = { fontFamily: "'Rackety DEMO', sans-serif" } as const
-const F = { fontFamily: "'BudgePair', sans-serif" } as const
+const R = { fontFamily: "'Baloo 2', sans-serif" } as const
+const F = { fontFamily: "'Nunito Sans', sans-serif" } as const
 
 const inputStyle: React.CSSProperties = {
   ...F, background: '#FFF', border: '1px solid #DDDDDD', borderRadius: 4,
-  padding: '12px 16px', color: '#1A1A1A', fontSize: '0.9rem', width: '100%', outline: 'none',
+  padding: '12px 16px', color: '#2A1A12', fontSize: '0.9rem', width: '100%', outline: 'none',
 }
 
 export default function CateringPage() {
@@ -27,13 +27,13 @@ export default function CateringPage() {
   }
 
   const labelS: React.CSSProperties = { ...R, fontSize: '0.85rem', color: '#666', display: 'block', marginBottom: 6, letterSpacing: '0.05em' }
-  const focusYellow = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => (e.target.style.borderColor = '#F3BD25')
+  const focusYellow = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => (e.target.style.borderColor = '#BA3A13')
   const blurGray = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => (e.target.style.borderColor = '#DDDDDD')
 
   return (
     <div style={{ background: '#FFF', minHeight: '100svh', padding: '48px 16px 80px' }}>
       <div style={{ maxWidth: 560, margin: '0 auto' }}>
-        <h1 style={{ ...R, fontSize: '2.8rem', color: '#1A1A1A', letterSpacing: '0.06em', marginBottom: 8 }}>
+        <h1 style={{ ...R, fontSize: '2.8rem', color: '#2A1A12', letterSpacing: '0.06em', marginBottom: 8 }}>
           Catering Services
         </h1>
         <p style={{ ...F, fontSize: '0.9rem', color: '#666', marginBottom: 28 }}>
@@ -46,20 +46,20 @@ export default function CateringPage() {
             { icon: '⚠', text: 'Please enquire 3–5 business days in advance' },
           ].map(({ icon, text }) => (
             <div key={text} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-              <span style={{ color: '#F3BD25', fontWeight: 700, fontSize: '1.2rem', width: 24, flexShrink: 0 }}>{icon}</span>
-              <span style={{ ...F, fontSize: '0.9rem', color: '#1A1A1A' }}>{text}</span>
+              <span style={{ color: '#BA3A13', fontWeight: 700, fontSize: '1.2rem', width: 24, flexShrink: 0 }}>{icon}</span>
+              <span style={{ ...F, fontSize: '0.9rem', color: '#2A1A12' }}>{text}</span>
             </div>
           ))}
         </div>
 
         {sent ? (
-          <div style={{ background: '#F7F7F7', borderRadius: 12, padding: '48px 32px', textAlign: 'center', border: '1px solid #EEEEEE' }}>
-            <p style={{ ...R, fontSize: '2rem', color: '#1A1A1A', letterSpacing: '0.06em', marginBottom: 8 }}>Enquiry Received!</p>
+          <div style={{ background: '#F6ECDF', borderRadius: 12, padding: '48px 32px', textAlign: 'center', border: '1px solid #F7DDD2' }}>
+            <p style={{ ...R, fontSize: '2rem', color: '#2A1A12', letterSpacing: '0.06em', marginBottom: 8 }}>Enquiry Received!</p>
             <p style={{ ...F, fontSize: '0.9rem', color: '#666', marginBottom: 24 }}>We'll be in touch within 1 business day.</p>
-            <a href="/" style={{ ...R, fontSize: '1.1rem', color: '#F3BD25', textDecoration: 'none', letterSpacing: '0.04em' }}>Back to Menu</a>
+            <a href="/" style={{ ...R, fontSize: '1.1rem', color: '#BA3A13', textDecoration: 'none', letterSpacing: '0.04em' }}>Back to Menu</a>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} style={{ background: '#F7F7F7', borderRadius: 12, padding: '28px 24px', border: '1px solid #EEEEEE', display: 'flex', flexDirection: 'column', gap: 18 }}>
+          <form onSubmit={handleSubmit} style={{ background: '#F6ECDF', borderRadius: 12, padding: '28px 24px', border: '1px solid #F7DDD2', display: 'flex', flexDirection: 'column', gap: 18 }}>
             {[
               { label: 'YOUR NAME', key: 'name', type: 'text', placeholder: 'Full name', required: true },
               { label: 'PHONE', key: 'phone', type: 'tel', placeholder: '04xx xxx xxx', required: true },

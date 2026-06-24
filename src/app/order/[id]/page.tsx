@@ -34,16 +34,16 @@ export default async function OrderPage({ params, searchParams }: Props) {
   }
 
   const pickupLabel = order.pickup_time === 'asap' ? '~15 minutes (ASAP)' : order.pickup_time
-  const R = { fontFamily: "'Rackety DEMO', sans-serif" } as const
-  const F = { fontFamily: "'BudgePair', sans-serif" } as const
+  const R = { fontFamily: "'Baloo 2', sans-serif" } as const
+  const F = { fontFamily: "'Nunito Sans', sans-serif" } as const
   const status = {
-    confirmed: { title: 'Order Confirmed!', detail: "We're preparing your order", color: '#D9A815' },
+    confirmed: { title: 'Order Confirmed!', detail: "We're preparing your order", color: '#8A2A0D' },
     ready: { title: 'Ready for Pickup!', detail: 'Your order is ready at the counter', color: '#16A34A' },
-    collected: { title: 'Order Collected', detail: 'Thank you for ordering with us', color: '#666666' },
+    collected: { title: 'Order Collected', detail: 'Thank you for ordering with us', color: '#856F63' },
   }[order.status as 'confirmed' | 'ready' | 'collected'] ?? {
     title: 'Order Confirmed!',
     detail: "We're preparing your order",
-    color: '#D9A815',
+    color: '#8A2A0D',
   }
 
   return (
@@ -53,11 +53,11 @@ export default async function OrderPage({ params, searchParams }: Props) {
         {/* Confirmation */}
         <div style={{ textAlign: 'center', marginBottom: 36 }}>
           <div style={{ marginBottom: 16 }}>
-            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#F3BD25" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block' }}>
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#BA3A13" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block' }}>
               <polyline points="20 6 9 17 4 12"/>
             </svg>
           </div>
-          <h1 style={{ ...R, fontSize: '2.2rem', color: '#1A1A1A', letterSpacing: '0.06em', marginBottom: 4 }}>{status.title}</h1>
+          <h1 style={{ ...R, fontSize: '2.2rem', color: '#2A1A12', letterSpacing: '0.06em', marginBottom: 4 }}>{status.title}</h1>
           <p style={{ ...F, fontSize: '0.95rem', color: status.color, fontWeight: 700, marginBottom: 6 }}>{status.detail}</p>
           <p style={{ ...R, fontSize: '1.4rem', color: status.color, letterSpacing: '0.06em' }}>
             #{String(order.order_number).padStart(4, '0')}
@@ -65,7 +65,7 @@ export default async function OrderPage({ params, searchParams }: Props) {
         </div>
 
         {/* Items */}
-        <div style={{ background: '#F7F7F7', borderRadius: 8, border: '1px solid #EEEEEE', overflow: 'hidden', marginBottom: 16 }}>
+        <div style={{ background: '#F6ECDF', borderRadius: 8, border: '1px solid #F7DDD2', overflow: 'hidden', marginBottom: 16 }}>
           <div style={{ padding: '16px 20px' }}>
             {order.order_items.map((item: {
               id: string; quantity: number; item_name: string
@@ -76,24 +76,24 @@ export default async function OrderPage({ params, searchParams }: Props) {
               return (
                 <div key={item.id} style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 10 }}>
                   <div>
-                    <span style={{ ...F, fontSize: '0.875rem', color: '#1A1A1A' }}>×{item.quantity} {item.item_name}</span>
+                    <span style={{ ...F, fontSize: '0.875rem', color: '#2A1A12' }}>×{item.quantity} {item.item_name}</span>
                     {item.extra_meat && <span style={{ ...F, fontSize: '0.72rem', color: '#666' }}> +Meat</span>}
                     {item.extra_vegetable && <span style={{ ...F, fontSize: '0.72rem', color: '#666' }}> +Veg</span>}
                     {item.notes && <p style={{ ...F, fontSize: '0.72rem', color: '#999', fontStyle: 'italic' }}>{item.notes}</p>}
                   </div>
-                  <span style={{ ...F, fontSize: '0.875rem', fontWeight: 700, color: '#1A1A1A' }}>${(line / 100).toFixed(2)}</span>
+                  <span style={{ ...F, fontSize: '0.875rem', fontWeight: 700, color: '#2A1A12' }}>${(line / 100).toFixed(2)}</span>
                 </div>
               )
             })}
           </div>
-          <div style={{ borderTop: '1px solid #EEEEEE', padding: '12px 20px', display: 'flex', justifyContent: 'space-between' }}>
-            <span style={{ ...R, fontSize: '1rem', color: '#1A1A1A', letterSpacing: '0.04em' }}>TOTAL</span>
-            <span style={{ ...R, fontSize: '1.1rem', color: '#1A1A1A', letterSpacing: '0.04em' }}>${(order.total_cents / 100).toFixed(2)}</span>
+          <div style={{ borderTop: '1px solid #F7DDD2', padding: '12px 20px', display: 'flex', justifyContent: 'space-between' }}>
+            <span style={{ ...R, fontSize: '1rem', color: '#2A1A12', letterSpacing: '0.04em' }}>TOTAL</span>
+            <span style={{ ...R, fontSize: '1.1rem', color: '#2A1A12', letterSpacing: '0.04em' }}>${(order.total_cents / 100).toFixed(2)}</span>
           </div>
         </div>
 
         {/* Pickup info */}
-        <div style={{ background: '#F7F7F7', borderRadius: 8, border: '1px solid #EEEEEE', padding: '16px 20px', marginBottom: 16 }}>
+        <div style={{ background: '#F6ECDF', borderRadius: 8, border: '1px solid #F7DDD2', padding: '16px 20px', marginBottom: 16 }}>
           {[
             { icon: '🕐', label: 'Pickup Time', value: pickupLabel },
             { icon: '📍', label: 'Pickup Location', value: 'Kiosk 2, 1/11 Town Terrace\nGlenmore Park NSW 2745' },
@@ -101,7 +101,7 @@ export default async function OrderPage({ params, searchParams }: Props) {
             <div key={label} style={{ display: 'flex', gap: 14, marginBottom: 14 }}>
               <span style={{ fontSize: '1.2rem', flexShrink: 0 }}>{icon}</span>
               <div>
-                <p style={{ ...F, fontWeight: 700, fontSize: '0.85rem', color: '#1A1A1A', marginBottom: 2 }}>{label}</p>
+                <p style={{ ...F, fontWeight: 700, fontSize: '0.85rem', color: '#2A1A12', marginBottom: 2 }}>{label}</p>
                 <p style={{ ...F, fontSize: '0.85rem', color: '#666', whiteSpace: 'pre-line' }}>{value}</p>
               </div>
             </div>
@@ -113,10 +113,10 @@ export default async function OrderPage({ params, searchParams }: Props) {
 
         <p style={{ ...F, textAlign: 'center', fontSize: '0.75rem', color: '#999', marginTop: 20 }}>
           Need to check this later?{' '}
-          <a href="/track" style={{ color: '#F3BD25', textDecoration: 'none' }}>Track your order</a>
+          <a href="/track" style={{ color: '#BA3A13', textDecoration: 'none' }}>Track your order</a>
         </p>
         <div style={{ textAlign: 'center', marginTop: 12 }}>
-          <Link href="/" style={{ ...R, fontSize: '1rem', color: '#1A1A1A', textDecoration: 'none', letterSpacing: '0.04em' }}>Order Again</Link>
+          <Link href="/" style={{ ...R, fontSize: '1rem', color: '#2A1A12', textDecoration: 'none', letterSpacing: '0.04em' }}>Order Again</Link>
         </div>
       </div>
     </div>

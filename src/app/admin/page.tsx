@@ -393,7 +393,7 @@ export default function AdminPage() {
 
   if (!authed) {
     return (
-      <div className="min-h-screen bg-[#F7F7F7] flex items-center justify-center px-4">
+      <div className="min-h-screen bg-[#F6ECDF] flex items-center justify-center px-4">
         <form onSubmit={handleLogin} className="bg-white rounded-2xl p-8 w-full max-w-sm shadow-sm border border-[#E5E5E5]">
           <h1 className="text-2xl font-black text-gray-900 mb-1">Staff Login</h1>
           <p className="text-sm text-gray-500 mb-6">Super Noodles – Glenmore Park</p>
@@ -403,11 +403,11 @@ export default function AdminPage() {
             type="password"
             value={password}
             onChange={event => setPassword(event.target.value)}
-            className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-base mb-3 focus:outline-none focus:ring-2 focus:ring-[#FFC200]"
+            className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-base mb-3 focus:outline-none focus:ring-2 focus:ring-[#FFC418]"
             required
           />
           {authError && <p className="text-red-600 text-sm mb-3">{authError}</p>}
-          <button type="submit" className="w-full min-h-12 bg-[#1A1A1A] text-white font-bold rounded-xl hover:bg-black transition-colors">
+          <button type="submit" className="w-full min-h-12 bg-[#2A1A12] text-white font-bold rounded-xl hover:bg-black transition-colors">
             Login
           </button>
         </form>
@@ -421,9 +421,9 @@ export default function AdminPage() {
   return (
     <div className="min-h-screen bg-white">
       {newestAlert && (
-        <div className="admin-alert sticky top-0 z-50 bg-[#1A1A1A] border-b-2 border-[#FFC200] text-white">
+        <div className="admin-alert sticky top-0 z-50 bg-[#2A1A12] border-b-2 border-[#FFC418] text-white">
           <div className="admin-shell mx-auto px-6 py-3 flex items-center gap-3">
-            <Bell size={18} className="text-[#FFC200] shrink-0" aria-hidden="true" />
+            <Bell size={18} className="text-[#FFC418] shrink-0" aria-hidden="true" />
             <div className="flex-1 min-w-0">
               <p className="font-black tracking-wide text-sm">NEW ORDER #{String(newestAlert.order_number).padStart(4, '0')}</p>
               <p className="text-xs text-gray-400">{newestAlert.customer_name} · {pickupLabel(newestAlert.pickup_time)}</p>
@@ -431,7 +431,7 @@ export default function AdminPage() {
             <button
               onClick={() => runOrderAction(newestAlert, 'ready')}
               disabled={saving === `${newestAlert.id}:ready`}
-              className="min-h-8 px-4 rounded-lg bg-[#FFC200] text-[#1A1A1A] text-xs font-black hover:bg-yellow-300 transition-colors shrink-0"
+              className="min-h-8 px-4 rounded-lg bg-[#FFC418] text-[#2A1A12] text-xs font-black hover:bg-yellow-300 transition-colors shrink-0"
             >
               MARK READY
             </button>
@@ -439,7 +439,7 @@ export default function AdminPage() {
         </div>
       )}
 
-      <header className="admin-header bg-[#1A1A1A] text-white">
+      <header className="admin-header bg-[#2A1A12] text-white">
         <div className="admin-shell mx-auto px-6 py-4 flex items-center gap-3">
           <div className="flex-1 min-w-0">
             <h1 className="text-base font-black leading-tight tracking-wide">Super Noodles Admin</h1>
@@ -452,7 +452,7 @@ export default function AdminPage() {
               className={`min-h-9 px-4 rounded-lg text-xs font-black transition-colors shrink-0 flex items-center gap-1.5 ${
                 audioUnlocked
                   ? 'bg-green-500 text-white disabled:cursor-default'
-                  : 'bg-[#FFC200] text-[#1A1A1A] hover:bg-yellow-300'
+                  : 'bg-[#FFC418] text-[#2A1A12] hover:bg-yellow-300'
               }`}
             >
               {audioUnlocked ? <Check size={14} strokeWidth={3} /> : null}
@@ -488,7 +488,7 @@ export default function AdminPage() {
               onClick={() => setTab(value)}
               className={`min-h-10 flex-1 rounded-lg font-bold text-sm transition-colors ${
                 tab === value
-                  ? 'bg-[#FFC200] text-[#1A1A1A]'
+                  ? 'bg-[#FFC418] text-[#2A1A12]'
                   : 'bg-white border border-[#E5E5E5] text-gray-600 hover:border-gray-400'
               }`}
             >
@@ -562,7 +562,7 @@ export default function AdminPage() {
                     if (e.target.value) void loadPastOrders(e.target.value)
                     else setPastOrders(null)
                   }}
-                  className="border border-[#E5E5E5] rounded-xl px-4 py-2.5 text-sm font-bold text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#FFC200] bg-white mb-5"
+                  className="border border-[#E5E5E5] rounded-xl px-4 py-2.5 text-sm font-bold text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#FFC418] bg-white mb-5"
                 />
                 {!pastDate && (
                   <div className="border border-dashed border-gray-200 rounded-2xl py-14 text-center text-gray-400 text-sm">
@@ -677,17 +677,17 @@ function OrderCard({
   const isNew = !readOnly && !order.acknowledged_at
   const statusCls = order.status === 'ready'
     ? 'bg-green-600 text-white'
-    : 'bg-[#FFC200] text-[#1A1A1A]'
+    : 'bg-[#FFC418] text-[#2A1A12]'
   const statusLabel = order.status === 'ready' ? 'Ready for Pickup' : 'Preparing'
   return (
-    <article className={`bg-white border rounded-xl overflow-hidden ${isNew ? 'border-[#FFC200] ring-2 ring-yellow-50' : 'border-[#E5E5E5]'}`}>
+    <article className={`bg-white border rounded-xl overflow-hidden ${isNew ? 'border-[#FFC418] ring-2 ring-yellow-50' : 'border-[#E5E5E5]'}`}>
       {/* Row 1: order # + status + amount */}
       <div className="px-4 pt-4 pb-3 border-b border-[#F0F0F0] flex items-center gap-2">
         <h3 className="text-lg font-black text-gray-900 shrink-0">#{String(order.order_number).padStart(4, '0')}</h3>
         <span className={`text-xs font-black rounded-full px-2.5 py-0.5 shrink-0 ${statusCls}`}>
           {statusLabel}
         </span>
-        {isNew && <span className="text-xs font-black text-[#FFC200] tracking-wide shrink-0">● New</span>}
+        {isNew && <span className="text-xs font-black text-[#FFC418] tracking-wide shrink-0">● New</span>}
         <span className="flex-1" />
         <p className="text-lg font-black text-gray-900 shrink-0">${(order.total_cents / 100).toFixed(2)}</p>
       </div>
@@ -723,7 +723,7 @@ function OrderCard({
 
           {/* FREE GIFT */}
           {gifts.length > 0 && (
-            <div className="mt-3 rounded-lg border-2 border-[#FFC200] bg-amber-50 px-3 py-2">
+            <div className="mt-3 rounded-lg border-2 border-[#FFC418] bg-amber-50 px-3 py-2">
               <p className="text-xs font-black text-amber-800 uppercase tracking-wide mb-1">🎁 Free Gift</p>
               {gifts.map(gift => (
                 <p key={gift} className="font-bold text-gray-900 text-sm">{gift}</p>
@@ -880,7 +880,7 @@ function HolidayAdmin({
                 style={{
                   aspectRatio: '1',
                   width: '100%',
-                  outline: isToday && !isHoliday ? '2px solid #FFC200' : 'none',
+                  outline: isToday && !isHoliday ? '2px solid #FFC418' : 'none',
                   outlineOffset: '-2px',
                 }}
               >
@@ -898,7 +898,7 @@ function HolidayAdmin({
           Rest day (store closed)
         </span>
         <span className="flex items-center gap-1.5">
-          <span style={{ width: 14, height: 14, borderRadius: 4, outline: '2px solid #FFC200', display: 'inline-block', flexShrink: 0 }} />
+          <span style={{ width: 14, height: 14, borderRadius: 4, outline: '2px solid #FFC418', display: 'inline-block', flexShrink: 0 }} />
           Today
         </span>
       </div>
@@ -954,7 +954,7 @@ function MenuAdmin({
         <section key={category.slug}>
           <div
             className="flex items-center justify-center mb-3"
-            style={{ background: '#FFC200', borderRadius: 8, padding: '10px 16px' }}
+            style={{ background: '#FFC418', borderRadius: 8, padding: '10px 16px' }}
           >
             <h3 className="text-sm font-black text-white uppercase tracking-widest">{category.name}</h3>
           </div>

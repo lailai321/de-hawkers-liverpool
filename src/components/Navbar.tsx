@@ -39,14 +39,14 @@ export default function Navbar() {
     <>
       <nav className="main-nav" style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
-        background: '#1A1A1A',
+        background: '#2A1A12',
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         padding: '0 24px',
       }}>
         {/* Logo */}
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', flexShrink: 0 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo_final.svg" alt="Super Noodles" className="nav-logo" style={{ width: 'auto', display: 'block' }} />
+          <img src="/ds/logo-cart.png" alt="De Hawker's Liverpool" className="nav-logo" style={{ width: 'auto', display: 'block' }} />
         </Link>
 
         {/* Desktop nav links */}
@@ -55,12 +55,12 @@ export default function Navbar() {
             const active = pathname === href
             return (
               <Link key={href} href={href} style={{
-                fontFamily: "'BudgePair', sans-serif",
+                fontFamily: "'Nunito Sans', sans-serif",
                 fontSize: '16px', letterSpacing: '0.02em',
-                color: active ? '#F3BD25' : '#FFFFFF',
+                color: active ? '#BA3A13' : '#FFFFFF',
                 textDecoration: 'none', transition: 'color 0.15s',
               }}
-              onMouseEnter={e => { if (!active) (e.currentTarget as HTMLElement).style.color = '#F3BD25' }}
+              onMouseEnter={e => { if (!active) (e.currentTarget as HTMLElement).style.color = '#BA3A13' }}
               onMouseLeave={e => { if (!active) (e.currentTarget as HTMLElement).style.color = '#FFFFFF' }}
               >
                 {label}
@@ -74,7 +74,7 @@ export default function Navbar() {
           {/* Cart — desktop only (mobile uses bottom bar) */}
           <button onClick={openCart} className="nav-cart-btn" style={{
             background: 'none', border: 'none', cursor: 'pointer',
-            position: 'relative', padding: 4, color: '#F3BD25',
+            position: 'relative', padding: 4, color: '#BA3A13',
             display: 'flex', alignItems: 'center',
           }}>
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -85,10 +85,10 @@ export default function Navbar() {
             {count > 0 && (
               <span style={{
                 position: 'absolute', top: -2, right: -6,
-                background: '#F3BD25', color: '#1A1A1A',
+                background: '#BA3A13', color: '#2A1A12',
                 borderRadius: '50%', width: 18, height: 18,
                 fontSize: 11, fontWeight: 700,
-                fontFamily: "'BudgePair', sans-serif",
+                fontFamily: "'Nunito Sans', sans-serif",
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
               }}>
                 {count}
@@ -123,7 +123,7 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="mobile-dropdown" style={{
           position: 'fixed', left: 0, right: 0, zIndex: 99,
-          background: '#1A1A1A', borderBottom: '1px solid #333',
+          background: '#2A1A12', borderBottom: '1px solid #333',
           padding: '8px 0',
         }}>
           {NAV_LINKS.map(({ label, href }) => (
@@ -131,9 +131,9 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
               style={{
                 display: 'block', padding: '14px 24px',
-                fontFamily: "'BudgePair', sans-serif",
+                fontFamily: "'Nunito Sans', sans-serif",
                 fontSize: 20, letterSpacing: '0.01em',
-                color: pathname === href ? '#F3BD25' : '#FFFFFF',
+                color: pathname === href ? '#BA3A13' : '#FFFFFF',
                 textDecoration: 'none',
                 borderBottom: '1px solid #2A2A2A',
               }}
@@ -153,10 +153,10 @@ export default function Navbar() {
         .mobile-dropdown { top: 100px; }
         .holiday-banner {
           position: fixed; top: 100px; left: 0; right: 0; z-index: 99;
-          background: #1A1A1A; border-bottom: 2px solid #FFC200;
-          color: #FFC200; text-align: center;
+          background: #2A1A12; border-bottom: 2px solid #FFC418;
+          color: #FFC418; text-align: center;
           padding: 13px 20px;
-          font-family: 'BudgePair', sans-serif; font-weight: 700;
+          font-family: 'Nunito Sans', sans-serif; font-weight: 700;
           font-size: 1.1rem; letter-spacing: 0.02em;
         }
         body.holiday-day .main-content { padding-top: 152px !important; }

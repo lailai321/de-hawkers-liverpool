@@ -77,7 +77,7 @@ export default function HomePage() {
 
   if (!data) return (
     <div style={{ minHeight: '100svh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#FFFFFF' }}>
-      <div style={{ width: 36, height: 36, borderRadius: '50%', border: '3px solid #EEEEEE', borderTopColor: '#F3BD25', animation: 'spin 0.7s linear infinite' }} />
+      <div style={{ width: 36, height: 36, borderRadius: '50%', border: '3px solid #F7DDD2', borderTopColor: '#BA3A13', animation: 'spin 0.7s linear infinite' }} />
       <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
     </div>
   )
@@ -89,12 +89,12 @@ export default function HomePage() {
 
       {/* Admin back button */}
       {isAdminView && (
-        <div style={{ background: '#1A1A1A', padding: '10px 20px' }}>
+        <div style={{ background: '#2A1A12', padding: '10px 20px' }}>
           <a
             href="/admin"
             style={{
-              color: '#FFC200',
-              fontFamily: "'BudgePair', sans-serif",
+              color: '#FFC418',
+              fontFamily: "'Nunito Sans', sans-serif",
               fontWeight: 700,
               fontSize: '0.9rem',
               textDecoration: 'none',
@@ -110,11 +110,11 @@ export default function HomePage() {
 
       {!holidayStatus?.today && holidayStatus?.tomorrow && (
         <div style={{
-          background: '#1A1A1A',
-          color: '#FFC200',
+          background: '#2A1A12',
+          color: '#FFC418',
           textAlign: 'center',
           padding: '13px 20px',
-          fontFamily: "'BudgePair', sans-serif",
+          fontFamily: "'Nunito Sans', sans-serif",
           fontWeight: 700,
           fontSize: '0.95rem',
           lineHeight: 1.5,
@@ -144,11 +144,11 @@ export default function HomePage() {
             <span className="hero-info-item"><Phone size={15} strokeWidth={2.2} className="hero-info-icon" />(02) 4733 4782</span>
           </div>
           <div className="hero-tags" style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: 7, background: '#F3BD25', color: '#1A1A1A', fontFamily: "'BudgePair', sans-serif", fontSize: '1rem', fontWeight: 700, padding: '7px 16px', borderRadius: 6, letterSpacing: '0.02em' }}>
+            <span style={{ display: 'flex', alignItems: 'center', gap: 7, background: '#BA3A13', color: '#2A1A12', fontFamily: "'Nunito Sans', sans-serif", fontSize: '1rem', fontWeight: 700, padding: '7px 16px', borderRadius: 6, letterSpacing: '0.02em' }}>
               <ShoppingBag size={17} strokeWidth={2.2} />
               Pick Up Only
             </span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: 7, background: '#DC2626', color: '#FFFFFF', fontFamily: "'BudgePair', sans-serif", fontSize: '1rem', fontWeight: 700, padding: '7px 16px', borderRadius: 6 }}>
+            <span style={{ display: 'flex', alignItems: 'center', gap: 7, background: '#DC2626', color: '#FFFFFF', fontFamily: "'Nunito Sans', sans-serif", fontSize: '1rem', fontWeight: 700, padding: '7px 16px', borderRadius: 6 }}>
               <XCircle size={17} strokeWidth={2.2} />
               Delivery Unavailable
             </span>
@@ -210,11 +210,11 @@ export default function HomePage() {
                 style={{
                   width: '100%', padding: '11px 16px 11px 44px',
                   borderRadius: 8, border: '1px solid #DDDDDD',
-                  background: '#FFFFFF', fontFamily: "'BudgePair', sans-serif",
-                  fontSize: '0.9rem', color: '#1A1A1A', outline: 'none',
+                  background: '#FFFFFF', fontFamily: "'Nunito Sans', sans-serif",
+                  fontSize: '0.9rem', color: '#2A1A12', outline: 'none',
                   transition: 'border-color 0.15s',
                 }}
-                onFocus={e => (e.target.style.borderColor = '#F3BD25')}
+                onFocus={e => (e.target.style.borderColor = '#BA3A13')}
                 onBlur={e => (e.target.style.borderColor = '#DDDDDD')}
               />
               {isSearching && (
@@ -284,9 +284,9 @@ export default function HomePage() {
                 return name.toLowerCase().includes(q) || (desc?.toLowerCase().includes(q) ?? false)
               })
             }) && (
-              <div style={{ textAlign: 'center', padding: '60px 20px', color: '#999', fontFamily: "'BudgePair', sans-serif" }}>
+              <div style={{ textAlign: 'center', padding: '60px 20px', color: '#999', fontFamily: "'Nunito Sans', sans-serif" }}>
                 <p style={{ fontSize: '1rem', marginBottom: 8 }}>No items found for &quot;{searchQuery}&quot;</p>
-                <button onClick={() => setSearchQuery('')} style={{ background: 'none', border: 'none', color: '#F3BD25', cursor: 'pointer', fontFamily: "'BudgePair', sans-serif", fontSize: '0.9rem', textDecoration: 'underline' }}>
+                <button onClick={() => setSearchQuery('')} style={{ background: 'none', border: 'none', color: '#BA3A13', cursor: 'pointer', fontFamily: "'Nunito Sans', sans-serif", fontSize: '0.9rem', textDecoration: 'underline' }}>
                   Clear search
                 </button>
               </div>

@@ -37,8 +37,8 @@ function isStoreOpen(): boolean {
   return mins >= 11 * 60 && mins < 20 * 60
 }
 
-const F = { fontFamily: "'BudgePair', sans-serif" } as const
-const R = { fontFamily: "'Rackety DEMO', sans-serif" } as const
+const F = { fontFamily: "'Nunito Sans', sans-serif" } as const
+const R = { fontFamily: "'Baloo 2', sans-serif" } as const
 
 export default function CheckoutPage() {
   const router = useRouter()
@@ -62,7 +62,7 @@ export default function CheckoutPage() {
   if (items.length === 0) return (
     <div style={{ minHeight: '100svh', background: '#FFF', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16 }}>
       <p style={{ ...F, color: '#666' }}>Your cart is empty.</p>
-      <a href="/" style={{ ...R, fontSize: '1.1rem', color: '#F3BD25', textDecoration: 'none' }}>← Back to Menu</a>
+      <a href="/" style={{ ...R, fontSize: '1.1rem', color: '#BA3A13', textDecoration: 'none' }}>← Back to Menu</a>
     </div>
   )
 
@@ -95,9 +95,9 @@ export default function CheckoutPage() {
 
   const pickupBtn = (active: boolean, disabled: boolean): React.CSSProperties => ({
     flex: 1, padding: '12px', borderRadius: 4,
-    border: `2px solid ${active ? '#F3BD25' : '#EEEEEE'}`,
-    background: active ? '#F3BD25' : '#FFF',
-    color: '#1A1A1A', ...R, fontSize: '1rem', letterSpacing: '0.04em',
+    border: `2px solid ${active ? '#BA3A13' : '#F7DDD2'}`,
+    background: active ? '#BA3A13' : '#FFF',
+    color: '#2A1A12', ...R, fontSize: '1rem', letterSpacing: '0.04em',
     cursor: disabled ? 'not-allowed' : 'pointer', opacity: disabled ? 0.4 : 1, transition: 'all 0.15s',
   })
 
@@ -107,10 +107,10 @@ export default function CheckoutPage() {
     <div style={{ background: '#FFF', minHeight: '100svh', padding: '36px 16px 80px' }}>
       <div style={{ maxWidth: 520, margin: '0 auto' }}>
         <a href="/" style={{ ...F, fontSize: '0.85rem', color: '#666', textDecoration: 'none', display: 'block', marginBottom: 24 }}>← Back to Menu</a>
-        <h1 style={{ ...R, fontSize: '2.5rem', color: '#1A1A1A', letterSpacing: '0.06em', marginBottom: 28 }}>Checkout</h1>
+        <h1 style={{ ...R, fontSize: '2.5rem', color: '#2A1A12', letterSpacing: '0.06em', marginBottom: 28 }}>Checkout</h1>
 
         {/* Summary */}
-        <div style={{ background: '#F7F7F7', borderRadius: 8, padding: '16px 20px', marginBottom: 24, border: '1px solid #EEEEEE' }}>
+        <div style={{ background: '#F6ECDF', borderRadius: 8, padding: '16px 20px', marginBottom: 24, border: '1px solid #F7DDD2' }}>
           <p style={{ ...F, fontSize: '1rem', color: '#666', marginBottom: 12 }}>ORDER SUMMARY</p>
           {items.map((item, i) => {
             const extras = (item.extraMeat ? 300 : 0) + (item.extraVegetable ? 300 : 0) + (item.optionExtrasCents ?? 0)
@@ -126,16 +126,16 @@ export default function CheckoutPage() {
             return (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8, gap: 8 }}>
                 <div style={{ flex: 1 }}>
-                  <span style={{ ...F, fontSize: '0.875rem', color: '#1A1A1A' }}>×{item.quantity} {item.name}</span>
+                  <span style={{ ...F, fontSize: '0.875rem', color: '#2A1A12' }}>×{item.quantity} {item.name}</span>
                   {subline && <p style={{ ...F, fontSize: '0.78rem', color: '#999', marginTop: 1 }}>{subline}</p>}
                 </div>
-                <span style={{ ...F, fontSize: '0.875rem', fontWeight: 700, color: '#1A1A1A', flexShrink: 0 }}>${(line / 100).toFixed(2)}</span>
+                <span style={{ ...F, fontSize: '0.875rem', fontWeight: 700, color: '#2A1A12', flexShrink: 0 }}>${(line / 100).toFixed(2)}</span>
               </div>
             )
           })}
-          <div style={{ borderTop: '1px solid #EEEEEE', marginTop: 12, paddingTop: 12, display: 'flex', justifyContent: 'space-between' }}>
-            <span style={{ ...F, fontSize: '1rem', fontWeight: 700, color: '#1A1A1A' }}>TOTAL</span>
-            <span style={{ ...F, fontSize: '1rem', fontWeight: 700, color: '#1A1A1A' }}>${(total / 100).toFixed(2)}</span>
+          <div style={{ borderTop: '1px solid #F7DDD2', marginTop: 12, paddingTop: 12, display: 'flex', justifyContent: 'space-between' }}>
+            <span style={{ ...F, fontSize: '1rem', fontWeight: 700, color: '#2A1A12' }}>TOTAL</span>
+            <span style={{ ...F, fontSize: '1rem', fontWeight: 700, color: '#2A1A12' }}>${(total / 100).toFixed(2)}</span>
           </div>
         </div>
 
@@ -153,8 +153,8 @@ export default function CheckoutPage() {
           <div>
             <label style={labelS}>PICKUP TIME</label>
             {!storeOpen && slots.length === 0 ? (
-              <div style={{ background: '#FFF8E5', border: '1.5px solid #F3BD25', borderRadius: 8, padding: '12px 16px' }}>
-                <p style={{ ...F, fontSize: '0.85rem', color: '#1A1A1A', fontWeight: 700, marginBottom: 4 }}>We&apos;re currently closed</p>
+              <div style={{ background: '#FFF8E5', border: '1.5px solid #BA3A13', borderRadius: 8, padding: '12px 16px' }}>
+                <p style={{ ...F, fontSize: '0.85rem', color: '#2A1A12', fontWeight: 700, marginBottom: 4 }}>We&apos;re currently closed</p>
                 <p style={{ ...F, fontSize: '0.78rem', color: '#666' }}>Open Tue–Sun 11:00am–8:00pm (Sydney time)</p>
               </div>
             ) : (
@@ -178,7 +178,7 @@ export default function CheckoutPage() {
             </div>
           )}
           <button type="submit" disabled={loading} className="btn-brand"
-            style={{ fontFamily: "'BudgePair', sans-serif", fontSize: '1rem', fontWeight: 700, letterSpacing: 0 }}>
+            style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '1rem', fontWeight: 700, letterSpacing: 0 }}>
             {loading ? 'Processing…' : `Pay $${(total / 100).toFixed(2)}`}
           </button>
           <p style={{ ...F, textAlign: 'center', fontSize: '0.72rem', color: '#AAA' }}>

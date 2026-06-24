@@ -19,14 +19,14 @@ export default function ReceiptForm({ orderId, stripeSessionId }: { orderId: str
   }
 
   if (sent) return (
-    <p style={{ fontFamily: "'BudgePair', sans-serif", textAlign: 'center', fontSize: '0.875rem', color: '#16a34a' }}>
+    <p style={{ fontFamily: "'Nunito Sans', sans-serif", textAlign: 'center', fontSize: '0.875rem', color: '#16a34a' }}>
       Receipt sent to {email} ✓
     </p>
   )
 
   return (
-    <div style={{ background: '#F7F7F7', borderRadius: 8, padding: '16px 20px', border: '1px solid #EEEEEE' }}>
-      <p style={{ fontFamily: "'BudgePair', sans-serif", fontSize: '0.875rem', fontWeight: 700, color: '#1A1A1A', marginBottom: 12 }}>
+    <div style={{ background: '#F6ECDF', borderRadius: 8, padding: '16px 20px', border: '1px solid #F7DDD2' }}>
+      <p style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '0.875rem', fontWeight: 700, color: '#2A1A12', marginBottom: 12 }}>
         Want a receipt?
       </p>
       <form onSubmit={handleSend} style={{ display: 'flex', gap: 8 }}>

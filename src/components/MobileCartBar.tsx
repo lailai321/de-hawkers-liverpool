@@ -31,30 +31,30 @@ export default function MobileCartBar() {
         onClick={openCart}
         style={{
           width: '100%', display: 'flex', alignItems: 'center', gap: 10,
-          background: '#1A1A1A', color: '#FFFFFF',
+          background: '#2A1A12', color: '#FFFFFF',
           border: 'none', borderRadius: 50,
           padding: '15px 22px',
           cursor: 'pointer',
           boxShadow: '0 4px 20px rgba(0,0,0,0.25)',
         }}
       >
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3BD25" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BA3A13" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
           <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
           <line x1="3" y1="6" x2="21" y2="6"/>
           <path d="M16 10a4 4 0 01-8 0"/>
         </svg>
-        <span style={{ flex: 1, textAlign: 'left', fontFamily: "'BudgePair', sans-serif", fontWeight: 700, fontSize: '1rem' }}>
+        <span style={{ flex: 1, textAlign: 'left', fontFamily: "'Nunito Sans', sans-serif", fontWeight: 700, fontSize: '1rem' }}>
           View Cart
         </span>
         <span style={{
-          background: '#F3BD25', color: '#1A1A1A', borderRadius: 50,
+          background: '#BA3A13', color: '#2A1A12', borderRadius: 50,
           minWidth: 26, height: 26, padding: '0 8px',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
-          fontFamily: "'BudgePair', sans-serif", fontWeight: 700, fontSize: '0.85rem',
+          fontFamily: "'Nunito Sans', sans-serif", fontWeight: 700, fontSize: '0.85rem',
         }}>
           {count}
         </span>
-        <span style={{ fontFamily: "'BudgePair', sans-serif", fontWeight: 700, fontSize: '1rem', marginLeft: 4 }}>
+        <span style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 700, fontSize: '1rem', marginLeft: 4 }}>
           ${(totalCents / 100).toFixed(2)}
         </span>
       </button>

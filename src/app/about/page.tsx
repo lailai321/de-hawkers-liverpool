@@ -2,8 +2,8 @@
 import Image from 'next/image'
 import { Utensils, Leaf, Users } from 'lucide-react'
 
-const R = { fontFamily: "'Rackety DEMO', sans-serif" } as const
-const F = { fontFamily: "'BudgePair', sans-serif" } as const
+const R = { fontFamily: "'Baloo 2', sans-serif" } as const
+const F = { fontFamily: "'Nunito Sans', sans-serif" } as const
 
 const locations = [
   {
@@ -36,9 +36,9 @@ const locations = [
 ]
 
 const sellingPoints = [
-  { icon: <Utensils size={22} color="#F3BD25" strokeWidth={1.8} />, label: 'Cantonese & Malaysian' },
-  { icon: <Leaf size={22} color="#F3BD25" strokeWidth={1.8} />, label: 'Fresh & Wholesome' },
-  { icon: <Users size={22} color="#F3BD25" strokeWidth={1.8} />, label: 'Family Owned Since 2001' },
+  { icon: <Utensils size={22} color="#BA3A13" strokeWidth={1.8} />, label: 'Cantonese & Malaysian' },
+  { icon: <Leaf size={22} color="#BA3A13" strokeWidth={1.8} />, label: 'Fresh & Wholesome' },
+  { icon: <Users size={22} color="#BA3A13" strokeWidth={1.8} />, label: 'Family Owned Since 2001' },
 ]
 
 const storyParagraphs = [
@@ -55,10 +55,10 @@ export default function AboutPage() {
       {/* Hero */}
       <div style={{ background: '#FFFFFF', padding: '56px 24px 40px', textAlign: 'center', width: '100%' }}>
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <h1 style={{ ...R, fontSize: 'clamp(48px, 8vw, 80px)', color: '#1A1A1A', letterSpacing: '0.06em', lineHeight: 1.1, marginBottom: 12 }}>
+          <h1 style={{ ...R, fontSize: 'clamp(48px, 8vw, 80px)', color: '#2A1A12', letterSpacing: '0.06em', lineHeight: 1.1, marginBottom: 12 }}>
             Super Noodles
           </h1>
-          <p style={{ ...F, fontSize: '1rem', color: '#666666', letterSpacing: '0.04em' }}>
+          <p style={{ ...F, fontSize: '1rem', color: '#856F63', letterSpacing: '0.04em' }}>
             From Our Family Kitchen to Yours
           </p>
         </div>
@@ -68,8 +68,8 @@ export default function AboutPage() {
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '40px 28px 56px' }}>
 
         {/* Section heading */}
-        <div style={{ background: '#F3BD25', display: 'inline-block', padding: '10px 20px', borderRadius: 4, marginBottom: 32 }}>
-          <h2 style={{ ...R, fontSize: '1.6rem', color: '#1A1A1A', letterSpacing: '0.04em', margin: 0 }}>Our Story</h2>
+        <div style={{ background: '#BA3A13', display: 'inline-block', padding: '10px 20px', borderRadius: 4, marginBottom: 32 }}>
+          <h2 style={{ ...R, fontSize: '1.6rem', color: '#2A1A12', letterSpacing: '0.04em', margin: 0 }}>Our Story</h2>
         </div>
 
         {/* Two-column: text left, images right */}
@@ -77,7 +77,7 @@ export default function AboutPage() {
           {/* Text */}
           <div className="story-text">
             {storyParagraphs.map((para, i) => (
-              <p key={i} style={{ ...F, fontSize: '0.95rem', color: '#1A1A1A', lineHeight: 1.9, marginBottom: 24 }}>
+              <p key={i} style={{ ...F, fontSize: '0.95rem', color: '#2A1A12', lineHeight: 1.9, marginBottom: 24 }}>
                 {para}
               </p>
             ))}
@@ -101,8 +101,8 @@ export default function AboutPage() {
               className="selling-point"
               style={{
                 display: 'flex', alignItems: 'center', gap: 12,
-                background: '#F7F7F7', borderRadius: 10, padding: '14px 22px',
-                border: '1px solid #EEEEEE',
+                background: '#F6ECDF', borderRadius: 10, padding: '14px 22px',
+                border: '1px solid #F7DDD2',
                 transition: 'box-shadow 0.18s, transform 0.18s',
                 cursor: 'default',
               }}
@@ -116,22 +116,22 @@ export default function AboutPage() {
               }}
             >
               {icon}
-              <span style={{ ...F, fontWeight: 700, fontSize: '0.95rem', color: '#1A1A1A' }}>{label}</span>
+              <span style={{ ...F, fontWeight: 700, fontSize: '0.95rem', color: '#2A1A12' }}>{label}</span>
             </div>
           ))}
         </div>
       </div>
 
       {/* Locations */}
-      <div style={{ background: '#F7F7F7', padding: '56px 24px 72px' }}>
+      <div style={{ background: '#F6ECDF', padding: '56px 24px 72px' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-          <div style={{ background: '#F3BD25', display: 'inline-block', padding: '10px 20px', borderRadius: 4, marginBottom: 32 }}>
-            <h2 style={{ ...R, fontSize: '1.6rem', color: '#1A1A1A', letterSpacing: '0.04em', margin: 0 }}>Our Locations</h2>
+          <div style={{ background: '#BA3A13', display: 'inline-block', padding: '10px 20px', borderRadius: 4, marginBottom: 32 }}>
+            <h2 style={{ ...R, fontSize: '1.6rem', color: '#2A1A12', letterSpacing: '0.04em', margin: 0 }}>Our Locations</h2>
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
             {locations.map((loc, i) => (
-              <div key={i} className="location-card" style={{ background: '#FFF', borderRadius: 12, border: '1px solid #EEEEEE', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', overflow: 'hidden', display: 'flex' }}>
+              <div key={i} className="location-card" style={{ background: '#FFF', borderRadius: 12, border: '1px solid #F7DDD2', boxShadow: '0 2px 8px rgba(0,0,0,0.06)', overflow: 'hidden', display: 'flex' }}>
                 <div style={{ width: '45%', flexShrink: 0, background: '#111', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
                   {loc.image ? (
                     // eslint-disable-next-line @next/next/no-img-element
@@ -148,19 +148,19 @@ export default function AboutPage() {
                   )}
                 </div>
                 <div style={{ flex: 1, padding: '22px 26px', display: 'flex', flexDirection: 'column', gap: 8 }}>
-                  <h3 style={{ ...R, fontSize: '1.4rem', color: '#1A1A1A', letterSpacing: '0.04em', lineHeight: 1.2 }}>{loc.name}</h3>
-                  <p style={{ ...F, fontSize: '0.875rem', color: '#1A1A1A', whiteSpace: 'pre-line' }}>{loc.address}</p>
-                  <p style={{ ...F, fontSize: '0.875rem', color: '#F3BD25', fontWeight: 700 }}>{loc.phone}</p>
+                  <h3 style={{ ...R, fontSize: '1.4rem', color: '#2A1A12', letterSpacing: '0.04em', lineHeight: 1.2 }}>{loc.name}</h3>
+                  <p style={{ ...F, fontSize: '0.875rem', color: '#2A1A12', whiteSpace: 'pre-line' }}>{loc.address}</p>
+                  <p style={{ ...F, fontSize: '0.875rem', color: '#BA3A13', fontWeight: 700 }}>{loc.phone}</p>
                   <p style={{ ...F, fontSize: '0.78rem', color: '#666' }}>{loc.hours}</p>
                   {loc.hasOrder && (
                     <a href="/" style={{
                       marginTop: 6, display: 'inline-block', padding: '10px 22px',
-                      background: '#F3BD25', color: '#1A1A1A', borderRadius: 4,
+                      background: '#BA3A13', color: '#2A1A12', borderRadius: 4,
                       ...R, fontSize: '1rem', letterSpacing: '0.04em', textDecoration: 'none',
                       transition: 'background 0.15s',
                     }}
-                    onMouseEnter={e => (e.currentTarget.style.background = '#D9A815')}
-                    onMouseLeave={e => (e.currentTarget.style.background = '#F3BD25')}
+                    onMouseEnter={e => (e.currentTarget.style.background = '#8A2A0D')}
+                    onMouseLeave={e => (e.currentTarget.style.background = '#BA3A13')}
                     >
                       Order Pickup
                     </a>

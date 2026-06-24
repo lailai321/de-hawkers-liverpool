@@ -118,15 +118,15 @@ export default function ItemModal({ item, onClose }: Props) {
     return (
       <div key={group.id} style={{ marginBottom: 16 }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
-          <p style={{ fontFamily: "'Rackety DEMO', sans-serif", fontSize: '1rem', color: isRequired ? '#1A1A1A' : '#999', letterSpacing: '0.06em' }}>
+          <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: '1rem', color: isRequired ? '#2A1A12' : '#999', letterSpacing: '0.06em' }}>
             {group.label}
           </p>
           {isRequired ? (
-            <span style={{ background: '#F3BD25', color: '#1A1A1A', fontFamily: "'BudgePair', sans-serif", fontSize: '0.72rem', fontWeight: 700, padding: '3px 10px', borderRadius: 4 }}>
+            <span style={{ background: '#BA3A13', color: '#2A1A12', fontFamily: "'Nunito Sans', sans-serif", fontSize: '0.72rem', fontWeight: 700, padding: '3px 10px', borderRadius: 4 }}>
               Required
             </span>
           ) : (
-            <span style={{ fontFamily: "'BudgePair', sans-serif", fontSize: '0.72rem', color: '#999', padding: '3px 0' }}>
+            <span style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '0.72rem', color: '#999', padding: '3px 0' }}>
               Optional
             </span>
           )}
@@ -138,37 +138,37 @@ export default function ItemModal({ item, onClose }: Props) {
               display: 'flex', alignItems: 'center', justifyContent: 'space-between',
               padding: '12px 14px', borderRadius: 6, marginBottom: 8,
               background: isSelected ? 'rgba(243,189,37,0.08)' : '#F9F9F9',
-              border: `1px solid ${isSelected ? '#F3BD25' : '#EEEEEE'}`,
+              border: `1px solid ${isSelected ? '#BA3A13' : '#F7DDD2'}`,
               cursor: 'pointer', transition: 'all 0.15s',
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                 {group.multiSelect ? (
                   <div style={{
                     width: 18, height: 18, borderRadius: 3,
-                    border: `2px solid ${isSelected ? '#F3BD25' : '#CCCCCC'}`,
-                    background: isSelected ? '#F3BD25' : 'transparent',
+                    border: `2px solid ${isSelected ? '#BA3A13' : '#CCCCCC'}`,
+                    background: isSelected ? '#BA3A13' : 'transparent',
                     flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
                   }}>
-                    {isSelected && <span style={{ color: '#1A1A1A', fontSize: '0.6rem', fontWeight: 900 }}>✓</span>}
+                    {isSelected && <span style={{ color: '#2A1A12', fontSize: '0.6rem', fontWeight: 900 }}>✓</span>}
                   </div>
                 ) : (
                   <div style={{
                     width: 18, height: 18, borderRadius: '50%',
-                    border: `2px solid ${isSelected ? '#F3BD25' : '#CCCCCC'}`,
-                    background: isSelected ? '#F3BD25' : 'transparent',
+                    border: `2px solid ${isSelected ? '#BA3A13' : '#CCCCCC'}`,
+                    background: isSelected ? '#BA3A13' : 'transparent',
                     flexShrink: 0,
                   }} />
                 )}
-                <span style={{ fontFamily: "'BudgePair', sans-serif", fontSize: '0.9rem', color: '#1A1A1A' }}>{choice.label}</span>
+                <span style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '0.9rem', color: '#2A1A12' }}>{choice.label}</span>
               </div>
-              <span style={{ fontFamily: "'BudgePair', sans-serif", fontSize: '0.85rem', fontWeight: 700, color: '#1A1A1A' }}>
+              <span style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '0.85rem', fontWeight: 700, color: '#2A1A12' }}>
                 {choice.priceCents > 0 ? `+$${(choice.priceCents / 100).toFixed(2)}` : ''}
               </span>
             </div>
           )
         })}
         {isRequired && sel.length === 0 && (
-          <p style={{ fontFamily: "'BudgePair', sans-serif", fontSize: '0.78rem', color: '#ef4444', marginTop: 4 }}>
+          <p style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '0.78rem', color: '#ef4444', marginTop: 4 }}>
             Please choose one
           </p>
         )}
@@ -211,18 +211,18 @@ export default function ItemModal({ item, onClose }: Props) {
           </div>
         )}
 
-        <div style={{ padding: '16px 20px 12px', flexShrink: 0, borderBottom: '1px solid #EEEEEE' }}>
-          <h2 style={{ fontFamily: "'BudgePair', sans-serif", fontWeight: 700, fontSize: '1.2rem', color: '#1A1A1A', marginBottom: 4, paddingRight: 32 }}>
+        <div style={{ padding: '16px 20px 12px', flexShrink: 0, borderBottom: '1px solid #F7DDD2' }}>
+          <h2 style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 700, fontSize: '1.2rem', color: '#2A1A12', marginBottom: 4, paddingRight: 32 }}>
             {item.name}
           </h2>
-          <p style={{ fontFamily: "'BudgePair', sans-serif", fontWeight: 700, fontSize: '1.05rem', color: '#1A1A1A' }}>
+          <p style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 700, fontSize: '1.05rem', color: '#2A1A12' }}>
             ${item.price.toFixed(2)}
           </p>
         </div>
 
         <div style={{ overflowY: 'auto', flex: 1, padding: '16px 20px' }}>
           {item.description && (
-            <p style={{ fontFamily: "'BudgePair', sans-serif", fontSize: '0.875rem', color: '#666', lineHeight: 1.6, marginBottom: 16 }}>
+            <p style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '0.875rem', color: '#666', lineHeight: 1.6, marginBottom: 16 }}>
               {item.description}
             </p>
           )}
@@ -231,10 +231,10 @@ export default function ItemModal({ item, onClose }: Props) {
           {isDrink && (
             <div style={{ marginBottom: 16 }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
-                <p style={{ fontFamily: "'Rackety DEMO', sans-serif", fontSize: '1rem', color: '#1A1A1A', letterSpacing: '0.06em' }}>
+                <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: '1rem', color: '#2A1A12', letterSpacing: '0.06em' }}>
                   CHOOSE FLAVOURS
                 </p>
-                <span style={{ background: '#F3BD25', color: '#1A1A1A', fontFamily: "'BudgePair', sans-serif", fontSize: '0.72rem', fontWeight: 700, padding: '3px 10px', borderRadius: 4 }}>
+                <span style={{ background: '#BA3A13', color: '#2A1A12', fontFamily: "'Nunito Sans', sans-serif", fontSize: '0.72rem', fontWeight: 700, padding: '3px 10px', borderRadius: 4 }}>
                   Required
                 </span>
               </div>
@@ -245,22 +245,22 @@ export default function ItemModal({ item, onClose }: Props) {
                     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                     padding: '10px 14px', borderRadius: 6, marginBottom: 8,
                     background: q > 0 ? 'rgba(243,189,37,0.08)' : '#F9F9F9',
-                    border: `1px solid ${q > 0 ? '#F3BD25' : '#EEEEEE'}`,
+                    border: `1px solid ${q > 0 ? '#BA3A13' : '#F7DDD2'}`,
                     transition: 'all 0.15s',
                   }}>
-                    <span style={{ fontFamily: "'BudgePair', sans-serif", fontSize: '0.9rem', color: '#1A1A1A' }}>{flavour}</span>
-                    <div style={{ display: 'flex', alignItems: 'center', border: '1px solid #EEEEEE', borderRadius: 4, overflow: 'hidden' }}>
+                    <span style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '0.9rem', color: '#2A1A12' }}>{flavour}</span>
+                    <div style={{ display: 'flex', alignItems: 'center', border: '1px solid #F7DDD2', borderRadius: 4, overflow: 'hidden' }}>
                       <button onClick={() => setFlavourQty(flavour, -1)}
-                        style={{ width: 34, height: 34, background: '#F9F9F9', border: 'none', color: '#F3BD25', fontSize: '1.2rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>−</button>
-                      <span style={{ width: 30, textAlign: 'center', fontFamily: "'BudgePair', sans-serif", fontWeight: 700, fontSize: '0.9rem', color: '#1A1A1A' }}>{q}</span>
+                        style={{ width: 34, height: 34, background: '#F9F9F9', border: 'none', color: '#BA3A13', fontSize: '1.2rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>−</button>
+                      <span style={{ width: 30, textAlign: 'center', fontFamily: "'Nunito Sans', sans-serif", fontWeight: 700, fontSize: '0.9rem', color: '#2A1A12' }}>{q}</span>
                       <button onClick={() => setFlavourQty(flavour, 1)}
-                        style={{ width: 34, height: 34, background: '#F9F9F9', border: 'none', color: '#F3BD25', fontSize: '1.2rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>+</button>
+                        style={{ width: 34, height: 34, background: '#F9F9F9', border: 'none', color: '#BA3A13', fontSize: '1.2rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>+</button>
                     </div>
                   </div>
                 )
               })}
               {totalFlavourQty === 0 && (
-                <p style={{ fontFamily: "'BudgePair', sans-serif", fontSize: '0.78rem', color: '#ef4444', marginTop: 4 }}>
+                <p style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '0.78rem', color: '#ef4444', marginTop: 4 }}>
                   Please choose at least 1
                 </p>
               )}
@@ -276,7 +276,7 @@ export default function ItemModal({ item, onClose }: Props) {
           {/* Old extras: Extra Meat / Extra Vegetable (optional, shown after required) */}
           {oldExtras.length > 0 && (
             <div style={{ marginBottom: 16 }}>
-              <p style={{ fontFamily: "'Rackety DEMO', sans-serif", fontSize: '1rem', color: '#999', letterSpacing: '0.06em', marginBottom: 10 }}>
+              <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: '1rem', color: '#999', letterSpacing: '0.06em', marginBottom: 10 }}>
                 EXTRAS
               </p>
               {oldExtras.map(({ label, checked, set }) => (
@@ -284,15 +284,15 @@ export default function ItemModal({ item, onClose }: Props) {
                   display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                   padding: '12px 14px', borderRadius: 6, marginBottom: 8,
                   background: checked ? 'rgba(243,189,37,0.08)' : '#F9F9F9',
-                  border: `1px solid ${checked ? '#F3BD25' : '#EEEEEE'}`,
+                  border: `1px solid ${checked ? '#BA3A13' : '#F7DDD2'}`,
                   cursor: 'pointer', transition: 'all 0.15s',
                 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                     <input type="checkbox" checked={checked} onChange={e => set(e.target.checked)}
-                      style={{ width: 18, height: 18, accentColor: '#F3BD25', cursor: 'pointer' }} />
-                    <span style={{ fontFamily: "'BudgePair', sans-serif", fontSize: '0.9rem', color: '#1A1A1A' }}>{label}</span>
+                      style={{ width: 18, height: 18, accentColor: '#BA3A13', cursor: 'pointer' }} />
+                    <span style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '0.9rem', color: '#2A1A12' }}>{label}</span>
                   </div>
-                  <span style={{ fontFamily: "'BudgePair', sans-serif", fontSize: '0.85rem', fontWeight: 700, color: '#1A1A1A' }}>+$3.00</span>
+                  <span style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '0.85rem', fontWeight: 700, color: '#2A1A12' }}>+$3.00</span>
                 </label>
               ))}
             </div>
@@ -300,7 +300,7 @@ export default function ItemModal({ item, onClose }: Props) {
 
           {!isDrink && (
             <div>
-              <p style={{ fontFamily: "'Rackety DEMO', sans-serif", fontSize: '1rem', color: '#999', letterSpacing: '0.06em', marginBottom: 8 }}>
+              <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: '1rem', color: '#999', letterSpacing: '0.06em', marginBottom: 8 }}>
                 SPECIAL INSTRUCTIONS (OPTIONAL)
               </p>
               <textarea
@@ -309,28 +309,28 @@ export default function ItemModal({ item, onClose }: Props) {
                 rows={2}
                 style={{
                   width: '100%', background: '#FFF', border: '1px solid #DDDDDD',
-                  borderRadius: 4, padding: '10px 14px', color: '#1A1A1A',
-                  fontFamily: "'BudgePair', sans-serif", fontSize: '0.875rem',
+                  borderRadius: 4, padding: '10px 14px', color: '#2A1A12',
+                  fontFamily: "'Nunito Sans', sans-serif", fontSize: '0.875rem',
                   resize: 'none', outline: 'none', transition: 'border-color 0.15s',
                 }}
-                onFocus={e => (e.target.style.borderColor = '#F3BD25')}
+                onFocus={e => (e.target.style.borderColor = '#BA3A13')}
                 onBlur={e => (e.target.style.borderColor = '#DDDDDD')}
               />
             </div>
           )}
         </div>
 
-        <div style={{ padding: '12px 20px 20px', background: '#FFF', display: 'flex', gap: 12, alignItems: 'center', borderTop: '1px solid #EEEEEE', flexShrink: 0 }}>
+        <div style={{ padding: '12px 20px 20px', background: '#FFF', display: 'flex', gap: 12, alignItems: 'center', borderTop: '1px solid #F7DDD2', flexShrink: 0 }}>
           {!isDrink && (
-            <div style={{ display: 'flex', alignItems: 'center', border: '1px solid #EEEEEE', borderRadius: 4, overflow: 'hidden', flexShrink: 0 }}>
+            <div style={{ display: 'flex', alignItems: 'center', border: '1px solid #F7DDD2', borderRadius: 4, overflow: 'hidden', flexShrink: 0 }}>
               <button onClick={() => setQty(Math.max(1, qty - 1))} style={{
-                width: 38, height: 46, color: '#F3BD25', fontSize: '1.4rem',
+                width: 38, height: 46, color: '#BA3A13', fontSize: '1.4rem',
                 background: '#F9F9F9', border: 'none', cursor: 'pointer',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
               }}>−</button>
-              <span style={{ width: 34, textAlign: 'center', fontFamily: "'BudgePair', sans-serif", fontWeight: 700, fontSize: '1rem', color: '#1A1A1A' }}>{qty}</span>
+              <span style={{ width: 34, textAlign: 'center', fontFamily: "'Nunito Sans', sans-serif", fontWeight: 700, fontSize: '1rem', color: '#2A1A12' }}>{qty}</span>
               <button onClick={() => setQty(qty + 1)} style={{
-                width: 38, height: 46, color: '#F3BD25', fontSize: '1.4rem',
+                width: 38, height: 46, color: '#BA3A13', fontSize: '1.4rem',
                 background: '#F9F9F9', border: 'none', cursor: 'pointer',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
               }}>+</button>

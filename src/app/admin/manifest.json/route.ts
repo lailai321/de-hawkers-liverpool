@@ -9,8 +9,8 @@ export function GET() {
     start_url: '/admin',
     scope: '/admin/',
     display: 'standalone',
-    background_color: '#F3BD25',
-    theme_color: '#F3BD25',
+    background_color: '#BA3A13',
+    theme_color: '#BA3A13',
     icons: [
       {
         src: '/icon.png',
