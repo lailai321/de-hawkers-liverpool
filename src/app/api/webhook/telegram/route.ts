@@ -58,7 +58,7 @@ export async function POST(req: NextRequest) {
     await sendMessage(`Chat ID: <code>${chatId}</code>`, chatId)
   } else if (text === '/help') {
     await sendMessage(
-      '<b>Super Noodles Bot Commands</b>\n\n' +
+      "<b>De Hawker's Bot Commands</b>\n\n" +
       '/soldout [item name] - Mark item as sold out\n' +
       '/available [item name] - Mark item as available\n' +
       '/list - Show all sold out items\n' +

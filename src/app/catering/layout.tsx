@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Catering Enquiry | Super Noodles Glenmore Park, Penrith',
-  description: 'Planning an event in Glenmore Park or Penrith? Enquire about Chinese & Malaysian catering from Super Noodles — laksa, fried rice, honey chicken and more for groups.',
+  title: "Catering Enquiry | De Hawker's Liverpool",
+  description: "Planning an event in Liverpool, Sydney? Enquire about hawker-style catering from De Hawker's — fried rice, stir-fried noodles, honey chicken and more for groups.",
 }
 
 export default function CateringLayout({ children }: { children: React.ReactNode }) {

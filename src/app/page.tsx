@@ -126,7 +126,7 @@ export default function HomePage() {
 
       {/* Hero */}
       <div className="hero-wrapper">
-        <Image src="/banner.jpg" alt="Super Noodles" fill style={{ objectFit: 'cover', objectPosition: 'center' }} priority unoptimized />
+        <Image src="/banner.jpg" alt="De Hawker's Liverpool" fill style={{ objectFit: 'cover', objectPosition: 'center' }} priority unoptimized />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 20%, rgba(0,0,0,0.6) 100%)', zIndex: 1 }} />
         {holidayStatus?.today && (
           <div style={{ position: 'absolute', inset: 0, background: 'rgba(255,255,255,0.6)', zIndex: 2 }} />
@@ -135,13 +135,13 @@ export default function HomePage() {
 
         {/* Text overlay */}
         <div className="hero-content">
-          <h1 className="hero-title">Super Noodles – Glenmore Park</h1>
+          <h1 className="hero-title">De Hawker&apos;s – Liverpool</h1>
           <div className="hero-info">
-            <span className="hero-info-item"><MapPin size={15} strokeWidth={2.2} className="hero-info-icon" />Kiosk 2 Glenmore Park Town Centre, 1/11 Town Terrace, Glenmore Park NSW 2745</span>
+            <span className="hero-info-item"><MapPin size={15} strokeWidth={2.2} className="hero-info-icon" />Shop 1011, Westfield Liverpool, Elizabeth St, Liverpool NSW 2170</span>
             <span className="hero-sep">·</span>
-            <span className="hero-info-item"><Clock size={15} strokeWidth={2.2} className="hero-info-icon" />Tue–Sun 11:00am – 8:00pm</span>
+            <span className="hero-info-item"><Clock size={15} strokeWidth={2.2} className="hero-info-icon" />Mon–Wed,Fri–Sun 9am–6pm · Thu 9am–9pm</span>
             <span className="hero-sep">·</span>
-            <span className="hero-info-item"><Phone size={15} strokeWidth={2.2} className="hero-info-icon" />(02) 4733 4782</span>
+            <span className="hero-info-item"><Phone size={15} strokeWidth={2.2} className="hero-info-icon" />0420 226 788</span>
           </div>
           <div className="hero-tags" style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             <span style={{ display: 'flex', alignItems: 'center', gap: 7, background: '#BA3A13', color: '#2A1A12', fontFamily: "'Nunito Sans', sans-serif", fontSize: '1rem', fontWeight: 700, padding: '7px 16px', borderRadius: 6, letterSpacing: '0.02em' }}>

@@ -21,8 +21,8 @@ export default function CateringPage() {
     try {
       const res = await fetch('/api/catering', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(form) })
       if (res.ok) setSent(true)
-      else setError('Something went wrong. Please call us at (02) 4733 4782.')
-    } catch { setError('Network error. Please call us at (02) 4733 4782.') }
+      else setError('Something went wrong. Please call us at 0420 226 788.')
+    } catch { setError('Network error. Please call us at 0420 226 788.') }
     finally { setLoading(false) }
   }
 

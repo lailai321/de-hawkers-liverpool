@@ -47,10 +47,10 @@ async function sendSms(phone: string, body: string): Promise<SmsResult> {
 export function sendReadySms(phone: string, orderNumber: number) {
   return sendSms(
     phone,
-    `Super Noodles: Order #${String(orderNumber).padStart(4, '0')} is ready for pickup at Glenmore Park. Please collect it at the counter.`
+    `De Hawker's: Order #${String(orderNumber).padStart(4, '0')} is ready for pickup at Westfield Liverpool. Please collect it at the counter.`
   )
 }
 
 export function sendTestSms(phone: string) {
-  return sendSms(phone, 'Super Noodles SMS test: your order-ready notifications are now connected.')
+  return sendSms(phone, "De Hawker's SMS test: your order-ready notifications are now connected.")
 }

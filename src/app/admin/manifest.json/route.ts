@@ -3,9 +3,9 @@ import { NextResponse } from 'next/server'
 export function GET() {
   return NextResponse.json({
     id: '/admin',
-    name: 'Super Noodles Admin',
-    short_name: 'SN Admin',
-    description: 'Super Noodles order and menu management.',
+    name: "De Hawker's Admin",
+    short_name: 'DH Admin',
+    description: "De Hawker's Liverpool order and menu management.",
     start_url: '/admin',
     scope: '/admin/',
     display: 'standalone',

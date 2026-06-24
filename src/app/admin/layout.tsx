@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Super Noodles Admin',
-  description: 'Super Noodles order and menu management.',
+  title: "De Hawker's Admin",
+  description: "De Hawker's Liverpool order and menu management.",
   manifest: '/admin/manifest.json',
   appleWebApp: {
     capable: true,
-    title: 'SN Admin',
+    title: 'DH Admin',
     statusBarStyle: 'black-translucent',
   },
   icons: {

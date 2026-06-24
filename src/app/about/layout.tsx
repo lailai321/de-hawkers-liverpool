@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About Us | Super Noodles – Glenmore Park, Burwood & Campbelltown',
-  description: 'Super Noodles serves Chinese & Malaysian favourites across Glenmore Park, Burwood and Campbelltown. See our locations, hours and contact details.',
+  title: "About Us | De Hawker's Liverpool – Westfield Liverpool",
+  description: "De Hawker's Liverpool serves hawker-style wok dishes at Westfield Liverpool, Sydney. See our location, hours and contact details.",
 }
 
 export default function AboutLayout({ children }: { children: React.ReactNode }) {

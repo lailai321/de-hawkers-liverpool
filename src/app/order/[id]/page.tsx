@@ -96,7 +96,7 @@ export default async function OrderPage({ params, searchParams }: Props) {
         <div style={{ background: '#F6ECDF', borderRadius: 8, border: '1px solid #F7DDD2', padding: '16px 20px', marginBottom: 16 }}>
           {[
             { icon: '🕐', label: 'Pickup Time', value: pickupLabel },
-            { icon: '📍', label: 'Pickup Location', value: 'Kiosk 2, 1/11 Town Terrace\nGlenmore Park NSW 2745' },
+            { icon: '📍', label: 'Pickup Location', value: 'Shop 1011, Westfield Liverpool\nElizabeth St, Liverpool NSW 2170' },
           ].map(({ icon, label, value }) => (
             <div key={label} style={{ display: 'flex', gap: 14, marginBottom: 14 }}>
               <span style={{ fontSize: '1.2rem', flexShrink: 0 }}>{icon}</span>

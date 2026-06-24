@@ -1,7 +1,7 @@
 const items = [
   'All refunds are processed in-store as cash.',
   'If an item is unavailable, our staff will inform you and provide a full cash refund at pickup.',
-  'For any issues with your order, please call us at (02) 4733 4782 or speak to our staff at pickup.',
+  'For any issues with your order, please call us at 0420 226 788 or speak to our staff at pickup.',
 ]
 
 export default function RefundPolicy() {

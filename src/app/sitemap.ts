@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 
-const SITE_URL = 'https://www.supernoodlesonline.com.au'
+const SITE_URL = 'https://de-hawkers-liverpool.vercel.app'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()

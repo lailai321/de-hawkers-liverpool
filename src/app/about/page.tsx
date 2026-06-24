@@ -7,45 +7,26 @@ const F = { fontFamily: "'Nunito Sans', sans-serif" } as const
 
 const locations = [
   {
-    name: 'Super Noodles – Glenmore Park',
-    address: 'Kiosk 2, Glenmore Park Town Centre\n1/11 Town Terrace, Glenmore Park NSW 2745',
-    phone: '(02) 4733 4782',
-    hours: 'Tue–Sun 11:00am–8:00pm · Mon Closed',
+    name: "De Hawker's – Liverpool",
+    address: 'Shop 1011, Westfield Liverpool\nElizabeth St, Liverpool NSW 2170',
+    phone: '0420 226 788',
+    hours: 'Mon–Wed, Fri–Sun 9:00am–6:00pm · Thu 9:00am–9:00pm',
     hasOrder: true,
     image: '/glenmore-park.jpg',
-    imgPosition: 'right top',
-  },
-  {
-    name: 'Super Noodles – Burwood',
-    address: 'Westfield Burwood, Shop FC3\nLevel 1/100 Burwood Rd, Burwood NSW 2134',
-    phone: 'TBC',
-    hours: 'Mon–Wed, Fri–Sun 9:00am–6:00pm · Thu 9:00am–9:00pm',
-    hasOrder: false,
-    image: '/burwood-store.jpg',
-    imgPosition: 'right top',
-  },
-  {
-    name: 'Super Noodles – Campbelltown',
-    address: 'Campbelltown Mall\n271 Queen St, Campbelltown NSW 2560',
-    phone: 'TBC',
-    hours: 'Mon–Wed, Fri–Sun 9:00am–6:00pm · Thu 9:00am–9:00pm',
-    hasOrder: false,
-    image: '/campbelltown-store.jpg',
     imgPosition: 'right top',
   },
 ]
 
 const sellingPoints = [
-  { icon: <Utensils size={22} color="#BA3A13" strokeWidth={1.8} />, label: 'Cantonese & Malaysian' },
-  { icon: <Leaf size={22} color="#BA3A13" strokeWidth={1.8} />, label: 'Fresh & Wholesome' },
-  { icon: <Users size={22} color="#BA3A13" strokeWidth={1.8} />, label: 'Family Owned Since 2001' },
+  { icon: <Utensils size={22} color="#BA3A13" strokeWidth={1.8} />, label: 'Hawker-Style Wok Cooking' },
+  { icon: <Leaf size={22} color="#BA3A13" strokeWidth={1.8} />, label: 'Build Your Own Dish' },
+  { icon: <Users size={22} color="#BA3A13" strokeWidth={1.8} />, label: 'Westfield Liverpool' },
 ]
 
 const storyParagraphs = [
-  `Super Noodles began in 2001 as a humble family kitchen in Western Sydney, founded by a first-generation immigrant family who brought with them recipes from across the Cantonese and Malaysian kitchens they grew up in.`,
-  `From hand-folded dumplings and stir-fried rice noodles to fragrant laksa and Hokkien noodles, our menu celebrates the rich crossover of Southern Chinese and Southeast Asian cooking — the kind of food our family has always gathered around the table to share.`,
-  `What started as a single noodle shop has grown into one of Sydney's most loved Asian restaurant brands, but our heart has never changed. Every broth is still simmered for hours, every dish still made the way our family always has.`,
-  `We believe great food should be honest food: fresh ingredients, authentic flavours, and no shortcuts. For over twenty years, from our kitchen to your table, we've been proud to share a taste of home with the community that has supported us every step of the way.`,
+  `De Hawker's brings the energy of an Asian hawker market to Westfield Liverpool — fried rice, stir-fried noodles, noodle soups and our Chief's Special rice plates, all cooked to order in the wok.`,
+  `Add your star ingredient: build your bowl with vegetables, chicken, beef, a combination, seafood or king prawn, laddered up from our base price so you only pay for what you choose.`,
+  `From Singapore noodles and Pad Thai to laksa and honey chicken, our menu draws on the hawker traditions of Malaysia, Thailand, Indonesia and Southern China — fast, fresh and made for pickup.`,
 ]
 
 export default function AboutPage() {
@@ -56,10 +37,10 @@ export default function AboutPage() {
       <div style={{ background: '#FFFFFF', padding: '56px 24px 40px', textAlign: 'center', width: '100%' }}>
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
           <h1 style={{ ...R, fontSize: 'clamp(48px, 8vw, 80px)', color: '#2A1A12', letterSpacing: '0.06em', lineHeight: 1.1, marginBottom: 12 }}>
-            Super Noodles
+            De Hawker&apos;s
           </h1>
           <p style={{ ...F, fontSize: '1rem', color: '#856F63', letterSpacing: '0.04em' }}>
-            From Our Family Kitchen to Yours
+            Add Your Star Ingredient
           </p>
         </div>
       </div>

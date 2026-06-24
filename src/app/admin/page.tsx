@@ -89,7 +89,7 @@ export default function AdminPage() {
   const [loadingHolidays, setLoadingHolidays] = useState(false)
   const [holidayMsg, setHolidayMsg] = useState<{ type: 'success' | 'error'; text: string } | null>(null)
   const audioRef = useRef<AudioContext | null>(null)
-  const previousTitle = useRef('Super Noodles Admin')
+  const previousTitle = useRef("De Hawker's Admin")
 
   const activeOrders = useMemo(() => orders, [orders])
   const confirmedCount = useMemo(
@@ -396,7 +396,7 @@ export default function AdminPage() {
       <div className="min-h-screen bg-[#F6ECDF] flex items-center justify-center px-4">
         <form onSubmit={handleLogin} className="bg-white rounded-2xl p-8 w-full max-w-sm shadow-sm border border-[#E5E5E5]">
           <h1 className="text-2xl font-black text-gray-900 mb-1">Staff Login</h1>
-          <p className="text-sm text-gray-500 mb-6">Super Noodles – Glenmore Park</p>
+          <p className="text-sm text-gray-500 mb-6">De Hawker&apos;s – Liverpool</p>
           <label htmlFor="admin-password" className="block text-sm font-semibold text-gray-700 mb-2">Password</label>
           <input
             id="admin-password"
@@ -442,8 +442,8 @@ export default function AdminPage() {
       <header className="admin-header bg-[#2A1A12] text-white">
         <div className="admin-shell mx-auto px-6 py-4 flex items-center gap-3">
           <div className="flex-1 min-w-0">
-            <h1 className="text-base font-black leading-tight tracking-wide">Super Noodles Admin</h1>
-            <p className="text-xs text-white opacity-70">Glenmore Park</p>
+            <h1 className="text-base font-black leading-tight tracking-wide">De Hawker&apos;s Admin</h1>
+            <p className="text-xs text-white opacity-70">Liverpool</p>
           </div>
           <div className="flex items-center gap-2 shrink-0">
             <button
