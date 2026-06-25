@@ -35,7 +35,9 @@ export default function FeaturedDishes({ categories, onSelect }: {
               <DishCard
                 image={item.imageUrl ?? undefined}
                 name={item.name}
+                nameCn={undefined}
                 price={undefined}
+                onClick={undefined}
                 style={{ paddingBottom: 8 }}
               />
               <div style={{ display: 'flex', justifyContent: 'center', marginTop: -22 }}>
