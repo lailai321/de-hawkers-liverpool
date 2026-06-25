@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useCartStore } from '@/store/cart'
+import { Badge } from '@/components/ds/core/Badge'
 
 const NAV_LINKS = [
   { label: 'Menu', href: '/' },
@@ -43,11 +44,16 @@ export default function Navbar() {
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         padding: '0 24px',
       }}>
-        {/* Logo */}
-        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', flexShrink: 0 }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/ds/logo-cart.png" alt="De Hawker's Liverpool" className="nav-logo" style={{ width: 'auto', display: 'block' }} />
-        </Link>
+        {/* Logo + certification mark */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14, flexShrink: 0 }}>
+          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/ds/logo-cart.png" alt="De Hawker's Liverpool" className="nav-logo" style={{ width: 'auto', display: 'block' }} />
+          </Link>
+          {/* Placeholder until the real certificate graphic is supplied — swap the
+              icon/label here, the position and styling can stay as-is. */}
+          <Badge tone="soft" className="halal-badge">☾ Halal</Badge>
+        </div>
 
         {/* Desktop nav links */}
         <div className="desktop-nav">
@@ -141,6 +147,9 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
+          <div style={{ padding: '14px 24px' }}>
+            <Badge tone="soft">☾ Halal</Badge>
+          </div>
         </div>
       )}
 
@@ -167,6 +176,7 @@ export default function Navbar() {
           .nav-logo { height: 42px; max-width: 140px; }
           .desktop-nav { display: none; }
           .hamburger-btn { display: flex; }
+          .halal-badge { display: none; }
           .mobile-dropdown { top: 64px; }
           .holiday-banner { top: 64px; font-size: 0.95rem; padding: 11px 16px; }
           body.holiday-day .main-content { padding-top: 116px !important; }

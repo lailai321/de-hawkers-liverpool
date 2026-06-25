@@ -30,13 +30,13 @@ export const metadata: Metadata = {
     siteName: "De Hawker's Liverpool",
     title: "De Hawker's Liverpool | Asian Hawker Wok Restaurant, Westfield Liverpool",
     description: "Order hawker-style wok dishes online for pickup at Westfield Liverpool. Fried rice, stir-fried noodles, noodle soups and Chief's Special rice plates.",
-    images: [{ url: '/banner.jpg', width: 1200, height: 630, alt: "De Hawker's Liverpool, Westfield Liverpool" }],
+    images: [{ url: '/banner.png', width: 1200, height: 630, alt: "De Hawker's Liverpool, Westfield Liverpool" }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "De Hawker's Liverpool | Asian Hawker Wok Restaurant, Westfield Liverpool",
     description: 'Order hawker-style wok dishes online for pickup at Westfield Liverpool.',
-    images: ['/banner.jpg'],
+    images: ['/banner.png'],
   },
   icons: {
     icon: [
@@ -51,7 +51,7 @@ const restaurantJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Restaurant',
   name: "De Hawker's Liverpool",
-  image: `${SITE_URL}/banner.jpg`,
+  image: `${SITE_URL}/banner.png`,
   url: SITE_URL,
   telephone: '+61420226788',
   servesCuisine: ['Asian', 'Chinese', 'Malaysian', 'Thai', 'Indonesian'],

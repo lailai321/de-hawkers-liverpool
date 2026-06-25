@@ -9,6 +9,7 @@ import ItemCard from '@/components/ItemCard'
 import ItemModal from '@/components/ItemModal'
 import { useCartStore } from '@/store/cart'
 import PromoBanner from '@/components/PromoBanner'
+import FeaturedDishes from '@/components/FeaturedDishes'
 
 interface MenuData {
   categories: MenuCategory[]
@@ -126,7 +127,7 @@ export default function HomePage() {
 
       {/* Hero */}
       <div className="hero-wrapper">
-        <Image src="/banner.jpg" alt="De Hawker's Liverpool" fill style={{ objectFit: 'cover', objectPosition: 'center' }} priority unoptimized />
+        <Image src="/banner.png" alt="De Hawker's Liverpool" fill style={{ objectFit: 'cover', objectPosition: '35% 50%' }} priority unoptimized />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 20%, rgba(0,0,0,0.6) 100%)', zIndex: 1 }} />
         {holidayStatus?.today && (
           <div style={{ position: 'absolute', inset: 0, background: 'rgba(255,255,255,0.6)', zIndex: 2 }} />
@@ -160,6 +161,10 @@ export default function HomePage() {
       <div className="hero-coupons">
         <PromoBanner />
       </div>
+
+      {!isSearching && (
+        <FeaturedDishes categories={data.categories} onSelect={setSelectedItem} />
+      )}
 
       {/* Mobile sticky category nav — full width, outside padded container */}
       <div className="mobile-cat-sticky">
