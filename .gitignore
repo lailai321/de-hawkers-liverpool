@@ -44,3 +44,5 @@ next-env.d.ts
 
 # print service runtime log
 print-service/print-service.log
+
+.vercel
