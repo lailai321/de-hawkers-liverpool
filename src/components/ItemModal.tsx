@@ -154,7 +154,7 @@ export default function ItemModal({ item, onClose }: Props) {
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                 <input
-                  type={group.multiSelect ? 'checkbox' : 'radio'}
+                  type={group.required ? 'radio' : 'checkbox'}
                   name={group.id}
                   value={choice.label}
                   checked={isSelected}
