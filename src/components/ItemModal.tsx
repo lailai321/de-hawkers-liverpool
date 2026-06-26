@@ -85,10 +85,19 @@ export default function ItemModal({ item, onClose }: Props) {
   const allRequired   = requiredGroups.every(g => (optionSelections[g.id] ?? []).length > 0)
   const canAdd        = isDrink ? totalFlavourQty > 0 : allRequired
 
+  // Items that should never show Extra Meat / Extra Vegetable
+  const NO_EXTRAS = new Set([
+    '2a6e5a71-7336-4f15-b13b-ca679177f89a', // Steamed Rice (sides)
+    '2c37450a-da79-4200-bb7b-24d370d38032', // Fried Rice (sides)
+    '53e176f3-7dbf-4806-9b42-563bc5f56d01', // Chicken Wonton Noodle Soup (has own add-extra)
+  ])
+  const noExtraMeat = item.noExtraMeat || NO_EXTRAS.has(item.uuid)
+  const noExtraVeg  = item.noExtraVeg  || NO_EXTRAS.has(item.uuid)
+
   const oldExtras: ExtraOption[] = []
   if (!isDrink && item.hasAddons) {
-    if (!item.noExtraMeat) oldExtras.push({ label: 'Extra Meat',      checked: extraMeat, set: setExtraMeat })
-    if (!item.noExtraVeg)  oldExtras.push({ label: 'Extra Vegetable', checked: extraVeg,  set: setExtraVeg })
+    if (!noExtraMeat) oldExtras.push({ label: 'Extra Meat',      checked: extraMeat, set: setExtraMeat })
+    if (!noExtraVeg)  oldExtras.push({ label: 'Extra Vegetable', checked: extraVeg,  set: setExtraVeg })
   }
 
   function toggleOption(groupId: string, label: string, multiSelect: boolean) {
