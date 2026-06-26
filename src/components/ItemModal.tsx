@@ -318,8 +318,9 @@ export default function ItemModal({ item, onClose }: Props) {
           {/* Extra meat/veg */}
           {oldExtras.length > 0 && (
             <fieldset style={{ border: 'none', padding: 0, marginBottom: 16 }}>
-              <legend style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '0.9rem', color: '#745F55', marginBottom: 10 }}>
-                Extras <span style={{ fontWeight: 400, fontSize: '0.8rem' }}>(optional)</span>
+              <legend style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
+                <span style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '0.9rem', color: '#211A17' }}>EXTRAS</span>
+                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', color: '#9E8880' }}>Optional</span>
               </legend>
               {oldExtras.map(({ label, checked, set }) => (
                 <label key={label} style={{
