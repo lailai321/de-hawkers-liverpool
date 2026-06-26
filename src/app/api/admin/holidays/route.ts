@@ -28,7 +28,5 @@ export async function POST(req: NextRequest) {
     const { error } = await db.from('holidays').delete().eq('date', date)
     if (error) return NextResponse.json({ error: error.message }, { status: 500 })
   }
-  // Verify write succeeded
-  const { data: verify, error: verifyErr } = await db.from('holidays').select('date').eq('date', date)
-  return NextResponse.json({ ok: true, _written: action === 'add' ? (verify ?? []).length > 0 : (verify ?? []).length === 0, _verifyErr: verifyErr?.message ?? null })
+  return NextResponse.json({ ok: true })
 }

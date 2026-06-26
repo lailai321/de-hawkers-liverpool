@@ -77,6 +77,6 @@ export const useCartStore = create<CartStore>()(
         return sum + (Math.round(i.price * 100) + extras) * i.quantity
       }, 0),
     }),
-    { name: 'sn-cart', partialize: (s) => ({ items: s.items }) }
+    { name: 'dh-cart', partialize: (s) => ({ items: s.items }) }
   )
 )

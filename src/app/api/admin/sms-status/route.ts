@@ -33,6 +33,9 @@ export async function POST(req: NextRequest) {
 
   const { phone } = await readJson<{ phone?: string }>(req, 1024)
   if (!phone) return NextResponse.json({ error: 'Missing phone' }, { status: 400 })
+  if (!/^04\d{8}$/.test(phone.replace(/\D/g, '').replace(/^61/, '0'))) {
+    return NextResponse.json({ error: 'Invalid phone number' }, { status: 400 })
+  }
 
   try {
     const result = await sendTestSms(phone)

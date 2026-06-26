@@ -2,9 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import ClientLayout from '@/components/ClientLayout'
 
-// Placeholder until a custom domain is connected (Phase E) — update once the
-// Vercel project URL is known.
-const SITE_URL = 'https://de-hawkers-liverpool.vercel.app'
+const SITE_URL = process.env.NEXT_PUBLIC_APP_URL?.replace(/\/$/, '') || 'https://dehawkers.com.au'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
