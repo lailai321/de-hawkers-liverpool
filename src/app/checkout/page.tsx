@@ -11,6 +11,7 @@ function getSydneyNow(): Date {
 
 function getTimeSlots(): string[] {
   const now = getSydneyNow()
+  if (now.getDay() === 1) return []
   const slots: string[] = []
   const earliest = new Date(now.getTime() + 30 * 60 * 1000)
   const open = new Date(now); open.setHours(11, 0, 0, 0)
@@ -187,7 +188,7 @@ export default function CheckoutPage() {
             {!storeOpen && slots.length === 0 ? (
               <div style={{ background: '#FFF8EF', border: '1.5px solid #E7C3B5', borderRadius: 8, padding: '12px 16px' }}>
                 <p style={{ ...F, fontSize: '0.85rem', color: '#211A17', fontWeight: 700, marginBottom: 4 }}>We&apos;re currently closed</p>
-                <p style={{ ...F, fontSize: '0.78rem', color: '#745F55' }}>Open Mon–Sun 9am–6pm (Thu 9am–9pm, Sydney time)</p>
+                <p style={{ ...F, fontSize: '0.78rem', color: '#745F55' }}>Open Tue–Sun, 11am–8pm (Sydney time)</p>
               </div>
             ) : (
               <>

@@ -2,20 +2,21 @@
 import { useState } from 'react'
 
 export default function ReceiptForm({ orderId, stripeSessionId }: { orderId: string; stripeSessionId: string }) {
-  const [email, setEmail] = useState(''), [sent, setSent] = useState(false), [loading, setLoading] = useState(false)
+  const [email, setEmail] = useState(''), [sent, setSent] = useState(false), [loading, setLoading] = useState(false), [sendError, setSendError] = useState('')
 
   async function handleSend(e: React.FormEvent) {
     e.preventDefault()
     if (!email) return
-    setLoading(true)
+    setLoading(true); setSendError('')
     try {
       const response = await fetch('/api/receipt', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, orderId, sessionId: stripeSessionId }),
       })
-      if (response.ok) setSent(true)
-    } finally { setLoading(false) }
+      if (response.ok) { setSent(true) } else { setSendError('Could not send receipt. Please try again.') }
+    } catch { setSendError('Network error. Please try again.') }
+    finally { setLoading(false) }
   }
 
   if (sent) return (
@@ -36,6 +37,7 @@ export default function ReceiptForm({ orderId, stripeSessionId }: { orderId: str
           {loading ? '…' : 'Send'}
         </button>
       </form>
+      {sendError && <p style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '0.8rem', color: '#DC2626', marginTop: 8 }}>{sendError}</p>}
     </div>
   )
 }

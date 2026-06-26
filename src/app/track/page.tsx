@@ -24,8 +24,9 @@ const STATUS_CONFIG = {
 
 function resolveStatus(order: OrderSummary, now: number) {
   const ageHours = (now - new Date(order.created_at).getTime()) / 3_600_000
-  if (ageHours > 6)              return STATUS_CONFIG.completed
-  if (order.status === 'ready')  return STATUS_CONFIG.ready
+  if (ageHours > 6)                   return STATUS_CONFIG.completed
+  if (order.status === 'collected')   return STATUS_CONFIG.completed
+  if (order.status === 'ready')       return STATUS_CONFIG.ready
   return STATUS_CONFIG.confirmed
 }
 
