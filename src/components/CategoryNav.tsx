@@ -20,22 +20,50 @@ export default function CategoryNav({ categories, activeSlug, onSelect }: Props)
   }, [activeSlug])
 
   return (
-    <div ref={navRef} className="hide-scrollbar" style={{ display: 'flex', gap: 8, overflowX: 'auto', padding: '10px 14px' }}>
+    <div
+      ref={navRef}
+      className="hide-scrollbar"
+      role="list"
+      aria-label="Menu categories"
+      style={{ display: 'flex', gap: 8, overflowX: 'auto', padding: '10px 14px' }}
+    >
       {categories.map(cat => {
         const active = activeSlug === cat.slug
         return (
           <button
             key={cat.slug}
             data-slug={cat.slug}
+            role="listitem"
             onClick={() => onSelect(cat.slug)}
+            aria-current={active ? 'true' : undefined}
+            aria-label={`Jump to ${cat.name} category`}
             style={{
-              whiteSpace: 'nowrap', padding: '10px 18px', borderRadius: 4,
-              border: 'none',
-              background: active ? '#2A1A12' : '#BA3A13',
-              color: active ? '#BA3A13' : '#2A1A12',
-              fontFamily: "'Baloo 2', sans-serif",
-              fontSize: '1.1rem', letterSpacing: '0.04em',
-              cursor: 'pointer', transition: 'background 0.15s', flexShrink: 0,
+              whiteSpace: 'nowrap',
+              padding: '10px 18px',
+              borderRadius: 50,
+              border: active ? 'none' : '1.5px solid #E7C3B5',
+              background: active ? '#B63A24' : '#FFFFFF',
+              color: active ? '#FFFFFF' : '#211A17',
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: '0.875rem',
+              fontWeight: active ? 700 : 500,
+              cursor: 'pointer',
+              transition: 'background 0.15s, color 0.15s, border-color 0.15s',
+              flexShrink: 0,
+              minHeight: 44,
+              boxShadow: active ? '0 2px 8px rgba(182,58,36,0.25)' : 'none',
+            }}
+            onMouseEnter={e => {
+              if (!active) {
+                ;(e.currentTarget as HTMLButtonElement).style.background = '#F5EBE6'
+                ;(e.currentTarget as HTMLButtonElement).style.borderColor = '#B63A24'
+              }
+            }}
+            onMouseLeave={e => {
+              if (!active) {
+                ;(e.currentTarget as HTMLButtonElement).style.background = '#FFFFFF'
+                ;(e.currentTarget as HTMLButtonElement).style.borderColor = '#E7C3B5'
+              }
             }}
           >
             {cat.name}

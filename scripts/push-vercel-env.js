@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 // One-off: pushes selected vars from .env.local to the linked Vercel project's
 // production environment, piping each value through stdin so secrets never
 // appear as literal command-line arguments.

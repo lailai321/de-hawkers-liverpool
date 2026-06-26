@@ -1,16 +1,16 @@
 :root {
   /* --- Families ----------------------------------------------------------- */
-  --font-display: 'Baloo 2', 'Trebuchet MS', system-ui, sans-serif;
-  --font-slab:    'Zilla Slab', 'Rockwell', Georgia, serif;
-  --font-body:    'Nunito Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-slab:    'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, -apple-system, sans-serif;
 
   /* --- Weights ------------------------------------------------------------ */
   --fw-regular: 400;
-  --fw-medium:  600;
+  --fw-medium:  500;
   --fw-bold:    700;
   --fw-black:   800;
 
-  /* --- Fluid type scale (1.250 major-third) ------------------------------- */
+  /* --- Fluid type scale --------------------------------------------------- */
   --text-2xs:  0.6875rem;
   --text-xs:   0.75rem;
   --text-sm:   0.875rem;
@@ -24,29 +24,29 @@
   --text-6xl:  5.5rem;
 
   /* --- Line heights ------------------------------------------------------- */
-  --leading-tight:   0.95;
-  --leading-snug:    1.1;
-  --leading-normal:  1.5;
-  --leading-relaxed: 1.65;
+  --leading-tight:   1.0;
+  --leading-snug:    1.2;
+  --leading-normal:  1.55;
+  --leading-relaxed: 1.7;
 
   /* --- Letter spacing ----------------------------------------------------- */
   --tracking-tight:  -0.01em;
   --tracking-normal: 0;
-  --tracking-wide:   0.04em;
-  --tracking-wider:  0.08em;
+  --tracking-wide:   0.03em;
+  --tracking-wider:  0.06em;
 
   /* --- Semantic roles ------------------------------------------------------ */
   --type-display-family: var(--font-display);
-  --type-display-weight: var(--fw-black);
-  --type-display-tracking: 0.005em;
+  --type-display-weight: var(--fw-bold);
+  --type-display-tracking: 0.01em;
 
-  --type-dish-family: var(--font-slab);
+  --type-dish-family: var(--font-display);
   --type-dish-weight: var(--fw-bold);
 
   --type-body-family: var(--font-body);
   --type-body-weight: var(--fw-regular);
 
-  --type-label-family: var(--font-display);
+  --type-label-family: var(--font-body);
   --type-label-weight: var(--fw-bold);
-  --type-label-tracking: var(--tracking-wider);
+  --type-label-tracking: var(--tracking-wide);
 }

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 // One-off: applies schema.sql + holidays table + order_operations.sql to a
 // fresh Supabase Postgres instance. Run once when setting up a new project.
 const fs = require('fs');

@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import { ShieldCheck, AlertCircle } from 'lucide-react'
 import { useCartStore } from '@/store/cart'
 import RefundPolicy from '@/components/RefundPolicy'
 
@@ -12,14 +13,11 @@ function getTimeSlots(): string[] {
   const now = getSydneyNow()
   const slots: string[] = []
   const earliest = new Date(now.getTime() + 30 * 60 * 1000)
-
   const open = new Date(now); open.setHours(11, 0, 0, 0)
   const close = new Date(now); close.setHours(20, 0, 0, 0)
-
-  let t = new Date(Math.max(earliest.getTime(), open.getTime()))
+  const t = new Date(Math.max(earliest.getTime(), open.getTime()))
   const mins = t.getMinutes(), rem = mins % 15
   if (rem !== 0) t.setMinutes(mins + (15 - rem), 0, 0)
-
   while (t <= close) {
     const h = t.getHours(), m = t.getMinutes()
     const ampm = h >= 12 ? 'pm' : 'am'
@@ -37,16 +35,17 @@ function isStoreOpen(): boolean {
   return mins >= 11 * 60 && mins < 20 * 60
 }
 
-const F = { fontFamily: "'Nunito Sans', sans-serif" } as const
-const R = { fontFamily: "'Baloo 2', sans-serif" } as const
+const F = { fontFamily: "'DM Sans', sans-serif" } as const
+const R = { fontFamily: "'Playfair Display', Georgia, serif" } as const
 
 export default function CheckoutPage() {
-  const router = useRouter()
   const { items, totalCents, clearCart } = useCartStore()
-  const [name, setName] = useState(''), [phone, setPhone] = useState('')
+  const [name, setName]   = useState('')
+  const [phone, setPhone] = useState('')
   const [pickupType, setPickupType] = useState<'asap' | 'schedule'>(() => isStoreOpen() ? 'asap' : 'schedule')
-  const [pickupTime, setPickupTime] = useState(''), [loading, setLoading] = useState(false), [error, setError] = useState('')
-
+  const [pickupTime, setPickupTime] = useState('')
+  const [loading, setLoading]       = useState(false)
+  const [error, setError]           = useState('')
   const [idempotencyKey] = useState(() => crypto.randomUUID())
   const [holidayToday, setHolidayToday] = useState(false)
 
@@ -60,9 +59,9 @@ export default function CheckoutPage() {
   const slots = getTimeSlots(), storeOpen = isStoreOpen(), total = totalCents()
 
   if (items.length === 0) return (
-    <div style={{ minHeight: '100svh', background: '#FFF', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16 }}>
-      <p style={{ ...F, color: '#666' }}>Your cart is empty.</p>
-      <a href="/" style={{ ...R, fontSize: '1.1rem', color: '#BA3A13', textDecoration: 'none' }}>← Back to Menu</a>
+    <div style={{ minHeight: '100svh', background: '#FFF8EF', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, padding: '0 24px' }}>
+      <p style={{ ...F, color: '#745F55', fontSize: '1rem' }}>Your cart is empty.</p>
+      <Link href="/" style={{ ...F, fontWeight: 700, fontSize: '0.95rem', color: '#B63A24', textDecoration: 'none' }}>← Back to Menu</Link>
     </div>
   )
 
@@ -82,7 +81,6 @@ export default function CheckoutPage() {
       if (data.url) {
         clearCart()
         window.location.href = data.url
-        // 不 setLoading(false)，按钮保持禁用直到页面跳转完成
       } else {
         setError(data.error || 'Something went wrong. Please try again.')
         setLoading(false)
@@ -93,78 +91,136 @@ export default function CheckoutPage() {
     }
   }
 
-  const pickupBtn = (active: boolean, disabled: boolean): React.CSSProperties => ({
-    flex: 1, padding: '12px', borderRadius: 4,
-    border: `2px solid ${active ? '#BA3A13' : '#F7DDD2'}`,
-    background: active ? '#BA3A13' : '#FFF',
-    color: '#2A1A12', ...R, fontSize: '1rem', letterSpacing: '0.04em',
-    cursor: disabled ? 'not-allowed' : 'pointer', opacity: disabled ? 0.4 : 1, transition: 'all 0.15s',
+  const focusFn = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>) => {
+    e.target.style.borderColor = '#B63A24'
+    e.target.style.boxShadow = '0 0 0 3px rgba(182,58,36,0.12)'
+  }
+  const blurFn = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>) => {
+    e.target.style.borderColor = '#E7C3B5'
+    e.target.style.boxShadow = 'none'
+  }
+
+  const pickupBtnStyle = (active: boolean, disabled: boolean): React.CSSProperties => ({
+    flex: 1, padding: '12px 8px', borderRadius: 8,
+    border: `2px solid ${active ? '#B63A24' : '#E7C3B5'}`,
+    background: active ? '#B63A24' : '#FFFFFF',
+    color: active ? '#FFFFFF' : '#211A17',
+    ...F, fontSize: '0.9rem', fontWeight: active ? 700 : 500,
+    cursor: disabled ? 'not-allowed' : 'pointer',
+    opacity: disabled ? 0.4 : 1,
+    transition: 'all 0.15s',
   })
 
-  const labelS: React.CSSProperties = { ...R, fontSize: '0.9rem', color: '#666', letterSpacing: '0.05em', display: 'block', marginBottom: 6 }
+  const labelS: React.CSSProperties = { ...F, fontSize: '0.875rem', fontWeight: 600, color: '#745F55', display: 'block', marginBottom: 6 }
 
   return (
-    <div style={{ background: '#FFF', minHeight: '100svh', padding: '36px 16px 80px' }}>
+    <div style={{ background: '#FFF8EF', minHeight: '100svh', padding: '36px 16px 80px' }}>
       <div style={{ maxWidth: 520, margin: '0 auto' }}>
-        <a href="/" style={{ ...F, fontSize: '0.85rem', color: '#666', textDecoration: 'none', display: 'block', marginBottom: 24 }}>← Back to Menu</a>
-        <h1 style={{ ...R, fontSize: '2.5rem', color: '#2A1A12', letterSpacing: '0.06em', marginBottom: 28 }}>Checkout</h1>
+        <Link href="/" style={{ ...F, fontSize: '0.85rem', color: '#B63A24', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 4, marginBottom: 24 }}>
+          ← Back to Menu
+        </Link>
+        <h1 style={{ ...R, fontSize: '2.2rem', color: '#211A17', letterSpacing: '0.01em', marginBottom: 28 }}>Checkout</h1>
 
-        {/* Summary */}
-        <div style={{ background: '#F6ECDF', borderRadius: 8, padding: '16px 20px', marginBottom: 24, border: '1px solid #F7DDD2' }}>
-          <p style={{ ...F, fontSize: '1rem', color: '#666', marginBottom: 12 }}>ORDER SUMMARY</p>
+        {/* Order summary */}
+        <div style={{ background: '#FFFFFF', borderRadius: 12, padding: '16px 20px', marginBottom: 24, border: '1.5px solid #E7C3B5' }}>
+          <p style={{ ...F, fontSize: '0.75rem', fontWeight: 700, color: '#B5A399', letterSpacing: '0.07em', marginBottom: 12 }}>ORDER SUMMARY</p>
           {items.map((item, i) => {
             const extras = (item.extraMeat ? 300 : 0) + (item.extraVegetable ? 300 : 0) + (item.optionExtrasCents ?? 0)
             const line = (Math.round(item.price * 100) + extras) * item.quantity
             const optionsSummary = item.optionSelections
               ? Object.values(item.optionSelections).flat().filter(Boolean).join(', ')
               : ''
-            const subline = [
-              optionsSummary,
-              item.extraMeat ? '+Meat' : '',
-              item.extraVegetable ? '+Veg' : '',
-            ].filter(Boolean).join(', ')
+            const subline = [optionsSummary, item.extraMeat ? '+Meat' : '', item.extraVegetable ? '+Veg' : ''].filter(Boolean).join(', ')
             return (
               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8, gap: 8 }}>
                 <div style={{ flex: 1 }}>
-                  <span style={{ ...F, fontSize: '0.875rem', color: '#2A1A12' }}>×{item.quantity} {item.name}</span>
-                  {subline && <p style={{ ...F, fontSize: '0.78rem', color: '#999', marginTop: 1 }}>{subline}</p>}
+                  <span style={{ ...F, fontSize: '0.875rem', color: '#211A17' }}>×{item.quantity} {item.name}</span>
+                  {subline && <p style={{ ...F, fontSize: '0.78rem', color: '#B5A399', marginTop: 1 }}>{subline}</p>}
                 </div>
-                <span style={{ ...F, fontSize: '0.875rem', fontWeight: 700, color: '#2A1A12', flexShrink: 0 }}>${(line / 100).toFixed(2)}</span>
+                <span style={{ ...F, fontSize: '0.875rem', fontWeight: 700, color: '#211A17', flexShrink: 0 }}>${(line / 100).toFixed(2)}</span>
               </div>
             )
           })}
-          <div style={{ borderTop: '1px solid #F7DDD2', marginTop: 12, paddingTop: 12, display: 'flex', justifyContent: 'space-between' }}>
-            <span style={{ ...F, fontSize: '1rem', fontWeight: 700, color: '#2A1A12' }}>TOTAL</span>
-            <span style={{ ...F, fontSize: '1rem', fontWeight: 700, color: '#2A1A12' }}>${(total / 100).toFixed(2)}</span>
+          <div style={{ borderTop: '1px solid #F5EBE6', marginTop: 12, paddingTop: 12, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <span style={{ ...F, fontSize: '0.875rem', fontWeight: 700, color: '#211A17' }}>Total</span>
+            <span style={{ ...R, fontSize: '1.25rem', fontWeight: 700, color: '#B63A24' }}>${(total / 100).toFixed(2)}</span>
           </div>
         </div>
 
+        {/* Form */}
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
           <div>
-            <label style={labelS}>NAME</label>
-            <input className="input-dark" type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Your full name" required />
-            <p style={{ ...F, fontSize: '0.72rem', color: '#999', marginTop: 4 }}>Include last name so we can call your order</p>
+            <label htmlFor="checkout-name" style={labelS}>Name</label>
+            <input
+              id="checkout-name"
+              className="input-dark"
+              type="text"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              placeholder="Your full name"
+              required
+              onFocus={focusFn}
+              onBlur={blurFn}
+            />
+            <p style={{ ...F, fontSize: '0.72rem', color: '#B5A399', marginTop: 4 }}>Include last name so we can call your order</p>
           </div>
+
           <div>
-            <label style={labelS}>PHONE</label>
-            <input className="input-dark" type="tel" value={phone} onChange={e => setPhone(e.target.value)} placeholder="04xx xxx xxx" required />
-            <p style={{ ...F, fontSize: '0.72rem', color: '#999', marginTop: 4 }}>We&apos;ll send you an SMS when your order is ready for pickup</p>
+            <label htmlFor="checkout-phone" style={labelS}>Phone</label>
+            <input
+              id="checkout-phone"
+              className="input-dark"
+              type="tel"
+              value={phone}
+              onChange={e => setPhone(e.target.value)}
+              placeholder="04xx xxx xxx"
+              required
+              autoComplete="tel"
+              onFocus={focusFn}
+              onBlur={blurFn}
+            />
+            <p style={{ ...F, fontSize: '0.72rem', color: '#B5A399', marginTop: 4 }}>We&apos;ll SMS you when your order is ready</p>
           </div>
+
           <div>
-            <label style={labelS}>PICKUP TIME</label>
+            <label style={labelS}>Pickup Time</label>
             {!storeOpen && slots.length === 0 ? (
-              <div style={{ background: '#FFF8E5', border: '1.5px solid #BA3A13', borderRadius: 8, padding: '12px 16px' }}>
-                <p style={{ ...F, fontSize: '0.85rem', color: '#2A1A12', fontWeight: 700, marginBottom: 4 }}>We&apos;re currently closed</p>
-                <p style={{ ...F, fontSize: '0.78rem', color: '#666' }}>Open Tue–Sun 11:00am–8:00pm (Sydney time)</p>
+              <div style={{ background: '#FFF8EF', border: '1.5px solid #E7C3B5', borderRadius: 8, padding: '12px 16px' }}>
+                <p style={{ ...F, fontSize: '0.85rem', color: '#211A17', fontWeight: 700, marginBottom: 4 }}>We&apos;re currently closed</p>
+                <p style={{ ...F, fontSize: '0.78rem', color: '#745F55' }}>Open Mon–Sun 9am–6pm (Thu 9am–9pm, Sydney time)</p>
               </div>
             ) : (
               <>
-                <div style={{ display: 'flex', gap: 8 }}>
-                  <button type="button" onClick={() => setPickupType('asap')} disabled={!storeOpen} style={pickupBtn(pickupType === 'asap', !storeOpen)}>ASAP (~15 min)</button>
-                  <button type="button" onClick={() => setPickupType('schedule')} disabled={slots.length === 0} style={pickupBtn(pickupType === 'schedule', slots.length === 0)}>Schedule</button>
+                <div style={{ display: 'flex', gap: 8 }} role="group" aria-label="Select pickup time type">
+                  <button
+                    type="button"
+                    onClick={() => setPickupType('asap')}
+                    disabled={!storeOpen}
+                    style={pickupBtnStyle(pickupType === 'asap', !storeOpen)}
+                    aria-pressed={pickupType === 'asap'}
+                  >
+                    ASAP (~15 min)
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setPickupType('schedule')}
+                    disabled={slots.length === 0}
+                    style={pickupBtnStyle(pickupType === 'schedule', slots.length === 0)}
+                    aria-pressed={pickupType === 'schedule'}
+                  >
+                    Schedule
+                  </button>
                 </div>
                 {pickupType === 'schedule' && slots.length > 0 && (
-                  <select value={pickupTime} onChange={e => setPickupTime(e.target.value)} className="input-dark" style={{ marginTop: 8 }}>
+                  <select
+                    value={pickupTime}
+                    onChange={e => setPickupTime(e.target.value)}
+                    className="input-dark"
+                    style={{ marginTop: 8 }}
+                    aria-label="Select pickup time"
+                    onFocus={focusFn}
+                    onBlur={blurFn}
+                  >
                     <option value="">Select a time…</option>
                     {slots.map(s => <option key={s} value={s}>{s}</option>)}
                   </select>
@@ -172,16 +228,31 @@ export default function CheckoutPage() {
               </>
             )}
           </div>
+
           {error && (
-            <div style={{ background: '#FEF2F2', border: '1.5px solid #FECACA', borderRadius: 8, padding: '12px 16px' }}>
-              <p style={{ ...F, fontSize: '0.9rem', color: '#DC2626', fontWeight: 700 }}>{error}</p>
+            <div role="alert" style={{ display: 'flex', alignItems: 'center', gap: 8, background: '#FEF2F2', border: '1.5px solid #FECACA', borderRadius: 8, padding: '12px 16px' }}>
+              <AlertCircle size={16} color="#DC2626" strokeWidth={2} aria-hidden="true" />
+              <p style={{ ...F, fontSize: '0.9rem', color: '#DC2626', fontWeight: 600 }}>{error}</p>
             </div>
           )}
-          <button type="submit" disabled={loading} className="btn-brand"
-            style={{ fontFamily: "'Nunito Sans', sans-serif", fontSize: '1rem', fontWeight: 700, letterSpacing: 0 }}>
-            {loading ? 'Processing…' : `Pay $${(total / 100).toFixed(2)}`}
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="btn-brand"
+            style={{ fontSize: '1rem', fontWeight: 700 }}
+          >
+            {loading
+              ? <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                  <span style={{ width: 16, height: 16, border: '2px solid rgba(255,255,255,0.4)', borderTopColor: '#FFF', borderRadius: '50%', animation: 'spin 0.7s linear infinite', display: 'inline-block' }} />
+                  Processing…
+                </span>
+              : `Pay $${(total / 100).toFixed(2)}`
+            }
           </button>
-          <p style={{ ...F, textAlign: 'center', fontSize: '0.72rem', color: '#AAA' }}>
+
+          <p style={{ ...F, textAlign: 'center', fontSize: '0.75rem', color: '#B5A399', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 5 }}>
+            <ShieldCheck size={13} strokeWidth={2} aria-hidden="true" />
             SSL encrypted · Powered by Stripe
           </p>
         </form>

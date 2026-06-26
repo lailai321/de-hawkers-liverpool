@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import { ShoppingBag } from 'lucide-react'
 import { useCartStore } from '@/store/cart'
 
 export default function MobileCartBar() {
@@ -23,38 +24,38 @@ export default function MobileCartBar() {
   return (
     <div style={{
       position: 'fixed', bottom: 0, left: 0, right: 0,
-      padding: '10px 16px 28px',
-      background: 'linear-gradient(to top, rgba(255,255,255,1) 55%, transparent)',
+      padding: '10px 16px calc(env(safe-area-inset-bottom, 8px) + 10px)',
+      background: 'linear-gradient(to top, rgba(255,252,247,1) 60%, transparent)',
       zIndex: 95,
     }}>
       <button
         onClick={openCart}
+        aria-label={`View cart, ${count} item${count > 1 ? 's' : ''}, total $${(totalCents / 100).toFixed(2)}`}
         style={{
           width: '100%', display: 'flex', alignItems: 'center', gap: 10,
-          background: '#2A1A12', color: '#FFFFFF',
+          background: '#B63A24', color: '#FFFFFF',
           border: 'none', borderRadius: 50,
           padding: '15px 22px',
           cursor: 'pointer',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.25)',
+          boxShadow: '0 4px 24px rgba(182,58,36,0.40)',
+          transition: 'background 0.15s',
         }}
+        onMouseEnter={e => (e.currentTarget as HTMLButtonElement).style.background = '#8F2C1B'}
+        onMouseLeave={e => (e.currentTarget as HTMLButtonElement).style.background = '#B63A24'}
       >
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BA3A13" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
-          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <path d="M16 10a4 4 0 01-8 0"/>
-        </svg>
-        <span style={{ flex: 1, textAlign: 'left', fontFamily: "'Nunito Sans', sans-serif", fontWeight: 700, fontSize: '1rem' }}>
+        <ShoppingBag size={20} strokeWidth={2} aria-hidden="true" style={{ flexShrink: 0 }} />
+        <span style={{ flex: 1, textAlign: 'left', fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '1rem' }}>
           View Cart
         </span>
         <span style={{
-          background: '#BA3A13', color: '#2A1A12', borderRadius: 50,
+          background: 'rgba(255,255,255,0.25)', borderRadius: 50,
           minWidth: 26, height: 26, padding: '0 8px',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
-          fontFamily: "'Nunito Sans', sans-serif", fontWeight: 700, fontSize: '0.85rem',
+          fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '0.85rem',
         }}>
           {count}
         </span>
-        <span style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 700, fontSize: '1rem', marginLeft: 4 }}>
+        <span style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '1rem' }}>
           ${(totalCents / 100).toFixed(2)}
         </span>
       </button>

@@ -20,7 +20,7 @@ export function Logo({
       whiteSpace: 'nowrap',
     }}>
       De
-      <span style={{ color: 'var(--saffron-500)', transform: 'skewX(-12deg)', letterSpacing: '-0.06em', fontWeight: 700 }}>//</span>
+      <span style={{ color: 'var(--saffron-500)', transform: 'skewX(-12deg)', letterSpacing: '-0.06em', fontWeight: 700 }}>{'//'}  </span>
       Hawker&apos;s
     </span>
   );

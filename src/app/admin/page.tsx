@@ -237,6 +237,7 @@ export default function AdminPage() {
 
   useEffect(() => {
     if (!authed || tab !== 'holidays') return
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     void loadHolidays()
   }, [authed, loadHolidays, tab])
 

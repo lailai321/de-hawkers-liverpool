@@ -1,8 +1,10 @@
+import Link from 'next/link'
+
 export default function OffersPage() {
   return (
     <div className="min-h-screen bg-[#f9f5f0]">
       <div className="max-w-md mx-auto px-4 py-10">
-        <a href="/" className="text-sm text-gray-500 hover:text-gray-700 mb-6 block">← Back to Menu</a>
+        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 mb-6 block">← Back to Menu</Link>
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Current Offers</h1>
         <p className="text-sm text-gray-500 mb-8">Special deals available for online orders.</p>
 
@@ -36,12 +38,12 @@ export default function OffersPage() {
         </div>
 
         <div className="mt-8 text-center">
-          <a
+          <Link
             href="/"
             className="inline-block bg-red-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-red-700 transition-colors"
           >
             Order Now
-          </a>
+          </Link>
         </div>
       </div>
     </div>

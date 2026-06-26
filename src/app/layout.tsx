@@ -9,7 +9,7 @@ const SITE_URL = 'https://de-hawkers-liverpool.vercel.app'
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "De Hawker's Liverpool | Asian Hawker Wok Restaurant, Westfield Liverpool",
-  description: "Order hawker-style wok dishes online for pickup at Westfield Liverpool. Fried rice, stir-fried noodles, noodle soups and Chief's Special rice plates — fast pickup, no delivery app fees.",
+  description: "Order hawker-style wok dishes online for pickup at Westfield Liverpool. Fried rice, stir-fried noodles, noodle soups and Chef's Special rice plates — fast pickup, no delivery app fees.",
   keywords: [
     'Asian restaurant Liverpool NSW',
     'wok restaurant Liverpool',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "De Hawker's Liverpool",
     title: "De Hawker's Liverpool | Asian Hawker Wok Restaurant, Westfield Liverpool",
-    description: "Order hawker-style wok dishes online for pickup at Westfield Liverpool. Fried rice, stir-fried noodles, noodle soups and Chief's Special rice plates.",
+    description: "Order hawker-style wok dishes online for pickup at Westfield Liverpool. Fried rice, stir-fried noodles, noodle soups and Chef's Special rice plates.",
     images: [{ url: '/banner.png', width: 1200, height: 630, alt: "De Hawker's Liverpool, Westfield Liverpool" }],
   },
   twitter: {

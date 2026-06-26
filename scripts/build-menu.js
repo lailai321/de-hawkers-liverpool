@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 // One-off data-migration script: combines the De Hawker's Liverpool Uber Eats
 // menu (scraped name/description/price/image) with the real customization
 // groups (scraped from Uber Eats' internal getMenuItemV1 API) into this

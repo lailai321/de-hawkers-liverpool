@@ -1,1 +1,379 @@
-{"categories":[{"name":"Offers","slug":"offers","hasAddons":true,"items":[{"uuid":"d8bb1f01-5fae-4f82-85dc-6eb959895bbe","name":"One Choice with Rice","description":"Your choice of stir fried dish with Rice in one container.","price":15.84,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/29c9f8f77a4076f7f5bdb86e8491bff5/58f691da9eaef86b0b51f9b2c483fe63.jpeg","hasAddons":true}]},{"name":"Entree","slug":"entree","hasAddons":false,"items":[{"uuid":"f43a5d0d-a664-4773-b4bb-86a9c6c1ba57","name":"Spring Rolls","description":"One piece spring roll filled with pork mince in traditional style.","price":2.5,"imageUrl":null,"hasAddons":false},{"uuid":"8e52397f-1c29-4730-8a83-b4167302567b","name":"Vegetable Spring Rolls","description":"One piece spring roll filled with mixed vegetables.","price":2.5,"imageUrl":null,"hasAddons":false},{"uuid":"ddab143f-9207-487f-ac90-b453b93a4408","name":"Pork Fried Dim Sim","description":"One piece dim sim filled with pork mince and juicy inside.","price":2.8,"imageUrl":null,"hasAddons":false},{"uuid":"21809638-47fa-469f-9c81-5eb5b291b745","name":"Steamed Dim Sim","description":"Six pieces. Filled with pork mince and juicy inside.","price":16.8,"imageUrl":null,"hasAddons":false},{"uuid":"106d551b-b9b5-41f9-a140-faf8178b6aea","name":"Prawn Chips","description":"Crispy prawns chips.","price":3.8,"imageUrl":null,"hasAddons":false}]},{"name":"Chinese Stir Fried","slug":"chinese-stir-fried","hasAddons":true,"items":[{"uuid":"243059bd-1489-4100-8d2a-3e48375a5996","name":"Honey Chicken","description":"Finger sized battered chicken breast with special honey sauce and sesame on top (no veggies).","price":25.8,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/89380d685b99c94ab4d6cc121f731cdb/5143f1e218c67c20fe5a4cd33d90b07b.jpeg","hasAddons":true},{"uuid":"63bb24dc-70ca-4c1e-b5db-0a6cb6e785cf","name":"Satay Chicken","description":"Thin sliced chicken breast and vegetables stir fried with delicious aromatic blend of peanuts, oriental herbs and spices.","price":25.8,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/fe1deaf2177a234e512033afd2f4256d/58f691da9eaef86b0b51f9b2c483fe63.jpeg","hasAddons":true},{"uuid":"117ae460-e536-451c-9fae-f862f38e5c3a","name":"Mongolian Beef","description":"Stir-fried beef in a savoury sauce.","price":25.8,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/84aef4458d81675ed10da7814c660ded/58f691da9eaef86b0b51f9b2c483fe63.jpeg","hasAddons":true},{"uuid":"7a79e9e5-5740-4501-9bf3-b57b65e1f936","name":"Beef with Black Bean Sauce","description":"Beef and bell pepper stir fried in Chinese fermented black bean sauce, sharp, salty and thick with a hint of sweet.","price":25.8,"imageUrl":null,"hasAddons":true},{"uuid":"12cc3367-f946-4612-835c-3519dca0bb4f","name":"Salt and Pepper Fried Fish","description":"Deep fried battered fish fillet chunks blend with chilli paste.","price":25.8,"imageUrl":null,"hasAddons":true},{"uuid":"0bf443ad-9795-4df1-b638-81f8b17852ee","name":"Teriyaki Chicken","description":"Thin cut chicken breast stir fried with mix vegetables in traditional Japanese teriyaki sauce, savoury, salty and sweet with lots of umami undertones.","price":25.8,"imageUrl":null,"hasAddons":true},{"uuid":"ce2c7532-48dc-40ba-b8a5-6bb560ceaba6","name":"Sweet and Sour Chicken","description":"Deep fried battered chicken with sweet and sour sauce.","price":25.8,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/ebd4da86dd8ba1e57461415c6ef9c0f7/a1681d67ebe55c76c3af5f401619c278.jpeg","hasAddons":true},{"uuid":"add183b5-bae3-432b-9708-e3e78a27ad0e","name":"Chicken with Vegetables","description":"Thin cut chicken breast, stir fried with mixed vegetables in flavourful garlic and oyster sauce.","price":25.8,"imageUrl":null,"hasAddons":true},{"uuid":"ea1ec57c-6121-4775-b3f2-104ed101a1f0","name":"Chilli Chicken","description":"Thin cut chicken breast stir fried with mixed vegetables in Chinese hot fermented bean paste (郫县豆瓣酱).","price":25.8,"imageUrl":null,"hasAddons":true}]},{"name":"Stir Fried Noodles","slug":"stir-fried-noodles","hasAddons":true,"items":[{"uuid":"3ab44f0f-a62d-4bf9-a80e-bdf35d2e22ec","name":"Singapore Noodles","description":"Rice vermicelli noodle with a meat of your choice egg, shallot, and mix vegetables.","price":15.84,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/c8a323fcaf5606b6bd23de9ede0ab21d/5143f1e218c67c20fe5a4cd33d90b07b.jpeg","hasAddons":true},{"uuid":"d42f51a5-60ac-4b18-951f-9755d891dc40","name":"Thai Pad See Ew","description":"Thick rice noodle with a meat of your choice, egg, mixed vegetables, soy sauce and oyster sauce. Picture is seafood Pad See Ew.","price":15.84,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/76d07c3de12bcbb8277c3ca4982fcba3/58f691da9eaef86b0b51f9b2c483fe63.jpeg","hasAddons":true},{"uuid":"2ba656e5-7a73-4348-9a2f-8cbf5dcde2b1","name":"Pad Thai","description":"Thin rice noodle with a meat of your choice, egg, peanuts, shallots, and tamarind sauce.","price":15.84,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/08ae9413c27f57caf192b1088d537dc7/58f691da9eaef86b0b51f9b2c483fe63.jpeg","hasAddons":true},{"uuid":"8ae5d125-cc86-494d-8571-63e6a915c5d3","name":"Chow Mein","description":"Served with mixed vegetables and egg noodles. Picture is seafood Chow Mein.","price":15.84,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/b883aa14073804bcc00b724b459b17d6/58f691da9eaef86b0b51f9b2c483fe63.jpeg","hasAddons":true},{"uuid":"2f879654-925d-476b-9600-ded7d8bd7e96","name":"Stir Fry Flat Rice Noodle","description":"Savory flat rice noodles stir-fried with soy sauce for a comforting, tender dish.","price":15.84,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/e3a662d013b58551bc412ae1c60f2f3d/5143f1e218c67c20fe5a4cd33d90b07b.jpeg","hasAddons":true},{"uuid":"31cac726-9580-4948-9e42-557e6feb937a","name":"Mee Goreng","description":"A sticky, savory sweet Indonesian stir-fried noodle dish with your choice of meat.","price":15.84,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/994692349db7bc52fbd0d08ca7b639fa/58f691da9eaef86b0b51f9b2c483fe63.jpeg","hasAddons":true}]},{"name":"Noodle Soup","slug":"noodle-soup","hasAddons":true,"items":[{"uuid":"53e176f3-7dbf-4806-9b42-563bc5f56d01","name":"Chicken Wonton Noodle Soup","description":"Chewy egg noodles and wonton dumplings, combined and served in a flavorful slow cooked chicken broth. Top with choy sum. The wontons are filled with a combination of minced Chicken and vegetable, lightly flavored with sesame oil, soy sauce and grated ginger.","price":17.8,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/ebbcab4aee7eb2917b15ce9059abe292/5143f1e218c67c20fe5a4cd33d90b07b.jpeg","hasAddons":true},{"uuid":"1fe87753-1990-486d-bce1-33ad1623e8da","name":"Laksa Soup","description":"Deliciously hearty noodle soup with a meat of your choice. Coconut milk, and Asian vegetables.","price":17.8,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/14513728fc6697ffaeb81c9c4b521309/5143f1e218c67c20fe5a4cd33d90b07b.jpeg","hasAddons":true},{"uuid":"ec52e734-d6a5-41fe-8c05-7da593448c34","name":"Tomyum Noodle Soup","description":"A classic Thai dish featuring a spicy, hot and sour broth enriched with Thai seasonings, spices, and fresh lime juice.","price":17.8,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/c1d4051b5e6693b56bc5ef5e664010bf/58f691da9eaef86b0b51f9b2c483fe63.jpeg","hasAddons":true}]},{"name":"Fried Rice","slug":"fried-rice","hasAddons":true,"items":[{"uuid":"90703dda-6f4b-4da7-86fc-95f5bb01289b","name":"Nasi Goreng","description":"A delicious stir-fried Indonesian rice sweet, spicy and packed with savory deliciousness.","price":18.24,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/1a92558152a38039ba815bbbb2fed3bc/58f691da9eaef86b0b51f9b2c483fe63.jpeg","hasAddons":true},{"uuid":"004509d2-78f6-4004-8c07-5fb744b60faf","name":"Chinese Special Fried Rice","description":"The base ingredients include egg and mixed vegetables.","price":18.24,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/f43e1d3a9ec4136bb67b2e28f88a80ba/58f691da9eaef86b0b51f9b2c483fe63.jpeg","hasAddons":true},{"uuid":"6624ffb6-98e6-4986-b991-cd37e787e554","name":"Thai Fried Rice","description":"Authentic Thai style Stir-fried rice with Thai basil, scrambled egg, chilies, and fish sauce. Choose pork, chicken, beef, or king prawn.","price":18.24,"imageUrl":null,"hasAddons":true}]},{"name":"Chief's Special","slug":"chief-s-special","hasAddons":true,"items":[{"uuid":"14dd6193-a783-4d66-809b-d39bc1e8bbf7","name":"Pork Chop with Rice or Noodle Soup","description":"Spicy, salty and crispy yet tender texture deep fried pork chop served with a fried egg, steam vegetable and your selection of carbs.","price":22.8,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/46e71f8b0ea91a44168898cb3a4c9b1d/58f691da9eaef86b0b51f9b2c483fe63.jpeg","hasAddons":true},{"uuid":"b112938c-8f8f-4516-b729-342312694cde","name":"Crispy Chicken with Rice or Noodle Soup","description":"The chicken is poached very gently, then dipped in vinegar and maltose, dried and deep-fried for the crispy skin, served with fried egg, steam vegetables and your selection of carbs.","price":22.8,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/bef2e63b050b877746776c71ca788d73/58f691da9eaef86b0b51f9b2c483fe63.jpeg","hasAddons":true},{"uuid":"6182c48a-4616-4be5-9009-cd04a614924e","name":"Beef Brisket","description":"Slowly braised savory sweet beef brisket served in a hot rich beef bone broth.","price":22.8,"imageUrl":"https://tb-static.uber.com/prod/image-proc/processed_images/cb5b17c3ad21acfb03eca634aca365d8/58f691da9eaef86b0b51f9b2c483fe63.jpeg","hasAddons":true}]},{"name":"Sides","slug":"sides","hasAddons":true,"items":[{"uuid":"2a6e5a71-7336-4f15-b13b-ca679177f89a","name":"Steamed Rice","description":"Freshly cooked white rice.","price":6,"imageUrl":null,"hasAddons":true},{"uuid":"2c37450a-da79-4200-bb7b-24d370d38032","name":"Fried Rice","description":"Ingredients include rice, egg, peas, carrot, corn kernels etc. no ham, garlic or spring onion.","price":11.9,"imageUrl":null,"hasAddons":true}]},{"name":"Beverage","slug":"beverage","hasAddons":false,"items":[{"uuid":"a2dff4c3-dc1b-4f12-91ce-579caf0d61f6","name":"Soft Drink Can","description":"375ml","price":4.8,"imageUrl":null,"hasAddons":false},{"uuid":"d9dd26f1-a86a-4301-a2b4-13b2bbf3a975","name":"Soft Drink Bottle","description":"600ml","price":6,"imageUrl":null,"hasAddons":false},{"uuid":"83108443-f7e0-46c6-afc7-8c620df7b522","name":"Water Bottle","description":"Fresh and refreshing drinking water.","price":4.8,"imageUrl":null,"hasAddons":false}]},{"name":"Soup","slug":"soup","hasAddons":false,"items":[{"uuid":"a8d1654e-852b-4aa6-a0eb-0c3df5c8a365","name":"Chicken Corn Soup","description":"Tender chicken and corn in a comforting soup.","price":8.5,"imageUrl":null,"hasAddons":false}]}],"soldOut":[],"overrides":{}}
+{
+  "categories": [
+    {
+      "name": "Offers",
+      "slug": "offers",
+      "hasAddons": true,
+      "items": [
+        {
+          "uuid": "d8bb1f01-5fae-4f82-85dc-6eb959895bbe",
+          "name": "One Choice with Rice",
+          "description": "Your choice of stir fried dish with Rice in one container.",
+          "price": 15.84,
+          "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/29c9f8f77a4076f7f5bdb86e8491bff5/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+          "hasAddons": true
+        }
+      ]
+    },
+    {
+      "name": "Entree",
+      "slug": "entree",
+      "hasAddons": false,
+      "items": [
+        {
+          "uuid": "f43a5d0d-a664-4773-b4bb-86a9c6c1ba57",
+          "name": "Chicken Spring Roll",
+          "description": "One piece spring roll filled with chicken mince and mixed vegetables.",
+          "price": 2.5,
+          "imageUrl": null,
+          "hasAddons": false
+        },
+        {
+          "uuid": "8e52397f-1c29-4730-8a83-b4167302567b",
+          "name": "Vegetable Spring Rolls",
+          "description": "One piece spring roll filled with mixed vegetables.",
+          "price": 2.5,
+          "imageUrl": null,
+          "hasAddons": false
+        },
+        {
+          "uuid": "ddab143f-9207-487f-ac90-b453b93a4408",
+          "name": "Chicken Fried Dim Sim",
+          "description": "Crispy fried dim sim filled with seasoned chicken, lightly golden on the outside.",
+          "price": 2.8,
+          "imageUrl": null,
+          "hasAddons": false
+        },
+        {
+          "uuid": "21809638-47fa-469f-9c81-5eb5b291b745",
+          "name": "Chicken Steamed Dim Sim",
+          "description": "Six pieces. Filled with seasoned chicken and juicy inside.",
+          "price": 16.8,
+          "imageUrl": null,
+          "hasAddons": false
+        },
+        {
+          "uuid": "106d551b-b9b5-41f9-a140-faf8178b6aea",
+          "name": "Prawn Chips",
+          "description": "Crispy prawns chips.",
+          "price": 3.8,
+          "imageUrl": null,
+          "hasAddons": false
+        }
+      ]
+    },
+    {
+      "name": "Chinese Stir Fried",
+      "slug": "chinese-stir-fried",
+      "hasAddons": true,
+      "items": [
+        {
+          "uuid": "243059bd-1489-4100-8d2a-3e48375a5996",
+          "name": "Honey Chicken",
+          "description": "Finger sized battered chicken breast with special honey sauce and sesame on top (no veggies).",
+          "price": 25.8,
+          "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/89380d685b99c94ab4d6cc121f731cdb/5143f1e218c67c20fe5a4cd33d90b07b.jpeg",
+          "hasAddons": true,
+          "noExtraVeg": true
+        },
+        {
+          "uuid": "63bb24dc-70ca-4c1e-b5db-0a6cb6e785cf",
+          "name": "Satay Chicken",
+          "description": "Thin sliced chicken breast and vegetables stir fried with delicious aromatic blend of peanuts, oriental herbs and spices.",
+          "price": 25.8,
+          "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/fe1deaf2177a234e512033afd2f4256d/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+          "hasAddons": true
+        },
+        {
+          "uuid": "117ae460-e536-451c-9fae-f862f38e5c3a",
+          "name": "Mongolian Beef",
+          "description": "Stir-fried beef in a savoury sauce.",
+          "price": 25.8,
+          "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/84aef4458d81675ed10da7814c660ded/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+          "hasAddons": true
+        },
+        {
+          "uuid": "7a79e9e5-5740-4501-9bf3-b57b65e1f936",
+          "name": "Beef with Black Bean Sauce",
+          "description": "Beef and bell pepper stir fried in Chinese fermented black bean sauce, sharp, salty and thick with a hint of sweet.",
+          "price": 25.8,
+          "imageUrl": null,
+          "hasAddons": true
+        },
+        {
+          "uuid": "12cc3367-f946-4612-835c-3519dca0bb4f",
+          "name": "Salt and Pepper Fried Fish",
+          "description": "Deep fried battered fish fillet chunks blend with chilli paste.",
+          "price": 25.8,
+          "imageUrl": null,
+          "hasAddons": true
+        },
+        {
+          "uuid": "0bf443ad-9795-4df1-b638-81f8b17852ee",
+          "name": "Teriyaki Chicken",
+          "description": "Thin cut chicken breast stir fried with mix vegetables in traditional Japanese teriyaki sauce, savoury, salty and sweet with lots of umami undertones.",
+          "price": 25.8,
+          "imageUrl": null,
+          "hasAddons": true
+        },
+        {
+          "uuid": "ce2c7532-48dc-40ba-b8a5-6bb560ceaba6",
+          "name": "Sweet and Sour Chicken",
+          "description": "Deep fried battered chicken with sweet and sour sauce.",
+          "price": 25.8,
+          "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/ebd4da86dd8ba1e57461415c6ef9c0f7/a1681d67ebe55c76c3af5f401619c278.jpeg",
+          "hasAddons": true
+        },
+        {
+          "uuid": "add183b5-bae3-432b-9708-e3e78a27ad0e",
+          "name": "Chicken with Vegetables",
+          "description": "Thin cut chicken breast, stir fried with mixed vegetables in flavourful garlic and oyster sauce.",
+          "price": 25.8,
+          "imageUrl": null,
+          "hasAddons": true
+        },
+        {
+          "uuid": "ea1ec57c-6121-4775-b3f2-104ed101a1f0",
+          "name": "Chilli Chicken",
+          "description": "Thin cut chicken breast stir fried with mixed vegetables in Chinese hot fermented bean paste (郫县豆瓣酱).",
+          "price": 25.8,
+          "imageUrl": null,
+          "hasAddons": true
+        },
+        {
+          "uuid": "e530688d-d343-4c08-9ef1-973d21c4ba13",
+          "name": "Curry Chicken",
+          "description": "Tender chicken pieces wok-tossed in a rich, mildly spiced curry sauce with mixed vegetables.",
+          "price": 25.8,
+          "imageUrl": null,
+          "hasAddons": true
+        },
+        {
+          "uuid": "e0655dee-2fdf-4346-a69b-f7036fbf17e4",
+          "name": "Beef with Black Pepper",
+          "description": "Sliced beef stir-fried with onion and capsicum in a bold black pepper sauce.",
+          "price": 25.8,
+          "imageUrl": null,
+          "hasAddons": true
+        }
+      ]
+    },
+    {
+      "name": "Stir Fried Noodles",
+      "slug": "stir-fried-noodles",
+      "hasAddons": true,
+      "items": [
+        {
+          "uuid": "3ab44f0f-a62d-4bf9-a80e-bdf35d2e22ec",
+          "name": "Singapore Noodles",
+          "description": "Rice vermicelli noodle with a meat of your choice egg, shallot, and mix vegetables.",
+          "price": 15.84,
+          "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/c8a323fcaf5606b6bd23de9ede0ab21d/5143f1e218c67c20fe5a4cd33d90b07b.jpeg",
+          "hasAddons": true
+        },
+        {
+          "uuid": "d42f51a5-60ac-4b18-951f-9755d891dc40",
+          "name": "Thai Pad See Ew",
+          "description": "Thick rice noodle with a meat of your choice, egg, mixed vegetables, soy sauce and oyster sauce. Picture is seafood Pad See Ew.",
+          "price": 15.84,
+          "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/76d07c3de12bcbb8277c3ca4982fcba3/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+          "hasAddons": true
+        },
+        {
+          "uuid": "2ba656e5-7a73-4348-9a2f-8cbf5dcde2b1",
+          "name": "Pad Thai",
+          "description": "Thin rice noodle with a meat of your choice, egg, peanuts, shallots, and tamarind sauce.",
+          "price": 15.84,
+          "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/08ae9413c27f57caf192b1088d537dc7/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+          "hasAddons": true
+        },
+        {
+          "uuid": "8ae5d125-cc86-494d-8571-63e6a915c5d3",
+          "name": "Chow Mein",
+          "description": "Served with mixed vegetables and egg noodles. Picture is seafood Chow Mein.",
+          "price": 15.84,
+          "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/b883aa14073804bcc00b724b459b17d6/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+          "hasAddons": true
+        },
+        {
+          "uuid": "2f879654-925d-476b-9600-ded7d8bd7e96",
+          "name": "Stir Fry Flat Rice Noodle",
+          "description": "Savory flat rice noodles stir-fried with soy sauce for a comforting, tender dish.",
+          "price": 15.84,
+          "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/e3a662d013b58551bc412ae1c60f2f3d/5143f1e218c67c20fe5a4cd33d90b07b.jpeg",
+          "hasAddons": true
+        },
+        {
+          "uuid": "31cac726-9580-4948-9e42-557e6feb937a",
+          "name": "Mee Goreng",
+          "description": "A sticky, savory sweet Indonesian stir-fried noodle dish with your choice of meat.",
+          "price": 15.84,
+          "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/994692349db7bc52fbd0d08ca7b639fa/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+          "hasAddons": true
+        }
+      ]
+    },
+    {
+      "name": "Noodle Soup",
+      "slug": "noodle-soup",
+      "hasAddons": true,
+      "items": [
+        {
+          "uuid": "53e176f3-7dbf-4806-9b42-563bc5f56d01",
+          "name": "Chicken Wonton Noodle Soup",
+          "description": "Chewy egg noodles and wonton dumplings, combined and served in a flavorful slow cooked chicken broth. Top with choy sum. The wontons are filled with a combination of minced Chicken and vegetable, lightly flavored with sesame oil, soy sauce and grated ginger.",
+          "price": 17.8,
+          "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/ebbcab4aee7eb2917b15ce9059abe292/5143f1e218c67c20fe5a4cd33d90b07b.jpeg",
+          "hasAddons": true,
+          "noExtraMeat": true,
+          "noExtraVeg": true
+        },
+        {
+          "uuid": "1fe87753-1990-486d-bce1-33ad1623e8da",
+          "name": "Laksa Soup",
+          "description": "Deliciously hearty noodle soup with a meat of your choice. Coconut milk, and Asian vegetables.",
+          "price": 17.8,
+          "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/14513728fc6697ffaeb81c9c4b521309/5143f1e218c67c20fe5a4cd33d90b07b.jpeg",
+          "hasAddons": true
+        },
+        {
+          "uuid": "ec52e734-d6a5-41fe-8c05-7da593448c34",
+          "name": "Tomyum Noodle Soup",
+          "description": "A classic Thai dish featuring a spicy, hot and sour broth enriched with Thai seasonings, spices, and fresh lime juice.",
+          "price": 17.8,
+          "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/c1d4051b5e6693b56bc5ef5e664010bf/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+          "hasAddons": true
+        }
+      ]
+    },
+    {
+      "name": "Fried Rice",
+      "slug": "fried-rice",
+      "hasAddons": true,
+      "items": [
+        {
+          "uuid": "90703dda-6f4b-4da7-86fc-95f5bb01289b",
+          "name": "Nasi Goreng",
+          "description": "A delicious stir-fried Indonesian rice sweet, spicy and packed with savory deliciousness.",
+          "price": 18.24,
+          "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/1a92558152a38039ba815bbbb2fed3bc/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+          "hasAddons": true
+        },
+        {
+          "uuid": "004509d2-78f6-4004-8c07-5fb744b60faf",
+          "name": "Chinese Special Fried Rice",
+          "description": "The base ingredients include egg and mixed vegetables.",
+          "price": 18.24,
+          "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/f43e1d3a9ec4136bb67b2e28f88a80ba/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+          "hasAddons": true
+        },
+        {
+          "uuid": "6624ffb6-98e6-4986-b991-cd37e787e554",
+          "name": "Thai Fried Rice",
+          "description": "Authentic Thai style Stir-fried rice with Thai basil, scrambled egg, chilies, and fish sauce. Choose chicken, beef, or king prawn.",
+          "price": 18.24,
+          "imageUrl": null,
+          "hasAddons": true
+        }
+      ]
+    },
+    {
+      "name": "Chef's Special",
+      "slug": "chef-s-special",
+      "hasAddons": true,
+      "items": [
+        {
+          "uuid": "b112938c-8f8f-4516-b729-342312694cde",
+          "name": "Crispy Chicken with Rice or Noodle Soup",
+          "description": "The chicken is poached very gently, then dipped in vinegar and maltose, dried and deep-fried for the crispy skin, served with fried egg, steam vegetables and your selection of carbs.",
+          "price": 22.8,
+          "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/bef2e63b050b877746776c71ca788d73/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+          "hasAddons": true
+        },
+        {
+          "uuid": "6182c48a-4616-4be5-9009-cd04a614924e",
+          "name": "Beef Brisket",
+          "description": "Slowly braised savory sweet beef brisket served in a hot rich beef bone broth.",
+          "price": 22.8,
+          "imageUrl": "https://tb-static.uber.com/prod/image-proc/processed_images/cb5b17c3ad21acfb03eca634aca365d8/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
+          "hasAddons": true
+        }
+      ]
+    },
+    {
+      "name": "Sides",
+      "slug": "sides",
+      "hasAddons": true,
+      "items": [
+        {
+          "uuid": "2a6e5a71-7336-4f15-b13b-ca679177f89a",
+          "name": "Steamed Rice",
+          "description": "Freshly cooked white rice.",
+          "price": 6,
+          "imageUrl": null,
+          "hasAddons": true,
+          "noExtraMeat": true,
+          "noExtraVeg": true
+        },
+        {
+          "uuid": "2c37450a-da79-4200-bb7b-24d370d38032",
+          "name": "Fried Rice",
+          "description": "Ingredients include rice, egg, peas, carrot, corn kernels etc. no ham, garlic or spring onion.",
+          "price": 11.9,
+          "imageUrl": null,
+          "hasAddons": true,
+          "noExtraMeat": true,
+          "noExtraVeg": true
+        }
+      ]
+    },
+    {
+      "name": "Beverage",
+      "slug": "beverage",
+      "hasAddons": false,
+      "items": [
+        {
+          "uuid": "a2dff4c3-dc1b-4f12-91ce-579caf0d61f6",
+          "name": "Soft Drink Can",
+          "description": "375ml",
+          "price": 4.8,
+          "imageUrl": null,
+          "hasAddons": false
+        },
+        {
+          "uuid": "d9dd26f1-a86a-4301-a2b4-13b2bbf3a975",
+          "name": "Soft Drink Bottle",
+          "description": "600ml",
+          "price": 6,
+          "imageUrl": null,
+          "hasAddons": false
+        },
+        {
+          "uuid": "83108443-f7e0-46c6-afc7-8c620df7b522",
+          "name": "Water Bottle",
+          "description": "Fresh and refreshing drinking water.",
+          "price": 4.8,
+          "imageUrl": null,
+          "hasAddons": false
+        }
+      ]
+    },
+    {
+      "name": "Soup",
+      "slug": "soup",
+      "hasAddons": false,
+      "items": [
+        {
+          "uuid": "a8d1654e-852b-4aa6-a0eb-0c3df5c8a365",
+          "name": "Chicken Corn Soup",
+          "description": "Tender chicken and corn in a comforting soup.",
+          "price": 8.5,
+          "imageUrl": null,
+          "hasAddons": false
+        }
+      ]
+    }
+  ],
+  "soldOut": [],
+  "overrides": {}
+}

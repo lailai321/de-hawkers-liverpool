@@ -21,9 +21,15 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   return (
     <>
       <Navbar />
-      <div className="main-content" style={{ paddingTop: 100 }}>{children}</div>
+      {/* padding-top matches --navbar-h (84px desktop, 64px mobile via CSS) */}
+      <div className="main-content" style={{ paddingTop: 84 }}>{children}</div>
       <CartDrawer open={cartOpen} onClose={closeCart} />
       <MobileCartBar />
+      <style>{`
+        @media (max-width: 768px) {
+          .main-content { padding-top: 64px !important; }
+        }
+      `}</style>
     </>
   )
 }

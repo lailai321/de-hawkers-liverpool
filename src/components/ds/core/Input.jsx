@@ -2,6 +2,7 @@ import React from 'react';
 
 /** Text input with De Hawker's warm styling. */
 export function Input({ label, hint, error, style = {}, id, ...props }) {
+  // eslint-disable-next-line react-hooks/purity
   const inputId = id || `dh-in-${Math.random().toString(36).slice(2, 8)}`;
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', fontFamily: 'var(--font-body)' }}>

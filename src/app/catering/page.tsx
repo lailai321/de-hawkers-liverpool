@@ -1,23 +1,23 @@
 'use client'
 import { useState } from 'react'
+import Link from 'next/link'
+import { CheckCircle, AlertCircle } from 'lucide-react'
 
-const R = { fontFamily: "'Baloo 2', sans-serif" } as const
-const F = { fontFamily: "'Nunito Sans', sans-serif" } as const
-
-const inputStyle: React.CSSProperties = {
-  ...F, background: '#FFF', border: '1px solid #DDDDDD', borderRadius: 4,
-  padding: '12px 16px', color: '#2A1A12', fontSize: '0.9rem', width: '100%', outline: 'none',
-}
+const F = { fontFamily: "'DM Sans', sans-serif" } as const
+const R = { fontFamily: "'Playfair Display', Georgia, serif" } as const
 
 export default function CateringPage() {
   const [form, setForm] = useState({ name: '', phone: '', email: '', date: '', time: '', guests: '', message: '' })
-  const [sent, setSent] = useState(false), [loading, setLoading] = useState(false), [error, setError] = useState('')
+  const [sent, setSent]       = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError]     = useState('')
 
   const set = (k: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
     setForm(f => ({ ...f, [k]: e.target.value }))
 
   async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault(); setLoading(true); setError('')
+    e.preventDefault()
+    setLoading(true); setError('')
     try {
       const res = await fetch('/api/catering', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(form) })
       if (res.ok) setSent(true)
@@ -26,69 +26,117 @@ export default function CateringPage() {
     finally { setLoading(false) }
   }
 
-  const labelS: React.CSSProperties = { ...R, fontSize: '0.85rem', color: '#666', display: 'block', marginBottom: 6, letterSpacing: '0.05em' }
-  const focusYellow = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => (e.target.style.borderColor = '#BA3A13')
-  const blurGray = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => (e.target.style.borderColor = '#DDDDDD')
+  const focusFn = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    e.target.style.borderColor = '#B63A24'
+    e.target.style.boxShadow = '0 0 0 3px rgba(182,58,36,0.12)'
+  }
+  const blurFn = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    e.target.style.borderColor = '#E7C3B5'
+    e.target.style.boxShadow = 'none'
+  }
+
+  const inputS: React.CSSProperties = {
+    ...F, background: '#FFFFFF', border: '1.5px solid #E7C3B5', borderRadius: 8,
+    padding: '12px 16px', color: '#211A17', fontSize: '1rem', width: '100%',
+    outline: 'none', transition: 'border-color 0.15s, box-shadow 0.15s',
+  }
+
+  const labelS: React.CSSProperties = {
+    ...F, fontSize: '0.875rem', fontWeight: 600, color: '#745F55',
+    display: 'block', marginBottom: 6,
+  }
 
   return (
-    <div style={{ background: '#FFF', minHeight: '100svh', padding: '48px 16px 80px' }}>
+    <div style={{ background: '#FFF8EF', minHeight: '100svh', padding: '48px 16px 80px' }}>
       <div style={{ maxWidth: 560, margin: '0 auto' }}>
-        <h1 style={{ ...R, fontSize: '2.8rem', color: '#2A1A12', letterSpacing: '0.06em', marginBottom: 8 }}>
+        <h1 style={{ ...R, fontSize: 'clamp(2rem, 6vw, 2.6rem)', color: '#211A17', letterSpacing: '0.01em', marginBottom: 8 }}>
           Catering Services
         </h1>
-        <p style={{ ...F, fontSize: '0.9rem', color: '#666', marginBottom: 28 }}>
+        <p style={{ ...F, fontSize: '0.95rem', color: '#745F55', marginBottom: 28, lineHeight: 1.6 }}>
           Hosting a party or event? We offer custom catering for any occasion.
         </p>
 
-        <div style={{ marginBottom: 24, display: 'flex', flexDirection: 'column', gap: 10 }}>
-          {[
-            { icon: '✓', text: 'Discounted pricing available' },
-            { icon: '⚠', text: 'Please enquire 3–5 business days in advance' },
-          ].map(({ icon, text }) => (
-            <div key={text} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-              <span style={{ color: '#BA3A13', fontWeight: 700, fontSize: '1.2rem', width: 24, flexShrink: 0 }}>{icon}</span>
-              <span style={{ ...F, fontSize: '0.9rem', color: '#2A1A12' }}>{text}</span>
-            </div>
-          ))}
+        {/* Info chips */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 28 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, background: '#FFFFFF', borderRadius: 8, padding: '10px 16px', border: '1.5px solid #E7C3B5' }}>
+            <CheckCircle size={17} color="#22C55E" strokeWidth={2} aria-hidden="true" />
+            <span style={{ ...F, fontSize: '0.9rem', color: '#211A17' }}>Discounted pricing available</span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, background: '#FFF8EF', borderRadius: 8, padding: '10px 16px', border: '1.5px solid #E7C3B5' }}>
+            <AlertCircle size={17} color="#F4C76B" strokeWidth={2} aria-hidden="true" />
+            <span style={{ ...F, fontSize: '0.9rem', color: '#211A17' }}>Please enquire 3–5 business days in advance</span>
+          </div>
         </div>
 
         {sent ? (
-          <div style={{ background: '#F6ECDF', borderRadius: 12, padding: '48px 32px', textAlign: 'center', border: '1px solid #F7DDD2' }}>
-            <p style={{ ...R, fontSize: '2rem', color: '#2A1A12', letterSpacing: '0.06em', marginBottom: 8 }}>Enquiry Received!</p>
-            <p style={{ ...F, fontSize: '0.9rem', color: '#666', marginBottom: 24 }}>We'll be in touch within 1 business day.</p>
-            <a href="/" style={{ ...R, fontSize: '1.1rem', color: '#BA3A13', textDecoration: 'none', letterSpacing: '0.04em' }}>Back to Menu</a>
+          <div style={{ background: '#FFFFFF', borderRadius: 14, padding: '48px 32px', textAlign: 'center', border: '1.5px solid #E7C3B5', boxShadow: '0 4px 20px rgba(182,58,36,0.08)' }}>
+            <CheckCircle size={40} color="#22C55E" strokeWidth={1.5} style={{ margin: '0 auto 16px' }} />
+            <p style={{ ...R, fontSize: '1.6rem', color: '#211A17', letterSpacing: '0.01em', marginBottom: 8 }}>Enquiry Received!</p>
+            <p style={{ ...F, fontSize: '0.9rem', color: '#745F55', marginBottom: 24 }}>We&apos;ll be in touch within 1 business day.</p>
+            <Link href="/" style={{ ...F, fontWeight: 700, fontSize: '0.95rem', color: '#B63A24', textDecoration: 'none' }}>← Back to Menu</Link>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} style={{ background: '#F6ECDF', borderRadius: 12, padding: '28px 24px', border: '1px solid #F7DDD2', display: 'flex', flexDirection: 'column', gap: 18 }}>
+          <form onSubmit={handleSubmit} style={{ background: '#FFFFFF', borderRadius: 14, padding: '28px 24px', border: '1.5px solid #E7C3B5', boxShadow: '0 4px 20px rgba(182,58,36,0.07)', display: 'flex', flexDirection: 'column', gap: 18 }}>
             {[
-              { label: 'YOUR NAME', key: 'name', type: 'text', placeholder: 'Full name', required: true },
-              { label: 'PHONE', key: 'phone', type: 'tel', placeholder: '04xx xxx xxx', required: true },
-              { label: 'EMAIL (OPTIONAL)', key: 'email', type: 'email', placeholder: 'your@email.com', required: false },
-              { label: 'EVENT DATE', key: 'date', type: 'date', placeholder: '', required: true },
-              { label: 'EVENT TIME', key: 'time', type: 'time', placeholder: '', required: true },
+              { label: 'Your Name',         key: 'name',  type: 'text',  placeholder: 'Full name',       required: true },
+              { label: 'Phone',             key: 'phone', type: 'tel',   placeholder: '04xx xxx xxx',    required: true },
+              { label: 'Email (optional)',  key: 'email', type: 'email', placeholder: 'your@email.com',  required: false },
+              { label: 'Event Date',        key: 'date',  type: 'date',  placeholder: '',                required: true },
+              { label: 'Event Time',        key: 'time',  type: 'time',  placeholder: '',                required: true },
             ].map(({ label, key, type, placeholder, required }) => (
               <div key={key}>
-                <label style={labelS}>{label}</label>
-                <input type={type} value={form[key as keyof typeof form]} onChange={set(key)}
-                  placeholder={placeholder} required={required} style={inputStyle}
-                  onFocus={focusYellow} onBlur={blurGray} />
+                <label htmlFor={`catering-${key}`} style={labelS}>{label}</label>
+                <input
+                  id={`catering-${key}`}
+                  type={type}
+                  value={form[key as keyof typeof form]}
+                  onChange={set(key)}
+                  placeholder={placeholder}
+                  required={required}
+                  style={inputS}
+                  onFocus={focusFn}
+                  onBlur={blurFn}
+                />
               </div>
             ))}
+
             <div>
-              <label style={labelS}>NUMBER OF GUESTS</label>
-              <select value={form.guests} onChange={set('guests')} required style={{ ...inputStyle, background: '#FFF' }}
-                onFocus={focusYellow} onBlur={blurGray}>
+              <label htmlFor="catering-guests" style={labelS}>Number of Guests</label>
+              <select
+                id="catering-guests"
+                value={form.guests}
+                onChange={set('guests')}
+                required
+                style={{ ...inputS, background: '#FFF', cursor: 'pointer' }}
+                onFocus={focusFn}
+                onBlur={blurFn}
+              >
                 <option value="">Select…</option>
                 {['10–15', '15–20', '20–30', '30–50', '50+'].map(o => <option key={o}>{o}</option>)}
               </select>
             </div>
+
             <div>
-              <label style={labelS}>ADDITIONAL NOTES</label>
-              <textarea value={form.message} onChange={set('message')} rows={3}
+              <label htmlFor="catering-notes" style={labelS}>Additional Notes</label>
+              <textarea
+                id="catering-notes"
+                value={form.message}
+                onChange={set('message')}
+                rows={3}
                 placeholder="Type of event, dietary requirements, specific dishes…"
-                style={{ ...inputStyle, resize: 'none' }} onFocus={focusYellow} onBlur={blurGray} />
+                style={{ ...inputS, resize: 'none' }}
+                onFocus={focusFn}
+                onBlur={blurFn}
+              />
             </div>
-            {error && <p style={{ ...F, fontSize: '0.85rem', color: '#ef4444' }}>{error}</p>}
+
+            {error && (
+              <div role="alert" style={{ display: 'flex', alignItems: 'center', gap: 8, background: '#FEF2F2', border: '1.5px solid #FECACA', borderRadius: 8, padding: '10px 14px' }}>
+                <AlertCircle size={16} color="#DC2626" strokeWidth={2} aria-hidden="true" />
+                <p style={{ ...F, fontSize: '0.875rem', color: '#DC2626' }}>{error}</p>
+              </div>
+            )}
+
             <button type="submit" disabled={loading} className="btn-brand">
               {loading ? 'Sending…' : 'Submit Enquiry'}
             </button>

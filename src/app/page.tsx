@@ -1,15 +1,15 @@
 'use client'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { ShoppingBag, XCircle, MapPin, Clock, Phone } from 'lucide-react'
+import { MapPin, Clock, Phone, ShoppingBag, Search, X, ChevronDown, CheckCircle } from 'lucide-react'
 import Image from 'next/image'
 
 import { MenuCategory, MenuItem } from '@/types'
 import CategoryNav from '@/components/CategoryNav'
 import ItemCard from '@/components/ItemCard'
 import ItemModal from '@/components/ItemModal'
-import { useCartStore } from '@/store/cart'
 import PromoBanner from '@/components/PromoBanner'
 import FeaturedDishes from '@/components/FeaturedDishes'
+import Footer from '@/components/Footer'
 
 interface MenuData {
   categories: MenuCategory[]
@@ -18,14 +18,32 @@ interface MenuData {
 }
 
 export default function HomePage() {
-  const [isAdminView, setIsAdminView] = useState(false)
-  const [data, setData] = useState<MenuData | null>(null)
-  const [activeSlug, setActiveSlug] = useState('')
+  const [isAdminView] = useState(() =>
+    typeof window !== 'undefined'
+      ? new URLSearchParams(window.location.search).get('admin') === 'true'
+      : false
+  )
+  const [data, setData]                 = useState<MenuData | null>(null)
+  const [loadError, setLoadError]       = useState(false)
+  const [activeSlug, setActiveSlug]     = useState('')
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null)
-  const [searchQuery, setSearchQuery] = useState('')
+  const [searchQuery, setSearchQuery]   = useState('')
   const [holidayStatus, setHolidayStatus] = useState<{ today: boolean; tomorrow: boolean } | null>(null)
-  const sectionRefs = useRef<Record<string, HTMLElement | null>>({})
-  const isScrolling = useRef(false)
+  const sectionRefs  = useRef<Record<string, HTMLElement | null>>({})
+  const isScrolling  = useRef(false)
+  const menuRef      = useRef<HTMLDivElement>(null)
+  const searchInputRef = useRef<HTMLInputElement>(null)
+
+  const fetchMenu = useCallback(() => {
+    setLoadError(false)
+    fetch('/api/menu')
+      .then(r => { if (!r.ok) throw new Error('Failed'); return r.json() })
+      .then((d: MenuData) => {
+        setData(d)
+        setActiveSlug(prev => prev || d.categories[0]?.slug || '')
+      })
+      .catch(() => setLoadError(true))
+  }, [])
 
   const fetchHolidayStatus = useCallback(() => {
     fetch('/api/holidays', { cache: 'no-store' })
@@ -35,18 +53,13 @@ export default function HomePage() {
   }, [])
 
   useEffect(() => {
-    setIsAdminView(new URLSearchParams(window.location.search).get('admin') === 'true')
-    fetch('/api/menu').then(r => r.json()).then(setData)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    fetchMenu()
     fetchHolidayStatus()
     const onVisible = () => { if (document.visibilityState === 'visible') fetchHolidayStatus() }
     document.addEventListener('visibilitychange', onVisible)
     return () => document.removeEventListener('visibilitychange', onVisible)
-  }, [fetchHolidayStatus])
-
-  useEffect(() => {
-    if (!data) return
-    setActiveSlug(data.categories[0]?.slug ?? '')
-  }, [data])
+  }, [fetchMenu, fetchHolidayStatus])
 
   useEffect(() => {
     if (!data) return
@@ -60,7 +73,7 @@ export default function HomePage() {
           if (slug) setActiveSlug(slug)
         }
       },
-      { threshold: 0.1, rootMargin: '-105px 0px 0px 0px' }
+      { threshold: 0.1, rootMargin: '-100px 0px 0px 0px' }
     )
     Object.values(sectionRefs.current).forEach(el => el && observer.observe(el))
     return () => observer.disconnect()
@@ -71,15 +84,43 @@ export default function HomePage() {
     if (!el) return
     setActiveSlug(slug)
     isScrolling.current = true
-    const top = el.getBoundingClientRect().top + window.scrollY - 120
+    const offset = window.innerWidth <= 768 ? 120 : 100
+    const top = el.getBoundingClientRect().top + window.scrollY - offset
     window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' })
     setTimeout(() => { isScrolling.current = false }, 1200)
   }
 
-  if (!data) return (
-    <div style={{ minHeight: '100svh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#FFFFFF' }}>
-      <div style={{ width: 36, height: 36, borderRadius: '50%', border: '3px solid #F7DDD2', borderTopColor: '#BA3A13', animation: 'spin 0.7s linear infinite' }} />
-      <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
+  function scrollToMenu() {
+    if (menuRef.current) {
+      const top = menuRef.current.getBoundingClientRect().top + window.scrollY - 100
+      window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' })
+      setTimeout(() => searchInputRef.current?.focus(), 600)
+    }
+  }
+
+  // Loading state
+  if (!data && !loadError) return (
+    <div style={{ minHeight: '100svh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#FFF8EF' }}>
+      <div style={{ width: 36, height: 36, borderRadius: '50%', border: '3px solid #E7C3B5', borderTopColor: '#B63A24', animation: 'spin 0.7s linear infinite' }} />
+    </div>
+  )
+
+  // Error state
+  if (loadError) return (
+    <div style={{ minHeight: '100svh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, background: '#FFF8EF', padding: '0 24px' }}>
+      <p style={{ fontFamily: "'DM Sans', sans-serif", color: '#745F55', fontSize: '1rem', textAlign: 'center' }}>
+        Couldn&apos;t load the menu. Please check your connection.
+      </p>
+      <button
+        onClick={fetchMenu}
+        style={{
+          background: '#B63A24', color: '#FFFFFF', border: 'none', borderRadius: '50px',
+          padding: '12px 28px', fontFamily: "'DM Sans', sans-serif", fontWeight: 700,
+          fontSize: '0.95rem', cursor: 'pointer',
+        }}
+      >
+        Retry
+      </button>
     </div>
   )
 
@@ -90,105 +131,175 @@ export default function HomePage() {
 
       {/* Admin back button */}
       {isAdminView && (
-        <div style={{ background: '#2A1A12', padding: '10px 20px' }}>
-          <a
-            href="/admin"
-            style={{
-              color: '#FFC418',
-              fontFamily: "'Nunito Sans', sans-serif",
-              fontWeight: 700,
-              fontSize: '0.9rem',
-              textDecoration: 'none',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 6,
-            }}
-          >
+        <div style={{ background: '#211A17', padding: '10px 20px' }}>
+          <a href="/admin" style={{ color: '#F4C76B', fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '0.9rem', textDecoration: 'none' }}>
             ← Back to Admin
           </a>
         </div>
       )}
 
+      {/* Tomorrow closed banner */}
       {!holidayStatus?.today && holidayStatus?.tomorrow && (
-        <div style={{
-          background: '#2A1A12',
-          color: '#FFC418',
-          textAlign: 'center',
-          padding: '13px 20px',
-          fontFamily: "'Nunito Sans', sans-serif",
-          fontWeight: 700,
-          fontSize: '0.95rem',
-          lineHeight: 1.5,
-        }}>
+        <div role="alert" style={{ background: '#211A17', color: '#F4C76B', textAlign: 'center', padding: '12px 20px', fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '0.9rem' }}>
           We&apos;ll be closed tomorrow. Order today!
-          {' '}<span style={{ opacity: 0.65, fontWeight: 400 }}>明日休息，欢迎今天提前点餐！</span>
+          <span style={{ opacity: 0.6, fontWeight: 400 }}> 明日休息，欢迎今天提前点餐！</span>
         </div>
       )}
 
-      {/* Hero */}
-      <div className="hero-wrapper">
-        <Image src="/banner.png" alt="De Hawker's Liverpool" fill style={{ objectFit: 'cover', objectPosition: '35% 50%' }} priority unoptimized />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 20%, rgba(0,0,0,0.6) 100%)', zIndex: 1 }} />
+      {/* ─── 1. Hero ─── */}
+      <div className="hero-wrapper" role="banner">
+        <Image
+          src="/banner.png"
+          alt="De Hawker's Liverpool — Asian hawker-style wok restaurant"
+          fill
+          style={{ objectFit: 'cover', objectPosition: '35% 50%' }}
+          priority
+          sizes="100vw"
+        />
+        {/* Gradient overlay */}
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(33,26,23,0.04) 0%, rgba(33,26,23,0.20) 35%, rgba(33,26,23,0.72) 70%, rgba(33,26,23,0.90) 100%)', zIndex: 1 }} />
+        {/* Brand logo watermark — decorative */}
+        <div className="hero-logo-watermark" aria-hidden="true">
+          <Image
+            src="/brand/logo-emblem-white.png"
+            alt=""
+            width={340}
+            height={340}
+            style={{ objectFit: 'contain', display: 'block' }}
+          />
+        </div>
+        {/* Holiday overlay */}
         {holidayStatus?.today && (
-          <div style={{ position: 'absolute', inset: 0, background: 'rgba(255,255,255,0.6)', zIndex: 2 }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'rgba(255,255,255,0.55)', zIndex: 2 }} />
         )}
-        <div className="hero-mobile-overlay" />
 
-        {/* Text overlay */}
         <div className="hero-content">
-          <h1 className="hero-title">De Hawker&apos;s – Liverpool</h1>
-          <div className="hero-info">
-            <span className="hero-info-item"><MapPin size={15} strokeWidth={2.2} className="hero-info-icon" />Shop 1011, Westfield Liverpool, Elizabeth St, Liverpool NSW 2170</span>
-            <span className="hero-sep">·</span>
-            <span className="hero-info-item"><Clock size={15} strokeWidth={2.2} className="hero-info-icon" />Mon–Wed,Fri–Sun 9am–6pm · Thu 9am–9pm</span>
-            <span className="hero-sep">·</span>
-            <span className="hero-info-item"><Phone size={15} strokeWidth={2.2} className="hero-info-icon" />0420 226 788</span>
+          <h1 className="hero-title">De Hawker&apos;s Liverpool</h1>
+
+          <address className="hero-info" style={{ fontStyle: 'normal' }}>
+            <a
+              href="https://maps.google.com/?q=Shop+1011+Westfield+Liverpool+Elizabeth+St+Liverpool+NSW+2170"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-info-item"
+            >
+              <MapPin size={14} strokeWidth={2.2} className="hero-info-icon" aria-hidden="true" />
+              Shop 1011, Westfield Liverpool, Elizabeth St, Liverpool NSW 2170
+            </a>
+            <span className="hero-info-item">
+              <Clock size={14} strokeWidth={2.2} className="hero-info-icon" aria-hidden="true" />
+              Mon–Wed, Fri–Sun 9am–6pm · Thu 9am–9pm
+            </span>
+            <a href="tel:+61420226788" className="hero-info-item">
+              <Phone size={14} strokeWidth={2.2} className="hero-info-icon" aria-hidden="true" />
+              0420 226 788
+            </a>
+          </address>
+
+          <div className="hero-tags">
+            <span className="hero-tag-pickup">
+              <ShoppingBag size={13} strokeWidth={2.2} aria-hidden="true" />
+              Pick-up Only
+            </span>
+            <span className="hero-tag-nodelivery">Delivery Unavailable</span>
+            <span className="hero-tag-halal">
+              <CheckCircle size={13} strokeWidth={2.2} aria-hidden="true" />
+              Halal Friendly
+            </span>
           </div>
-          <div className="hero-tags" style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: 7, background: '#BA3A13', color: '#2A1A12', fontFamily: "'Nunito Sans', sans-serif", fontSize: '1rem', fontWeight: 700, padding: '7px 16px', borderRadius: 6, letterSpacing: '0.02em' }}>
-              <ShoppingBag size={17} strokeWidth={2.2} />
-              Pick Up Only
-            </span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: 7, background: '#DC2626', color: '#FFFFFF', fontFamily: "'Nunito Sans', sans-serif", fontSize: '1rem', fontWeight: 700, padding: '7px 16px', borderRadius: 6 }}>
-              <XCircle size={17} strokeWidth={2.2} />
-              Delivery Unavailable
-            </span>
+
+          <div className="hero-actions">
+            <button
+              onClick={scrollToMenu}
+              className="hero-btn-primary"
+              aria-label="Order for pick-up — jump to menu"
+            >
+              <ShoppingBag size={17} strokeWidth={2} aria-hidden="true" />
+              Order for Pick-up
+            </button>
+            <button
+              onClick={() => { scrollToMenu(); setTimeout(() => searchInputRef.current?.focus(), 700) }}
+              className="hero-btn-secondary"
+              aria-label="Browse the full menu"
+            >
+              Browse Menu
+              <ChevronDown size={16} strokeWidth={2} aria-hidden="true" />
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Coupon cards — below the hero photo, never overlapping it */}
-      <div className="hero-coupons">
+      {/* ─── 2. Promo ─── */}
+      <div className="hero-coupons" style={{ position: 'relative', overflow: 'hidden' }}>
+        {/* Subtle brand watermark behind coupons */}
+        <div aria-hidden="true" style={{
+          position: 'absolute', right: 16, top: '50%', transform: 'translateY(-50%)',
+          opacity: 0.06, pointerEvents: 'none', userSelect: 'none',
+        }}>
+          <Image src="/brand/logo-cart-transparent.png" alt="" width={90} height={90} style={{ objectFit: 'contain' }} />
+        </div>
         <PromoBanner />
       </div>
 
-      {!isSearching && (
-        <FeaturedDishes categories={data.categories} onSelect={setSelectedItem} />
-      )}
+      {/* ─── 3. Menu Explorer (Search + Category) ─── */}
+      <div className="menu-explorer" ref={menuRef}>
+        <div className="menu-explorer-inner">
+          <h2>Explore the Menu</h2>
+          <div className="search-wrap">
+            <Search size={18} strokeWidth={2} className="search-icon" aria-hidden="true" />
+            <input
+              ref={searchInputRef}
+              id="menu-search"
+              type="search"
+              className="search-input"
+              value={searchQuery}
+              onChange={e => setSearchQuery(e.target.value)}
+              placeholder="Search dishes…"
+              aria-label="Search menu items"
+              autoComplete="off"
+            />
+            {isSearching && (
+              <button
+                className="search-clear"
+                onClick={() => { setSearchQuery(''); searchInputRef.current?.focus() }}
+                aria-label="Clear search"
+              >
+                <X size={16} strokeWidth={2.5} aria-hidden="true" />
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
 
-      {/* Mobile sticky category nav — full width, outside padded container */}
+      {/* ─── Mobile sticky category nav ─── */}
       <div className="mobile-cat-sticky">
         <CategoryNav
-          categories={data.categories}
+          categories={data!.categories}
           activeSlug={activeSlug}
           onSelect={(slug) => { setSearchQuery(''); scrollToCategory(slug) }}
         />
       </div>
 
-      {/* Main content — padded */}
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 28px' }}>
+      {/* ─── 4. Today's Picks ─── */}
+      {!isSearching && (
+        <FeaturedDishes categories={data!.categories} onSelect={setSelectedItem} />
+      )}
+
+      {/* ─── 5. Full menu ─── */}
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 40px' }}>
         <div className="page-body">
 
-          {/* Left sidebar */}
-          <aside className="cat-sidebar">
-            {data.categories.map(cat => {
-              const visible = cat.items.filter(item => !data.overrides[item.uuid]?.is_hidden)
+          {/* Desktop sidebar */}
+          <aside className="cat-sidebar" aria-label="Menu categories">
+            {data!.categories.map(cat => {
+              const visible = cat.items.filter(item => !data!.overrides[item.uuid]?.is_hidden)
               if (!visible.length) return null
               return (
                 <button
                   key={cat.slug}
                   className={`cat-sidebar-btn${activeSlug === cat.slug ? ' active' : ''}`}
                   onClick={() => { setSearchQuery(''); scrollToCategory(cat.slug) }}
+                  aria-current={activeSlug === cat.slug ? 'true' : undefined}
                 >
                   {cat.name}
                 </button>
@@ -197,52 +308,18 @@ export default function HomePage() {
           </aside>
 
           {/* Main content */}
-          <main className="menu-main">
-
-            {/* Search box */}
-            <div style={{ position: 'relative', marginBottom: 24 }}>
-              <svg
-                style={{ position: 'absolute', left: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none', color: '#999' }}
-                width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-              >
-                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-              </svg>
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={e => setSearchQuery(e.target.value)}
-                placeholder="Search menu..."
-                style={{
-                  width: '100%', padding: '11px 16px 11px 44px',
-                  borderRadius: 8, border: '1px solid #DDDDDD',
-                  background: '#FFFFFF', fontFamily: "'Nunito Sans', sans-serif",
-                  fontSize: '0.9rem', color: '#2A1A12', outline: 'none',
-                  transition: 'border-color 0.15s',
-                }}
-                onFocus={e => (e.target.style.borderColor = '#BA3A13')}
-                onBlur={e => (e.target.style.borderColor = '#DDDDDD')}
-              />
-              {isSearching && (
-                <button
-                  onClick={() => setSearchQuery('')}
-                  style={{
-                    position: 'absolute', right: 12, top: '50%', transform: 'translateY(-50%)',
-                    background: 'none', border: 'none', cursor: 'pointer', color: '#999', fontSize: '1.1rem', lineHeight: 1,
-                  }}
-                >✕</button>
-              )}
-            </div>
+          <main className="menu-main" aria-label="Menu items">
 
             {/* Menu sections */}
-            {data.categories.map(cat => {
+            {data!.categories.map(cat => {
               const allItems = cat.items
-                .filter(item => !data.overrides[item.uuid]?.is_hidden)
+                .filter(item => !data!.overrides[item.uuid]?.is_hidden)
                 .map(item => {
-                  const ov = data.overrides[item.uuid]
+                  const ov = data!.overrides[item.uuid]
                   return {
                     ...item,
-                    name: ov?.name ?? item.name,
-                    price: ov?.price_cents != null ? ov.price_cents / 100 : item.price,
+                    name:        ov?.name ?? item.name,
+                    price:       ov?.price_cents != null ? ov.price_cents / 100 : item.price,
                     description: ov?.description ?? item.description,
                   }
                 })
@@ -262,16 +339,18 @@ export default function HomePage() {
                   key={cat.slug}
                   data-slug={cat.slug}
                   ref={el => { sectionRefs.current[cat.slug] = el }}
-                  style={{ scrollMarginTop: 120 }}
+                  style={{ scrollMarginTop: 108 }}
+                  aria-labelledby={`cat-${cat.slug}`}
                 >
-                  <h2 className="cat-section-title">{cat.name}</h2>
+                  <h2 id={`cat-${cat.slug}`} className="cat-section-title">{cat.name}</h2>
                   <div className="item-grid">
                     {visible.map(item => (
                       <ItemCard
                         key={item.uuid}
                         item={item}
-                        isSoldOut={data.soldOut.includes(item.uuid)}
+                        isSoldOut={data!.soldOut.includes(item.uuid)}
                         onClick={() => setSelectedItem(item)}
+                        triggerRef={undefined}
                       />
                     ))}
                   </div>
@@ -280,18 +359,24 @@ export default function HomePage() {
             })}
 
             {/* No results */}
-            {isSearching && data.categories.every(cat => {
+            {isSearching && data!.categories.every(cat => {
               const q = searchQuery.toLowerCase()
-              return !cat.items.filter(item => !data.overrides[item.uuid]?.is_hidden).some(item => {
-                const ov = data.overrides[item.uuid]
+              return !cat.items.filter(item => !data!.overrides[item.uuid]?.is_hidden).some(item => {
+                const ov = data!.overrides[item.uuid]
                 const name = ov?.name ?? item.name
                 const desc = ov?.description ?? item.description
                 return name.toLowerCase().includes(q) || (desc?.toLowerCase().includes(q) ?? false)
               })
             }) && (
-              <div style={{ textAlign: 'center', padding: '60px 20px', color: '#999', fontFamily: "'Nunito Sans', sans-serif" }}>
-                <p style={{ fontSize: '1rem', marginBottom: 8 }}>No items found for &quot;{searchQuery}&quot;</p>
-                <button onClick={() => setSearchQuery('')} style={{ background: 'none', border: 'none', color: '#BA3A13', cursor: 'pointer', fontFamily: "'Nunito Sans', sans-serif", fontSize: '0.9rem', textDecoration: 'underline' }}>
+              <div style={{ textAlign: 'center', padding: '60px 20px' }}>
+                <Search size={32} strokeWidth={1.5} style={{ color: '#E7C3B5', marginBottom: 12 }} aria-hidden="true" />
+                <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', color: '#745F55', marginBottom: 12 }}>
+                  No items found for &ldquo;{searchQuery}&rdquo;
+                </p>
+                <button
+                  onClick={() => setSearchQuery('')}
+                  style={{ background: 'none', border: 'none', color: '#B63A24', cursor: 'pointer', fontFamily: "'DM Sans', sans-serif", fontSize: '0.9rem', fontWeight: 600, textDecoration: 'underline' }}
+                >
                   Clear search
                 </button>
               </div>
@@ -301,7 +386,13 @@ export default function HomePage() {
         </div>
       </div>
 
-      <ItemModal item={selectedItem} onClose={() => setSelectedItem(null)} />
+      <Footer />
+
+      <ItemModal
+        key={selectedItem?.uuid ?? 'none'}
+        item={selectedItem}
+        onClose={() => setSelectedItem(null)}
+      />
     </div>
   )
 }
