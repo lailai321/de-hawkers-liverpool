@@ -19,17 +19,17 @@ type CheckoutInput = {
 
 function validPickupTime(value: string) {
   const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Australia/Sydney' }))
-  if (now.getDay() === 1) return false
   const currentMinutes = now.getHours() * 60 + now.getMinutes()
-  if (value === 'asap') return currentMinutes >= 11 * 60 && currentMinutes < 20 * 60
+  const closeMins = now.getDay() === 4 ? 21 * 60 : 18 * 60
+  if (value === 'asap') return currentMinutes >= 9 * 60 && currentMinutes < closeMins
 
   const match = value.match(/^(\d{1,2}):(00|15|30|45)(am|pm)$/)
   if (!match) return false
   let hour = Number(match[1]) % 12
   if (match[3] === 'pm') hour += 12
   const pickupMinutes = hour * 60 + Number(match[2])
-  return pickupMinutes >= 11 * 60
-    && pickupMinutes <= 20 * 60
+  return pickupMinutes >= 9 * 60
+    && pickupMinutes <= closeMins
     && pickupMinutes >= currentMinutes + 30
 }
 

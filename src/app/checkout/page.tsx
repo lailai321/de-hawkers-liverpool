@@ -11,11 +11,11 @@ function getSydneyNow(): Date {
 
 function getTimeSlots(): string[] {
   const now = getSydneyNow()
-  if (now.getDay() === 1) return []
   const slots: string[] = []
   const earliest = new Date(now.getTime() + 30 * 60 * 1000)
-  const open = new Date(now); open.setHours(11, 0, 0, 0)
-  const close = new Date(now); close.setHours(20, 0, 0, 0)
+  const open = new Date(now); open.setHours(9, 0, 0, 0)
+  const closeHour = now.getDay() === 4 ? 21 : 18
+  const close = new Date(now); close.setHours(closeHour, 0, 0, 0)
   const t = new Date(Math.max(earliest.getTime(), open.getTime()))
   const mins = t.getMinutes(), rem = mins % 15
   if (rem !== 0) t.setMinutes(mins + (15 - rem), 0, 0)
@@ -31,9 +31,9 @@ function getTimeSlots(): string[] {
 
 function isStoreOpen(): boolean {
   const now = getSydneyNow()
-  if (now.getDay() === 1) return false
   const mins = now.getHours() * 60 + now.getMinutes()
-  return mins >= 11 * 60 && mins < 20 * 60
+  const closeMins = now.getDay() === 4 ? 21 * 60 : 18 * 60
+  return mins >= 9 * 60 && mins < closeMins
 }
 
 const F = { fontFamily: "'DM Sans', sans-serif" } as const
@@ -188,7 +188,7 @@ export default function CheckoutPage() {
             {!storeOpen && slots.length === 0 ? (
               <div style={{ background: '#FFF8EF', border: '1.5px solid #E7C3B5', borderRadius: 8, padding: '12px 16px' }}>
                 <p style={{ ...F, fontSize: '0.85rem', color: '#211A17', fontWeight: 700, marginBottom: 4 }}>We&apos;re currently closed</p>
-                <p style={{ ...F, fontSize: '0.78rem', color: '#745F55' }}>Open Tue–Sun, 11am–8pm (Sydney time)</p>
+                <p style={{ ...F, fontSize: '0.78rem', color: '#745F55' }}>Open Mon–Sun 9am–6pm (Thu 9am–9pm, Sydney time)</p>
               </div>
             ) : (
               <>
