@@ -26,6 +26,7 @@ export default function ItemModal({ item, onClose }: Props) {
   const [notes, setNotes]           = useState('')
   const [flavourQtys, setFlavourQtys]       = useState<Record<string, number>>({})
   const [optionSelections, setOptionSelections] = useState<Record<string, string[]>>({})
+  const [attempted, setAttempted]   = useState(false)
   const addItem   = useCartStore(s => s.addItem)
   const dialogRef = useRef<HTMLDivElement>(null)
   const closeBtnRef = useRef<HTMLButtonElement>(null)
@@ -118,7 +119,8 @@ export default function ItemModal({ item, onClose }: Props) {
   }
 
   function handleAdd() {
-    if (!item || !canAdd) return
+    if (!item) return
+    if (!canAdd) { setAttempted(true); return }
     if (isDrink) {
       const filtered = Object.fromEntries(Object.entries(flavourQtys).filter(([, q]) => q > 0))
       addItem({ uuid: item.uuid, name: item.name, price: item.price, quantity: totalFlavourQty, extraMeat: false, extraVegetable: false, notes: '', flavourSelections: filtered })
@@ -183,7 +185,7 @@ export default function ItemModal({ item, onClose }: Props) {
           )
         })}
 
-        {isRequired && sel.length === 0 && (
+        {isRequired && sel.length === 0 && attempted && (
           <p role="alert" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem', color: '#DC2626', marginTop: 4 }}>
             Please choose one
           </p>
@@ -304,7 +306,7 @@ export default function ItemModal({ item, onClose }: Props) {
                   </div>
                 )
               })}
-              {totalFlavourQty === 0 && (
+              {totalFlavourQty === 0 && attempted && (
                 <p role="alert" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem', color: '#DC2626', marginTop: 4 }}>
                   Please choose at least 1
                 </p>
