@@ -180,7 +180,6 @@ export default function CheckoutPage() {
               onFocus={focusFn}
               onBlur={blurFn}
             />
-            <p style={{ ...F, fontSize: '0.72rem', color: '#B5A399', marginTop: 4 }}>We&apos;ll SMS you when your order is ready</p>
           </div>
 
           <div>
