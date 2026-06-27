@@ -74,7 +74,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <p style={{ maxWidth: 1200, margin: '28px auto 0', paddingTop: 20, borderTop: '1px solid rgba(231,195,181,0.12)', ...F, fontSize: '0.78rem', color: 'rgba(255,248,239,0.28)' }}>
-        © {new Date().getFullYear()} De Hawker&apos;s Liverpool &middot; All rights reserved &middot; Halal Friendly
+        © {new Date().getFullYear()}{' '}De Hawker&apos;s Liverpool &middot; All rights reserved &middot; Halal Friendly
       </p>
     </footer>
   )
